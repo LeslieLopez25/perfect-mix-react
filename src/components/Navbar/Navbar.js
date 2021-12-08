@@ -28,23 +28,58 @@ const Navbar = () => {
       setButton(true);
     }
   };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  return (
+    <>
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <Nav>
+          <NavbarContainer>
+            <NavLogo to="/" onClick={closeMobileMenu}>
+              <NavIcon />
+              The Perfect Mix
+            </NavLogo>
+            <MobileIcon onClick={handleClick}>
+              {click ? <FaTimes /> : <FaBars />}
+            </MobileIcon>
+            <NavMenu onClick={handleClick} click={click}>
+              <NavItem>
+                <NavLinks to="/">Home</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/">Menu</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/">Beverages</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/">Desserts</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/">Appetizers</NavLinks>
+              </NavItem>
+              <NavItemBtn>
+                {button ? (
+                  <NavBtnLink to="/order">
+                    <Button primary>Order</Button>
+                  </NavBtnLink>
+                ) : (
+                  <NavBtnLink to="/order">
+                    <Button fontBig primary>
+                      Order
+                    </Button>
+                  </NavBtnLink>
+                )}
+              </NavItemBtn>
+            </NavMenu>
+          </NavbarContainer>
+        </Nav>
+      </IconContext.Provider>
+    </>
+  );
 };
 
-useEffect(() => {
-  showButton();
-}, []);
-
-return (
-    <>
-        <IconContext.Provider value={{ color: "#fff" }}>
-            <Nav>
-                <NavLogo to="/" onClick={closeMobileMenu}>
-                    <NavIcon />
-                    The Perfect Mix
-                </NavLogo>
-                <MobileIcon onClick={handleClick}>
-                    {click ? <FaTimes /> : <FaBars />}
-                </MobileIcon>
-            </Nav>
-      </IconContext.Provider>
-)
+export default Navbar;
