@@ -13,7 +13,7 @@ import {
   NavLinks,
   NavItemBtn,
   NavBtnLink
-} from "./Navbar.elements";
+} from "./NavbarElements";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
