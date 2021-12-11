@@ -22,6 +22,16 @@ export const NavbarContainer = styled(Container)`
   ${Container}
 `;
 
+export const NavLogo = styled(Link)`
+  color: #228b22;
+  display: flex;
+  justify-self: flex-start;
+  align-items: center;
+  font-size: 32px;
+  text-decoration: none;
+  cursor: pointer;
+`;
+
 export const NavIcon = styled(FaBattleNet)`
   margin-right: 8px;
 `;
