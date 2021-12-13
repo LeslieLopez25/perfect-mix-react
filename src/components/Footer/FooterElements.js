@@ -86,4 +86,88 @@ export const FooterLinksWrapper = styled.div`
   }
 `;
 
-export const FooterLinksItems = styled.div``;
+export const FooterLinksItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  text-align: left;
+  margin: 1rem;
+  width: 10rem;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 420px) {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+`;
+
+export const FooterLinkTitle = styled.h2`
+  margin-bottom: 16px;
+`;
+
+export const FooterLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 8px;
+
+  &:hover {
+    color: #f15;
+    transition: 0.3s ease-out;
+  }
+`;
+
+export const SocialMedia = styled.section`
+  max-width: 1000px;
+  width: 100%;
+`;
+
+export const SocialMediaWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 90%;
+  margin: 40px auto 0 auto;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+  }
+`;
+
+export const SocialLogo = styled(Link)`
+  display: flex;
+  justify-self: start;
+  align-items: center;
+  color: #fff;
+  font-size: 32px;
+  text-decoration: none;
+  margin-bottom: 16px;
+  cursor: pointer;
+`;
+
+export const SocialIcon = styled(FaBattleNet)`
+  margin-right: 10px;
+`;
+
+export const WebsiteRights = styled.small`
+  color: #fff;
+  margin-bottom: 16px;
+`;
+
+export const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+`;
+
+export const SocialIconLink = styled.a`
+  color: #fff;
+  font-size: 24px;
+
+  &:hover {
+    color: #4d5;
+  }
+`;
