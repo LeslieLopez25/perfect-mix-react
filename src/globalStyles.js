@@ -48,4 +48,32 @@ export const Button = styled.button`
   }
 `;
 
+export const Appetizers = styled.Appetizers`
+  background: linear-gradient(to right, #682c0e 0%, #228b22 100%);
+  color: #fff;
+  font-size: 100px;
+`;
+export const Beverages = styled.Beverages`
+  background: linear-gradient(to right, #682c0e 0%, #228b22 100%);
+  color: #fff;
+  font-size: 100px;
+`;
+export const Desserts = styled.Desserts`
+  background: linear-gradient(to right, #682c0e 0%, #228b22 100%);
+  color: #fff;
+  font-size: 100px;
+`;
+
+export const Home = styled.Home`
+  background: linear-gradient(to right, #682c0e 0%, #228b22 100%);
+  color: #fff;
+  font-size: 100px;
+`;
+
+export const Menu = styled.Menu`
+  background: linear-gradient(to right, #682c0e 0%, #228b22 100%);
+  color: #fff;
+  font-size: 100px;
+`;
+
 export default GlobalStyle;

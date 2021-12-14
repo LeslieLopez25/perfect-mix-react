@@ -1,12 +1,13 @@
 import React from "react";
 import GlobalStyle from "./globalStyles";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/HomePage/Home";
-import Menu from "./pages/Menu/Menu";
-import Beverages from "./pages/Beverages/Beverages";
-import Desserts from "./pages/Desserts/Desserts";
-import Appetizers from "./pages/Appetizers/Appetizers";
-import { Navbar, Footer } from "./components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import Beverages from "./pages/Beverages";
+import Desserts from "./pages/Desserts";
+import Appetizers from "./pages/Appetizers";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -16,13 +17,13 @@ function App() {
         <GlobalStyle />
         <ScrollToTop />
         <Navbar />
-        <Switch>
+        <Routes>
           <Route path="/" exact components={Home} />
           <Route path="/menu" exact components={Menu} />
           <Route path="/beverages" exact components={Beverages} />
           <Route path="/desserts" exact components={Desserts} />
           <Route path="/appetizers" exact components={Appetizers} />
-        </Switch>
+        </Routes>
         <Footer />
       </Router>
     </>

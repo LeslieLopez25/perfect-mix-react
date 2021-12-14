@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import HeroImg from "../../images/hero-img.png";
 
 export const HeroContainer = styled.div`
   background: #682c0e;
   height: 100%;
 `;
 
-HeroContent = styled.div`
+export const HeroContent = styled.div`
   height: calc(100% - 80px);
   max-height: 100%;
   padding: 0 calc((100vw - 1300px) / 2);

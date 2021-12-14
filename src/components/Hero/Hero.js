@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from "../Navbar";
+import NavBar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar";
 import {
   HeroContainer,
@@ -27,7 +27,6 @@ const Hero = () => {
           <HeroH1>We’ve Got Something For Everyone</HeroH1>
           <HeroP>The flavours of your wish! Order to go!</HeroP>
           <HeroBtn>Order</HeroBtn>
-          <HeroImg></HeroImg>
         </HeroItems>
       </HeroContent>
     </HeroContainer>
