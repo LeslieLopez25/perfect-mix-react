@@ -1,12 +1,12 @@
 import React from "react";
-import "../globalStyles";
-import Cards from "../components/Cards";
-import Hero from "../components/Hero/Hero";
+import "../../App.css";
+import Cards from "../Cards";
+import HeroSection from "../HeroSection";
 
 function Home() {
   return (
     <>
-      <Hero />
+      <HeroSection />
       <Cards />
     </>
   );

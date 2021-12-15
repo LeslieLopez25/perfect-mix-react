@@ -1,10 +1,6 @@
 import React from "react";
-import "../globalStyles";
+import "../../App.css";
 
 export default function Appetizers() {
-  return (
-    <Appetizers>
-      <h1>Appetizers</h1>
-    </Appetizers>
-  );
+  return <h1 className="appetizers">APPETIZERS</h1>;
 }

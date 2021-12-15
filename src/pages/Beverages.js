@@ -1,10 +1,6 @@
 import React from "react";
-import "../globalStyles";
+import "../../App.css";
 
 export default function Beverages() {
-  return (
-    <Beverages>
-      <h1>Beverages</h1>
-    </Beverages>
-  );
+  return <h1 className="beverages">BEVERAGES</h1>;
 }

@@ -1,26 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
-import { Button } from "../../globalStyles";
-import {
-  Nav,
-  NavbarContainer,
-  NavLogo,
-  NavIcon,
-  MobileIcon,
-  NavMenu,
-  NavItem,
-  NavLinks,
-  NavItemBtn,
-  NavBtnLink
-} from "./NavbarElements";
+import { Button } from "../Button";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -33,53 +22,59 @@ const Navbar = () => {
     showButton();
   }, []);
 
+  window.addEventListener("resize", showButton);
+
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav>
-          <NavbarContainer>
-            <NavLogo to="/" onClick={closeMobileMenu}>
-              <NavIcon />
-              The Perfect Mix
-            </NavLogo>
-            <MobileIcon onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
-            </MobileIcon>
-            <NavMenu onClick={handleClick} click={click}>
-              <NavItem>
-                <NavLinks to="/">Home</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to="/">Menu</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to="/">Beverages</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to="/">Desserts</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to="/">Appetizers</NavLinks>
-              </NavItem>
-              <NavItemBtn>
-                {button ? (
-                  <NavBtnLink to="/order">
-                    <Button primary>Order</Button>
-                  </NavBtnLink>
-                ) : (
-                  <NavBtnLink to="/order">
-                    <Button fontBig primary>
-                      Order
-                    </Button>
-                  </NavBtnLink>
-                )}
-              </NavItemBtn>
-            </NavMenu>
-          </NavbarContainer>
-        </Nav>
-      </IconContext.Provider>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            JOURNEY
+            <i class="fas fa-map-marked-alt" />
+          </Link>
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          </div>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/services"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Services
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/products"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Products
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/sign-up"
+                className="nav-links-mobile"
+                onClick={closeMobileMenu}
+              >
+                Sign Up
+              </Link>
+            </li>
+          </ul>
+          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+        </div>
+      </nav>
     </>
   );
-};
+}
 
 export default Navbar;

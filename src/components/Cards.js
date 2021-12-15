@@ -1,25 +1,19 @@
 import React from "react";
+import "./Cards.css";
 import CardItem from "./CardItem";
-import "./CardsElements.js";
-import {
-  Card,
-  CardsContainer,
-  CardsWrapper,
-  CardsItems
-} from "./CardsElements";
-import Img1 from "../images/display-1.jpg";
-import Img2 from "../images/display-2.jpg";
-import Img3 from "../images/display-3.jpg";
-import Img4 from "../images/display-4.jpg";
-import Img5 from "../images/display-4.jpg";
+import Img1 from "../images/img-8.jpg";
+import Img2 from "../images/img-1.jpg";
+import Img3 from "../images/img-2.jpg";
+import Img4 from "../images/img-3.jpg";
+import Img5 from "../images/img-4.jpg";
 
 function Cards() {
   return (
-    <Card>
+    <div className="cards">
       <h1>Check out these EPIC Destinations!</h1>
-      <CardsContainer>
-        <CardsWrapper>
-          <CardsItems>
+      <div className="cards__container">
+        <div className="cards__wrapper">
+          <ul className="cards__items">
             <CardItem
               src={Img1}
               text="Explore The Amazon Jungle And All Its Wonder"
@@ -32,8 +26,8 @@ function Cards() {
               label="Luxury"
               path="/services"
             />
-          </CardsItems>
-          <CardsItems>
+          </ul>
+          <ul className="cards__items">
             <CardItem
               src={Img3}
               text="Set Sail In The Pacific Ocean Visiting Uncharted Waters"
@@ -52,10 +46,10 @@ function Cards() {
               label="Adrenaline"
               path="/sign-up"
             />
-          </CardsItems>
-        </CardsWrapper>
-      </CardsContainer>
-    </Card>
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 }
 

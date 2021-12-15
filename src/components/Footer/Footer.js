@@ -1,111 +1,122 @@
 import React from "react";
-import { Button } from "../../globalStyles";
-import {
-  FooterContainer,
-  FooterSubscription,
-  FooterSubHeading,
-  FooterSubText,
-  Form,
-  FormInput,
-  FooterLinksContainer,
-  FooterLinksWrapper,
-  FooterLinksItems,
-  FooterLinkTitle,
-  FooterLink,
-  SocialMedia,
-  SocialMediaWrap,
-  SocialLogo,
-  WebsiteRights,
-  SocialIcons,
-  SocialIcon,
-  SocialIconLink
-} from "./FooterElements";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin
-} from "react-icons/fa";
+import "./Footer.css";
+import { Button } from "../Button";
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+function Footer() {
   return (
-    <FooterContainer>
-      <FooterSubscription>
-        <FooterSubHeading>
-          Join our exclusive membership to receive the latest news and trends
-        </FooterSubHeading>
-        <FooterSubText>You can unsubscribe at any time.</FooterSubText>
-        <Form>
-          <FormInput name="email" type="email" placeholder="Your Email" />
-          <Button fontBig>Subscribe</Button>
-        </Form>
-      </FooterSubscription>
-      <FooterLinksContainer>
-        <FooterLinksWrapper>
-          <FooterLinksItems>
-            <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Services</FooterLink>
-          </FooterLinksItems>
-          <FooterLinksItems>
-            <FooterLinkTitle>Contact</FooterLinkTitle>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Services</FooterLink>
-          </FooterLinksItems>
-          <FooterLinksItems>
-            <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Services</FooterLink>
-          </FooterLinksItems>
-          <FooterLinksItems>
-            <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Services</FooterLink>
-          </FooterLinksItems>
-        </FooterLinksWrapper>
-      </FooterLinksContainer>
-      <SocialMedia>
-        <SocialMediaWrap>
-          <SocialLogo to="/">
-            <SocialIcon />
-            The Perfect Mix
-          </SocialLogo>
-          <WebsiteRights>The Perfect Mix © 2021</WebsiteRights>
-          <SocialIcons>
-            <SocialIconLink href="/" target="_blank" aria-label="Facebook">
-              <FaFacebook />
-            </SocialIconLink>
-            <SocialIconLink href="/" target="_blank" aria-label="Instagram">
-              <FaInstagram />
-            </SocialIconLink>
-            <SocialIconLink
-              href="/"
+    <div className="footer-container">
+      <section className="footer-subscription">
+        <p className="footer-subscription-heading">
+          Join the adventure newsletter to receive our best vacation deals
+        </p>
+        <p className="footer-subscription-text">
+          You can unsubscribe at any time.
+        </p>
+        <div className="input-areas">
+          <form>
+            <input
+              className="footer-input"
+              name="email"
+              type="email"
+              placeholder="Your Email"
+            />
+            <Button buttonStyle="btn--outline">Subscribe</Button>
+          </form>
+        </div>
+      </section>
+      <div class="footer-links">
+        <div className="footer-link-wrapper">
+          <div class="footer-link-items">
+            <h2>About Us</h2>
+            <Link to="/sign-up">How it works</Link>
+            <Link to="/">Testimonials</Link>
+            <Link to="/">Careers</Link>
+            <Link to="/">Investors</Link>
+            <Link to="/">Terms of Service</Link>
+          </div>
+          <div class="footer-link-items">
+            <h2>Contact Us</h2>
+            <Link to="/">Contact</Link>
+            <Link to="/">Support</Link>
+            <Link to="/">Destinations</Link>
+            <Link to="/">Sponsorships</Link>
+          </div>
+        </div>
+        <div className="footer-link-wrapper">
+          <div class="footer-link-items">
+            <h2>Videos</h2>
+            <Link to="/">Submit Video</Link>
+            <Link to="/">Ambassadors</Link>
+            <Link to="/">Agency</Link>
+            <Link to="/">Influencer</Link>
+          </div>
+          <div class="footer-link-items">
+            <h2>Social Media</h2>
+            <Link to="/">Instagram</Link>
+            <Link to="/">Facebook</Link>
+            <Link to="/">Youtube</Link>
+            <Link to="/">Twitter</Link>
+          </div>
+        </div>
+      </div>
+      <section class="social-media">
+        <div class="social-media-wrap">
+          <div class="footer-logo">
+            <Link to="/" className="social-logo">
+              JOURNEY
+              <i class="fas fa-map-marked-alt" />
+            </Link>
+          </div>
+          <small class="website-rights">
+            JOURNEY © {new Date().getFullYear()}
+          </small>
+          <div class="social-icons">
+            <Link
+              class="social-icon-link facebook"
+              to="/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f" />
+            </Link>
+            <Link
+              class="social-icon-link instagram"
+              to="/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram" />
+            </Link>
+            <Link
+              class="social-icon-link youtube"
+              to="/"
               target="_blank"
               aria-label="Youtube"
-              rel="noopener noreferrer"
             >
-              <FaYoutube />
-            </SocialIconLink>
-            <SocialIconLink href="/" target="_blank" aria-label="Twitter">
-              <FaTwitter />
-            </SocialIconLink>
-            <SocialIconLink href="/" target="_blank" aria-label="Linkedin">
-              <FaLinkedin />
-            </SocialIconLink>
-          </SocialIcons>
-        </SocialMediaWrap>
-      </SocialMedia>
-    </FooterContainer>
+              <i class="fab fa-youtube" />
+            </Link>
+            <Link
+              class="social-icon-link twitter"
+              to="/"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter" />
+            </Link>
+            <Link
+              class="social-icon-link twitter"
+              to="/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-};
+}
 
 export default Footer;
