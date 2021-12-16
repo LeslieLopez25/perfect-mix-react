@@ -65,7 +65,7 @@ function Footer() {
           <div class="footer-logo">
             <Link to="/" className="social-logo">
               THE PERFECT MIX
-              <i class="fas fa-map-marked-alt" />
+              <i class="fas fa-mortar-pestle" />
             </Link>
           </div>
           <small class="website-rights">

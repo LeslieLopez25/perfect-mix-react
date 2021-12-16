@@ -9,6 +9,7 @@ import Desserts from "./components/pages/Desserts";
 import Appetizers from "./components/pages/Appetizers";
 import SignUp from "./components/pages/SignUp";
 import Footer from "./components/Footer/Footer";
+import Specials1 from "./components/SpecialsSection/SpecialsArea1";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/appetizers" element={<Appetizers />} />
           <Route path="/sign-up" element={<SignUp />} />
         </Routes>
+        <Specials1 />
         <Footer />
       </Router>
     </>
