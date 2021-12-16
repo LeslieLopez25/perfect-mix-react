@@ -64,12 +64,12 @@ function Footer() {
         <div class="social-media-wrap">
           <div class="footer-logo">
             <Link to="/" className="social-logo">
-              JOURNEY
+              THE PERFECT MIX
               <i class="fas fa-map-marked-alt" />
             </Link>
           </div>
           <small class="website-rights">
-            JOURNEY © {new Date().getFullYear()}
+            THE PERFECT MIX © {new Date().getFullYear()}
           </small>
           <div class="social-icons">
             <Link

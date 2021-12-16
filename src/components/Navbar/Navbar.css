@@ -43,7 +43,7 @@
 .nav-menu {
   display: grid;
   justify-content: end;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(6, auto);
   grid-gap: 0.62rem;
   text-align: center;
   list-style: none;
