@@ -1,12 +1,14 @@
 import React from "react";
 import "../../App.css";
 import { Button } from "../Button";
-import "../SpecialsSection/SpecialArea2.css";
+import "../SpecialsSection/SpecialArea1.css";
 
-function HeroSection() {
+function SpecialsSection() {
   return (
-    <div className="hero-container">
-      <div className="hero-btns">
+    <div className="specials-container">
+      <h1>ADVENTURE AWAITS</h1>
+      <p>What are you waiting for?</p>
+      <div className="specials-btns">
         <Button
           className="btns"
           buttonStyle="btn--outline"
@@ -14,17 +16,9 @@ function HeroSection() {
         >
           GET STARTED
         </Button>
-        <Button
-          className="btns"
-          buttonStyle="btn--primary"
-          buttonSize="btn--large"
-          onClick={console.log("hey")}
-        >
-          WATCH TRAILER <i className="far fa-play-circle" />
-        </Button>
       </div>
     </div>
   );
 }
 
-export default HeroSection;
+export default SpecialsSection;

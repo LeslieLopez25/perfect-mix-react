@@ -1,0 +1,65 @@
+.specials-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    height: 600px;
+    background: linear-gradient(150deg, #006b3c 30%, #228b22 100%);
+}
+
+.specials-container>h1 {
+    color: var(--white);
+    font-size: 100px;
+    margin-top: -100px;
+}
+
+.specials-container>p {
+    color: var(--white);
+    font-size: 32px;
+    font-family: "Signika",
+        'Lucida Sans Unicode',
+        'Lucida Grande',
+        'Lucida Sans',
+        Arial,
+        sans-serif;
+    margin-top: 8px;
+}
+
+.specials-btns {
+    margin-top: 32px;
+}
+
+.specials-btns .btn {
+    margin: 6px;
+}
+
+.fa-play-circle {
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
+    .specials-container>h1 {
+        font-size: 70px;
+        margin-top: -150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .specials-container>h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+
+    .specials-container>p {
+        font-size: 30px;
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

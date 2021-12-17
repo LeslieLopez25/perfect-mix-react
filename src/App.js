@@ -7,9 +7,8 @@ import Menu from "./components/pages/Menu";
 import Beverages from "./components/pages/Beverages";
 import Desserts from "./components/pages/Desserts";
 import Appetizers from "./components/pages/Appetizers";
-import SignUp from "./components/pages/SignUp";
+import Order from "./components/pages/Order";
 import Footer from "./components/Footer/Footer";
-import Specials1 from "./components/SpecialsSection/SpecialsArea1";
 
 function App() {
   return (
@@ -22,9 +21,8 @@ function App() {
           <Route path="/beverages" element={<Beverages />} />
           <Route path="/desserts" element={<Desserts />} />
           <Route path="/appetizers" element={<Appetizers />} />
-          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/order" element={<Order />} />
         </Routes>
-        <Specials1 />
         <Footer />
       </Router>
     </>
