@@ -1,28 +1,29 @@
 .hero-container {
-  background-color: #682c0e;
+  background-image: url("../../images/pattern.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 570px;
-  box-shadow: inset 0 0 0 1000px hsl(197.5, 44.4%, 10.6%, 0.2);
+  box-shadow: inset 0 0 0 1000px hsl(197.5, 44.4%, 10.6%, 0.4);
   object-fit: contain;
 }
 
-.hero-container .left {
+.hero-container>.left {
   width: 500px;
   max-height: 500px;
   display: block;
   position: relative;
   left: -400px;
-  top: 150px;
+  top: 230px;
 }
 
 .hero-container .left>h1 {
   color: #fff;
-  font-size: 100px;
+  font-size: 50px;
   margin-top: -100px;
+  text-transform: uppercase;
 }
 
 .hero-container .left>p {
@@ -35,26 +36,21 @@
     Arial,
     sans-serif;
   margin-top: 8px;
+  text-align: center;
 }
 
 .hero-container .right {
   width: 500px;
   max-height: 500px;
-  border: 1px solid red;
   position: relative;
   left: 800px;
   bottom: 360px;
   content: url("../../images/hero-img.png");
 }
 
-.hero-container>.hero-img {}
-
 .hero-btns {
   margin-top: 32px;
-}
-
-.hero-btns .btn {
-  margin: 6px;
+  text-align: center;
 }
 
 .fa-play-circle {
