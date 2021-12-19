@@ -28,34 +28,26 @@ function Footer() {
       <div class="footer-links">
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
-            <h2>About Us</h2>
-            <Link to="/sign-up">How it works</Link>
-            <Link to="/">Testimonials</Link>
-            <Link to="/">Careers</Link>
-            <Link to="/">Investors</Link>
-            <Link to="/">Terms of Service</Link>
+            <h2>Address</h2>
+            <h3>Av Mexico 2097, Guadalajara, Jalisco, Mexico 44600</h3>
           </div>
           <div class="footer-link-items">
-            <h2>Contact Us</h2>
-            <Link to="/">Contact</Link>
-            <Link to="/">Support</Link>
-            <Link to="/">Destinations</Link>
-            <Link to="/">Sponsorships</Link>
+            <h2>Hours</h2>
+            <h3>
+              Monday - Thursday 10:00AM - 11:00PM Friday - Saturday 11:00 -
+              3:00AM Sunday - Closed
+            </h3>
           </div>
         </div>
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
-            <h2>Videos</h2>
-            <Link to="/">Submit Video</Link>
-            <Link to="/">Ambassadors</Link>
-            <Link to="/">Agency</Link>
-            <Link to="/">Influencer</Link>
+            <h2>Contact Us</h2>
+            <h3>33 3630 2532 theperfectmix@business.com</h3>
           </div>
           <div class="footer-link-items">
             <h2>Social Media</h2>
             <Link to="/">Instagram</Link>
             <Link to="/">Facebook</Link>
-            <Link to="/">Youtube</Link>
             <Link to="/">Twitter</Link>
           </div>
         </div>
@@ -89,28 +81,12 @@ function Footer() {
               <i class="fab fa-instagram" />
             </Link>
             <Link
-              class="social-icon-link youtube"
-              to="/"
-              target="_blank"
-              aria-label="Youtube"
-            >
-              <i class="fab fa-youtube" />
-            </Link>
-            <Link
               class="social-icon-link twitter"
               to="/"
               target="_blank"
               aria-label="Twitter"
             >
               <i class="fab fa-twitter" />
-            </Link>
-            <Link
-              class="social-icon-link twitter"
-              to="/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i class="fab fa-linkedin" />
             </Link>
           </div>
         </div>
