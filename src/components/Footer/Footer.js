@@ -29,20 +29,20 @@ function Footer() {
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
             <h2>Address</h2>
-            <h3>Av Mexico 2097, Guadalajara, Jalisco, Mexico 44600</h3>
+            <p>Av Mexico 2097, Guadalajara, Jalisco, Mexico 44600</p>
           </div>
           <div class="footer-link-items">
             <h2>Hours</h2>
-            <h3>
+            <p>
               Monday - Thursday 10:00AM - 11:00PM Friday - Saturday 11:00 -
-              3:00AM Sunday - Closed
-            </h3>
+              3:00AM Sunday: Closed
+            </p>
           </div>
         </div>
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
             <h2>Contact Us</h2>
-            <h3>33 3630 2532 theperfectmix@business.com</h3>
+            <p>Phone Number: 33 3630 2532 Email: theperfectmix@business.com</p>
           </div>
           <div class="footer-link-items">
             <h2>Social Media</h2>
