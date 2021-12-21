@@ -1,13 +1,12 @@
 .cards {
-  background: linear-gradient(90deg,
-      hsl(203.8, 63.7%, 44.3%) 0%,
-      hsl(195.7, 93.4%, 70.4%) 20%,
-      hsl(0, 0%, 100%) 100%);
-  padding: 4rem;
+  background: linear-gradient(150deg,
+      #f58b54 0, #006b3c 100%);
+  padding: 64px;
 }
 
 h1 {
   text-align: center;
+  color: #fff;
 }
 
 .cards__container {
@@ -15,23 +14,23 @@ h1 {
   flex-flow: column;
   align-items: center;
   width: 90%;
-  max-width: 70rem;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .cards__wrapper {
   position: relative;
-  margin: 3.12rem 0 2.81rem;
+  margin: 50px 0 45px;
 }
 
 .cards__items {
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .cards__item {
   display: flex;
   flex: 1;
-  margin: 0 1rem;
+  margin: 0 16px;
   border-radius: 10px;
 }
 
@@ -39,9 +38,9 @@ h1 {
   display: flex;
   flex-flow: column;
   text-decoration: none;
-  box-shadow: 0 6px 20px hsl(219.2, 100%, 61%, 0.17);
-  -webkit-filter: drop-shadow(0 6px 20px hsl(219.2, 100%, 61%, 0.017));
-  filter: drop-shadow(0 6px 20px hsl(219.2, 100%, 61%, 0.017));
+  box-shadow: 0 6px 20px #682c0e;
+  -webkit-filter: drop-shadow(0 6px 20px #228b22);
+  filter: drop-shadow(0 6px 20px #228b22);
   border-radius: 10px;
   width: 100%;
   overflow: hidden;
@@ -61,15 +60,15 @@ h1 {
 
 .cards__item__pic-wrap::after {
   content: attr(data-category);
-  background-color: var(--phthalo-blue);
+  background-color: #006994;
   color: var(--white);
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 700;
-  margin-left: 0.62rem;
-  padding: 0.37rem 0.5rem;
+  margin-left: 10px;
+  padding: 6px 8px;
   position: absolute;
   bottom: 0;
-  max-width: calc((100%) - 3.75rem);
+  max-width: calc((100%) - 60px);
   box-sizing: border-box;
 }
 
@@ -93,29 +92,29 @@ h1 {
 }
 
 .cards__item__info {
-  padding: 1.25rem 1.87rem 1.87rem;
+  padding: 20px 30px 30px;
 }
 
 .cards__item__text {
-  color: hsl(224.6, 32.1%, 21.4%);
-  font-size: 1.12rem;
-  line-height: 1.5rem;
+  color: #080808;
+  font-size: 24px;
+  line-height: 24px;
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;
   }
 }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 1024px) {
   .cards__items {
     display: flex;
   }
 }
 
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 1024px) {
   .cards__item {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
 }

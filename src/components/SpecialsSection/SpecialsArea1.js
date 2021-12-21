@@ -6,16 +6,21 @@ import "../SpecialsSection/SpecialArea1.css";
 function SpecialsSection() {
   return (
     <div className="specials-container">
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
-      <div className="specials-btns">
-        <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-        >
-          GET STARTED
-        </Button>
+      <h1>Specials This Week For The Menu And Desserts</h1>
+      <div className="specials-wrapper">
+        <div className="specials-img menu">
+          <p>What are you waiting for?</p>
+          <p>$5.99</p>
+          <div className="specials-btns">
+            <Button
+              className="btns"
+              buttonStyle="btn--outline"
+              buttonSize="btn--large"
+            >
+              Add To Cart
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );

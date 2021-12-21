@@ -10,41 +10,41 @@ import Img5 from "../images/display-5.jpg";
 function Cards() {
   return (
     <div className="cards">
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1>What Are You Eating Today?</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
               src={Img1}
-              text="Explore The Amazon Jungle And All Its Wonder"
-              label="Adventure"
-              path="/services"
+              text="Fresh Tortillas Made Everyday"
+              label="Homemade"
+              path="/appetizers"
             />
             <CardItem
               src={Img2}
-              text="Travel Through The Isles Of Scilly"
-              label="Luxury"
-              path="/services"
+              text="Delicious Fruits Mixed With Our Main Menu And Desserts"
+              label="Fresh"
+              path="/Desserts"
             />
           </ul>
           <ul className="cards__items">
             <CardItem
               src={Img3}
-              text="Set Sail In The Pacific Ocean Visiting Uncharted Waters"
-              label="Mystery"
-              path="/services"
+              text="Delicious And Cold Beverages"
+              label="Refreshing"
+              path="/beverages"
             />
             <CardItem
               src={Img4}
-              text="Take A Step Into Ancient Japan and Visit Mt. Fuji "
-              label="Venture"
-              path="/products"
+              text="Hear The Sizzle, Savor The Flavor"
+              label="Mouthwatering"
+              path="/menu"
             />
             <CardItem
               src={Img5}
-              text="Explore The Beautiful Mountainside And Gorgeous Lake At Mt. Chephren in Canada"
-              label="Adrenaline"
-              path="/sign-up"
+              text="Eat Fresh And Delicious Vegetables"
+              label="Natural"
+              path="/order"
             />
           </ul>
         </div>

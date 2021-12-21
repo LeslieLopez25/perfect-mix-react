@@ -8,14 +8,20 @@
 }
 
 .specials-container>h1 {
-    color: var(--white);
-    font-size: 100px;
+    color: #fff;
+    font-size: 12px;
     margin-top: -100px;
 }
 
-.specials-container>p {
-    color: var(--white);
-    font-size: 32px;
+.specials-wrapper {
+    display: flex;
+    width: 300px;
+    margin: 0 32px;
+}
+
+.specials-wrapper>p {
+    color: #fff;
+    font-size: 12px;
     font-family: "Signika",
         'Lucida Sans Unicode',
         'Lucida Grande',
