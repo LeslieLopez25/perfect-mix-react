@@ -15,7 +15,7 @@ function Home() {
       <Banner />
       <Cards />
       <Video />
-      <Specials2 />
+      {/* <Specials2 /> */}
     </>
   );
 }

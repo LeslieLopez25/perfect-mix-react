@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.css";
 import { Button } from "../Button";
-import "../SpecialsSection/SpecialArea2.css";
+import "../SpecialsSection/SpecialArea1.css";
 
 function Specials2Section() {
   return (
