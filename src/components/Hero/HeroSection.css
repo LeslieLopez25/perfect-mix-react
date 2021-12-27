@@ -15,7 +15,7 @@
   max-height: 500px;
   display: block;
   position: relative;
-  left: -400px;
+  left: -300px;
   top: 230px;
 }
 
@@ -43,7 +43,7 @@
   width: 500px;
   max-height: 500px;
   position: relative;
-  left: 800px;
+  left: 650px;
   bottom: 360px;
   content: url("../../images/hero-img.png");
 }

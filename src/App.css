@@ -47,3 +47,17 @@
   color: var(--white);
   font-size: 100px;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  font-family: "Signika",
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+}
