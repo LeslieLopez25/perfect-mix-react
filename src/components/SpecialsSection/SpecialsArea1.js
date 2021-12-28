@@ -3,7 +3,7 @@ import "../../App.css";
 import { Button } from "../Button";
 import Img1 from "../../images/menu-special.jpg";
 import Img2 from "../../images/dessert-special.jpg";
-import "../SpecialsSection/SpecialArea1.css";
+import "../SpecialsSection/SpecialsArea1.css";
 
 function SpecialsSection() {
   return (

@@ -83,7 +83,11 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">Order</Button>}
+          {button && (
+            <Button buttonStyle="btn--primary">
+              <i class="fas fa-shopping-cart" />
+            </Button>
+          )}
         </div>
       </nav>
     </>

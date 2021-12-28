@@ -3,13 +3,13 @@ import "../../App.css";
 import { Button } from "../Button";
 import Img3 from "../../images/appetizers-special.jpg";
 import Img4 from "../../images/drink-special.jpg";
-import "../SpecialsSection/SpecialArea1.css";
+import "../SpecialsSection/SpecialsArea2.css";
 
 function Specials2Section() {
   return (
     <div className="specials-container">
       <h2 className="specials-heading">
-        Specials This Week For The Menu And Desserts
+        Specials This Week For The Appetizers And Beverages
       </h2>
       <div className="specials-wrapper">
         <div className="specials-card">
