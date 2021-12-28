@@ -3,10 +3,10 @@ import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import Home from "./components/pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Menu from "./components/pages/Menu";
-import Beverages from "./components/pages/Beverages";
-import Desserts from "./components/pages/Desserts";
-import Appetizers from "./components/pages/Appetizers";
+import Menu from "./components/pages/Menu/Menu";
+import Beverages from "./components/pages/Beverages/Beverages";
+import Desserts from "./components/pages/Desserts/Desserts";
+import Appetizers from "./components/pages/Appetizers/Appetizers";
 import Order from "./components/pages/Order";
 import Footer from "./components/Footer/Footer";
 

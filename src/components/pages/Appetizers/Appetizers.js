@@ -1,11 +1,11 @@
 import React from "react";
-import "../../App.css";
-import { Button } from "../Button";
-import Img1 from "../../images/appetizers-1.jpg";
-import Img2 from "../../images/appetizers-2.jpg";
-import Img3 from "../../images/appetizers-3.jpg";
-import Img4 from "../../images/appetizers-4.jpg";
-import "../pages/AppetizersElements.css";
+import "../../../App.css";
+import { Button } from "../../Button";
+import Img1 from "../../../images/appetizers-1.jpg";
+import Img2 from "../../../images/appetizers-2.jpg";
+import Img3 from "../../../images/appetizers-3.jpg";
+import Img4 from "../../../images/appetizers-4.jpg";
+import "../../pages/Appetizers/AppetizersElements.css";
 
 export default function Appetizers() {
   return (

@@ -1,16 +1,16 @@
 import React from "react";
-import "../../App.css";
-import { Button } from "../Button";
-import Img1 from "../../images/drink-1.jpg";
-import Img2 from "../../images/drink-2.jpg";
-import Img3 from "../../images/drink-3.jpg";
-import Img4 from "../../images/drink-4.jpg";
-import "../pages/BeveragesElements.css";
+import "../../../App.css";
+import { Button } from "../../Button";
+import Img1 from "../../../images/dessert-1.jpg";
+import Img2 from "../../../images/dessert-2.jpg";
+import Img3 from "../../../images/dessert-3.jpg";
+import Img4 from "../../../images/dessert-4.jpg";
+import "../../pages/Desserts/DessertsElements.css";
 
-export default function Beverages() {
+export default function Desserts() {
   return (
     <div className="specials-container">
-      <h2 className="specials-heading">Beverages</h2>
+      <h2 className="specials-heading">Desserts</h2>
       <div className="specials-wrapper">
         <div className="specials-card">
           <img className="specials-img" src={Img1} alt="Tamales" />
