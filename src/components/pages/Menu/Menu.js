@@ -15,12 +15,12 @@ export default function Menu() {
         <div className="specials-card">
           <img className="specials-img" src={Img1} alt="Tamales" />
           <div className="specials-info">
-            <h3 className="specials-name">Tamales</h3>
+            <h3 className="specials-name">Seafood Enchiladas</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
             </p>
-            <p className="price">$1.50</p>
+            <p className="price">$14.99</p>
             <div className="specials-btns">
               <Button
                 className="btns"
@@ -35,12 +35,12 @@ export default function Menu() {
         <div className="specials-card">
           <img className="specials-img" src={Img2} alt="churros" />
           <div className="specials-info">
-            <h3 className="specials-name">Red Wine</h3>
+            <h3 className="specials-name">Carne Asada Tacos</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
             </p>
-            <p className="price">$9.99</p>
+            <p className="price">$10.99</p>
             <div className="specials-btns">
               <Button
                 className="btns"
@@ -57,12 +57,12 @@ export default function Menu() {
         <div className="specials-card">
           <img className="specials-img" src={Img3} alt="Tamales" />
           <div className="specials-info">
-            <h3 className="specials-name">Tamales</h3>
+            <h3 className="specials-name">Pozole Rojo</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
             </p>
-            <p className="price">$1.50</p>
+            <p className="price">$14.99</p>
             <div className="specials-btns">
               <Button
                 className="btns"
@@ -77,12 +77,12 @@ export default function Menu() {
         <div className="specials-card">
           <img className="specials-img" src={Img4} alt="churros" />
           <div className="specials-info">
-            <h3 className="specials-name">Red Wine</h3>
+            <h3 className="specials-name">Carnitas</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
             </p>
-            <p className="price">$9.99</p>
+            <p className="price">$11.99</p>
             <div className="specials-btns">
               <Button
                 className="btns"

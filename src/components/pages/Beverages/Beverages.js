@@ -15,7 +15,7 @@ export default function Beverages() {
         <div className="specials-card">
           <img className="specials-img" src={Img1} alt="Tamales" />
           <div className="specials-info">
-            <h3 className="specials-name">Tamales</h3>
+            <h3 className="specials-name">Cappuccino</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
@@ -35,7 +35,7 @@ export default function Beverages() {
         <div className="specials-card">
           <img className="specials-img" src={Img2} alt="churros" />
           <div className="specials-info">
-            <h3 className="specials-name">Red Wine</h3>
+            <h3 className="specials-name">Orange Juice</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
@@ -57,7 +57,7 @@ export default function Beverages() {
         <div className="specials-card">
           <img className="specials-img" src={Img3} alt="Tamales" />
           <div className="specials-info">
-            <h3 className="specials-name">Tamales</h3>
+            <h3 className="specials-name">Coca Cola</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
@@ -77,7 +77,7 @@ export default function Beverages() {
         <div className="specials-card">
           <img className="specials-img" src={Img4} alt="churros" />
           <div className="specials-info">
-            <h3 className="specials-name">Red Wine</h3>
+            <h3 className="specials-name">Corona Extra</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
