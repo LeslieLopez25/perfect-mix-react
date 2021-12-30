@@ -13,7 +13,7 @@ export default function Menu() {
       <h2 className="specials-heading">Menu</h2>
       <div className="specials-wrapper">
         <div className="specials-card">
-          <img className="specials-img" src={Img1} alt="Tamales" />
+          <img className="specials-img" src={Img1} alt="seafood-enchiladas" />
           <div className="specials-info">
             <h3 className="specials-name">Seafood Enchiladas</h3>
             <p className="description">
@@ -33,9 +33,9 @@ export default function Menu() {
           </div>
         </div>
         <div className="specials-card">
-          <img className="specials-img" src={Img2} alt="churros" />
+          <img className="specials-img" src={Img2} alt="tacos-de-carne-asada" />
           <div className="specials-info">
-            <h3 className="specials-name">Carne Asada Tacos</h3>
+            <h3 className="specials-name">Tacos de Carne Asada</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
@@ -55,7 +55,7 @@ export default function Menu() {
       </div>
       <div className="specials-wrapper">
         <div className="specials-card">
-          <img className="specials-img" src={Img3} alt="Tamales" />
+          <img className="specials-img" src={Img3} alt="pozole-rojo" />
           <div className="specials-info">
             <h3 className="specials-name">Pozole Rojo</h3>
             <p className="description">
@@ -75,7 +75,7 @@ export default function Menu() {
           </div>
         </div>
         <div className="specials-card">
-          <img className="specials-img" src={Img4} alt="churros" />
+          <img className="specials-img" src={Img4} alt="carnitas" />
           <div className="specials-info">
             <h3 className="specials-name">Carnitas</h3>
             <p className="description">

@@ -13,7 +13,7 @@ export default function Beverages() {
       <h2 className="specials-heading">Beverages</h2>
       <div className="specials-wrapper">
         <div className="specials-card">
-          <img className="specials-img" src={Img1} alt="Tamales" />
+          <img className="specials-img" src={Img1} alt="cappuccino" />
           <div className="specials-info">
             <h3 className="specials-name">Cappuccino</h3>
             <p className="description">
@@ -33,7 +33,7 @@ export default function Beverages() {
           </div>
         </div>
         <div className="specials-card">
-          <img className="specials-img" src={Img2} alt="churros" />
+          <img className="specials-img" src={Img2} alt="orange-juice" />
           <div className="specials-info">
             <h3 className="specials-name">Orange Juice</h3>
             <p className="description">
@@ -55,7 +55,7 @@ export default function Beverages() {
       </div>
       <div className="specials-wrapper">
         <div className="specials-card">
-          <img className="specials-img" src={Img3} alt="Tamales" />
+          <img className="specials-img" src={Img3} alt="coca-cola" />
           <div className="specials-info">
             <h3 className="specials-name">Coca Cola</h3>
             <p className="description">
@@ -75,7 +75,7 @@ export default function Beverages() {
           </div>
         </div>
         <div className="specials-card">
-          <img className="specials-img" src={Img4} alt="churros" />
+          <img className="specials-img" src={Img4} alt="corona-extra" />
           <div className="specials-info">
             <h3 className="specials-name">Corona Extra</h3>
             <p className="description">

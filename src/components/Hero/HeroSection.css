@@ -24,6 +24,9 @@
   font-size: 50px;
   margin-top: -100px;
   text-transform: uppercase;
+  box-shadow: 8px 8px #228b22;
+  margin-bottom: 30px;
+  background-color: hsl(20.5, 89%, 64.5%, 0.7);
 }
 
 .hero-container .left>p {

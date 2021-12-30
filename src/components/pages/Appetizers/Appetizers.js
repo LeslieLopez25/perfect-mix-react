@@ -13,14 +13,14 @@ export default function Appetizers() {
       <h2 className="specials-heading">Appetizers</h2>
       <div className="specials-wrapper">
         <div className="specials-card">
-          <img className="specials-img" src={Img1} alt="Tamales" />
+          <img className="specials-img" src={Img1} alt="taco-cups" />
           <div className="specials-info">
-            <h3 className="specials-name">Tamales</h3>
+            <h3 className="specials-name">Taco Cups</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
             </p>
-            <p className="price">$1.50</p>
+            <p className="price">$0.99</p>
             <div className="specials-btns">
               <Button
                 className="btns"
@@ -33,14 +33,14 @@ export default function Appetizers() {
           </div>
         </div>
         <div className="specials-card">
-          <img className="specials-img" src={Img2} alt="churros" />
+          <img className="specials-img" src={Img2} alt="guacamole" />
           <div className="specials-info">
-            <h3 className="specials-name">Red Wine</h3>
+            <h3 className="specials-name">Guacamole</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
             </p>
-            <p className="price">$9.99</p>
+            <p className="price">$1.99</p>
             <div className="specials-btns">
               <Button
                 className="btns"
@@ -55,9 +55,9 @@ export default function Appetizers() {
       </div>
       <div className="specials-wrapper">
         <div className="specials-card">
-          <img className="specials-img" src={Img3} alt="Tamales" />
+          <img className="specials-img" src={Img3} alt="ceviche" />
           <div className="specials-info">
-            <h3 className="specials-name">Tamales</h3>
+            <h3 className="specials-name">Ceviche</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
@@ -75,14 +75,14 @@ export default function Appetizers() {
           </div>
         </div>
         <div className="specials-card">
-          <img className="specials-img" src={Img4} alt="churros" />
+          <img className="specials-img" src={Img4} alt="taquitos" />
           <div className="specials-info">
-            <h3 className="specials-name">Red Wine</h3>
+            <h3 className="specials-name">Taquitos</h3>
             <p className="description">
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
             </p>
-            <p className="price">$9.99</p>
+            <p className="price">$0.99</p>
             <div className="specials-btns">
               <Button
                 className="btns"
