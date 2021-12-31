@@ -10,7 +10,7 @@
   object-fit: contain;
 }
 
-.hero-container>.left {
+.hero-container > .left {
   width: 500px;
   max-height: 500px;
   display: block;
@@ -19,25 +19,22 @@
   top: 230px;
 }
 
-.hero-container .left>h1 {
+.hero-container .left > h1 {
   color: #fff;
   font-size: 50px;
   margin-top: -100px;
   text-transform: uppercase;
-  box-shadow: 8px 8px #228b22;
+  box-shadow: 8px 8px hsl(120, 60.7%, 33.9%, 0.7);
   margin-bottom: 30px;
   background-color: hsl(20.5, 89%, 64.5%, 0.7);
+  border-radius: 4px;
 }
 
-.hero-container .left>p {
+.hero-container .left > p {
   color: #fff;
   font-size: 32px;
-  font-family: "Signika",
-    'Lucida Sans Unicode',
-    'Lucida Grande',
-    'Lucida Sans',
-    Arial,
-    sans-serif;
+  font-family: "Signika", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
   margin-top: 8px;
   text-align: center;
 }
@@ -61,19 +58,19 @@
 }
 
 @media screen and (max-width: 960px) {
-  .hero-container .left>h1 {
+  .hero-container .left > h1 {
     font-size: 70px;
     margin-top: -150px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hero-container .left>h1 {
+  .hero-container .left > h1 {
     font-size: 50px;
     margin-top: -100px;
   }
 
-  .hero-container .left>p {
+  .hero-container .left > p {
     font-size: 30px;
   }
 

@@ -7,7 +7,7 @@ import Menu from "./components/pages/Menu/Menu";
 import Beverages from "./components/pages/Beverages/Beverages";
 import Desserts from "./components/pages/Desserts/Desserts";
 import Appetizers from "./components/pages/Appetizers/Appetizers";
-import Order from "./components/pages/Order";
+import Cart from "./components/pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Route path="/beverages" element={<Beverages />} />
           <Route path="/desserts" element={<Desserts />} />
           <Route path="/appetizers" element={<Appetizers />} />
-          <Route path="/order" element={<Order />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </Router>

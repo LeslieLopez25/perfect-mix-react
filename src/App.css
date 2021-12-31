@@ -10,7 +10,7 @@
 .beverages,
 .desserts,
 .appetizers,
-.order {
+.cart {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@
   font-size: 100px;
 }
 
-.order {
+.cart {
   background: linear-gradient(150deg, #682c0e 40%, #228b22 100%);
   color: var(--white);
   font-size: 100px;

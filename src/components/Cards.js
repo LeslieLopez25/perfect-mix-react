@@ -44,7 +44,7 @@ function Cards() {
               src={Img5}
               text="Eat Fresh And Delicious Vegetables"
               label="Natural"
-              path="/order"
+              path="/cart"
             />
           </ul>
         </div>
