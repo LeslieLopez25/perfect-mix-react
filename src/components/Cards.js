@@ -24,7 +24,7 @@ function Cards() {
               src={Img2}
               text="Delicious Fruits Mixed With Our Main Menu And Desserts"
               label="Fresh"
-              path="/Desserts"
+              path="/desserts"
             />
           </ul>
           <ul className="cards__items">
