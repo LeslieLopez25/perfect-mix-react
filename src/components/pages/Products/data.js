@@ -22,191 +22,182 @@ import specials4 from "../../images/drink-special.jpg";
 export const Menu = [
   {
     img: food1,
-    alt: "Coffee",
-    name: "Black Coffee",
+    alt: "seafood enchiladas",
+    name: "Seafood Enchiladas",
     desc:
-      "To go java shop redeye spoon cup cream eu whipped extraction coffee.",
-    price: "$1.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$14.99"
   },
 
   {
     img: food2,
-    alt: "Coffee",
-    name: "Latte",
+    alt: "tacos de carne asada",
+    name: "Tacos de Carne Asada",
     desc:
-      "To go java shop redeye spoon cup cream eu whipped extraction coffee.",
-    price: "$1.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$10.99"
   },
   {
     img: food3,
-    alt: "Coffee",
-    name: "Iced coffee",
+    alt: "pozole rojo",
+    name: "Pozole Rojo",
     desc:
-      "To go java shop redeye spoon cup cream eu whipped extraction coffee.",
-    price: "$1.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$14.99"
   },
   {
     img: food4,
-    alt: "Coffee",
-    name: "Iced coffee",
+    alt: "carnitas",
+    name: "Carnitas",
     desc:
-      "To go java shop redeye spoon cup cream eu whipped extraction coffee.",
-    price: "$1.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$12.99"
   }
 ];
 
-export const Beverages = [
+export const BeverageMenu = [
   {
     img: beverages1,
-    alt: "Dessert",
-    name: "Macarrones",
+    alt: "cappuccino",
+    name: "Cappuccino",
     desc:
-      "As iced whipped, redeye aromatic macchiato brewed beans medium sit cortado.",
-    price: "$2.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$1.50"
   },
 
   {
     img: beverages2,
-    alt: "Dessert",
-    name: "Brownies",
+    alt: "orange juice",
+    name: "Orange Juice",
     desc:
-      "As iced whipped, redeye aromatic macchiato brewed beans medium sit cortado.",
-    price: "$2.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$1.99"
   },
   {
     img: beverages3,
-    alt: "Dessert",
-    name: "Chocolate Donut",
+    alt: "coca cola",
+    name: "Coca Cola",
     desc:
-      "As iced whipped, redeye aromatic macchiato brewed beans medium sit cortado.",
-    price: "$2.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$1.50"
   },
   {
     img: beverages4,
-    alt: "Dessert",
-    name: "Chocolate Donut",
+    alt: "corona extra",
+    name: "Corona Extra",
     desc:
-      "As iced whipped, redeye aromatic macchiato brewed beans medium sit cortado.",
-    price: "$2.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$1.99"
   }
 ];
 
 export const Desserts = [
   {
     img: desserts1,
-    alt: "Sandwich",
-    name: "Bacon Cheese Sandwich",
-    desc: "Mug pumpkin spice brewed, and that to go pumpkin spice aromatic.",
-    price: "$3.99",
-    button: "Add to Cart"
+    alt: "tres leches pastel",
+    name: "Tres Leches Pastel",
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$4.99"
   },
 
   {
     img: desserts2,
-    alt: "Sandwich",
-    name: "Egg Sandwich",
-    desc: "Mug pumpkin spice brewed, and that to go pumpkin spice aromatic.",
-    price: "$3.99",
-    button: "Add to Cart"
+    alt: "dessert nachos",
+    name: "Dessert Nachos",
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$6.99"
   },
   {
     img: desserts3,
-    alt: "Sandwich",
-    name: "Ham Sandwich",
-    desc: "Mug pumpkin spice brewed, and that to go pumpkin spice aromatic.",
-    price: "$3.99",
-    button: "Add to Cart"
+    alt: "paletas",
+    name: "Paletas",
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$0.99"
   },
   {
     img: desserts4,
-    alt: "Sandwich",
-    name: "Ham Sandwich",
-    desc: "Mug pumpkin spice brewed, and that to go pumpkin spice aromatic.",
-    price: "$3.99",
-    button: "Add to Cart"
+    alt: "fresas con crema",
+    name: "Fresas Con Crema",
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$3.99"
   }
 ];
 
 export const Appetizers = [
   {
     img: appetizers1,
-    alt: "Soup",
-    name: "Broccoli Soup",
-    desc: "Kopi-luwak crema qui crema cinnamon robusta acerbic steamed.",
-    price: "$6.99",
-    button: "Add to Cart"
+    alt: "taco cups",
+    name: "Taco Cups",
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$0.99"
   },
 
   {
     img: appetizers2,
-    alt: "Soup",
-    name: "Pea Soup",
-    desc: "Kopi-luwak crema qui crema cinnamon robusta acerbic steamed.",
-    price: "$6.99",
-    button: "Add to Cart"
+    alt: "guacamole",
+    name: "Guacamole",
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$1.99"
   },
   {
     img: appetizers3,
-    alt: "Soup",
-    name: "Tomato Soup",
-    desc: "Kopi-luwak crema qui crema cinnamon robusta acerbic steamed.",
-    price: "$6.99",
-    button: "Add to Cart"
+    alt: "ceviche",
+    name: "Ceviche",
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$1.50"
   },
   {
     img: appetizers4,
-    alt: "Soup",
-    name: "Tomato Soup",
-    desc: "Kopi-luwak crema qui crema cinnamon robusta acerbic steamed.",
-    price: "$6.99",
-    button: "Add to Cart"
+    alt: "taquitos",
+    name: "Taquitos",
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$0.99"
   }
 ];
 
-export const Specials = [
+export const SpecialsSection1 = [
   {
     img: specials1,
-    alt: "Special",
-    name: "Belgian Waffle",
+    alt: "tacos de birria",
+    name: "Tacos de Birria",
     desc:
-      "Aromatic ut aroma latte blue mountain, grinder black doppio percolator sugar.",
-    price: "$9.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$5.99"
   },
 
   {
     img: specials2,
-    alt: "Special",
-    name: "Quiche",
+    alt: "churros",
+    name: "Churros",
     desc:
-      "Aromatic ut aroma latte blue mountain, grinder black doppio percolator sugar.",
-    price: "$9.99",
-    button: "Add to Cart"
-  },
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$2.99"
+  }
+];
+
+export const SpecialsSection2 = [
   {
     img: specials3,
-    alt: "Special",
-    name: "Tiramisu",
+    alt: "tamales",
+    name: "Tamales",
     desc:
-      "Aromatic ut aroma latte blue mountain, grinder black doppio percolator sugar.",
-    price: "$9.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$1.50"
   },
   {
     img: specials4,
-    alt: "Special",
-    name: "Tiramisu",
+    alt: "red wine",
+    name: "Red Wine",
     desc:
-      "Aromatic ut aroma latte blue mountain, grinder black doppio percolator sugar.",
-    price: "$9.99",
-    button: "Add to Cart"
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: "$1.50"
   }
 ];
