@@ -1,10 +1,12 @@
-.specials-container {
+import styled from "styled-components";
+
+export const ProductsContainer = styled.div`
     padding: 80px calc((100vw - 1300px) / 2);
     width: 100%;
     min-height: 100%;
     background: linear-gradient(150deg, #682c0e 35%, #006b3c 100%);
     color: #fff;
-}
+`
 
 .specials-container .specials-heading {
     font-size: clamp(32px, 2.5vw, 48px);
