@@ -1,4 +1,6 @@
-.hero-container {
+import styled from "styled-components";
+
+export const HeroContainer = styled.div`
   background-image: url("../../images/pattern.png");
   display: flex;
   flex-direction: column;
@@ -8,18 +10,18 @@
   height: 570px;
   box-shadow: inset 0 0 0 1000px hsl(197.5, 44.4%, 10.6%, 0.4);
   object-fit: contain;
-}
+`;
 
-.hero-container > .left {
+export const HeroLeft = styled.div`
   width: 500px;
   max-height: 500px;
   display: block;
   position: relative;
   left: -300px;
   top: 230px;
-}
+`;
 
-.hero-container .left > h1 {
+export const HeroSlogan = styled.h1`
   color: #fff;
   font-size: 50px;
   margin-top: -100px;
@@ -28,58 +30,41 @@
   margin-bottom: 30px;
   background-color: hsl(20.5, 89%, 64.5%, 0.7);
   border-radius: 4px;
-}
 
-.hero-container .left > p {
+  @media screen and (max-width: 960px) {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+    margin-top: -100px;
+  }
+`;
+
+export const HeroText = styled.p`
   color: #fff;
   font-size: 32px;
   font-family: "Signika", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
   margin-top: 8px;
   text-align: center;
-}
 
-.hero-container .right {
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+`;
+
+export const HeroRight = styled.div`
   width: 500px;
   max-height: 500px;
   position: relative;
   left: 650px;
   bottom: 360px;
   content: url("../../images/hero-img.png");
-}
+`;
 
-.hero-btns {
+export const HeroBtns = styled.div`
   margin-top: 32px;
   text-align: center;
-}
-
-.fa-play-circle {
-  margin-left: 4px;
-}
-
-@media screen and (max-width: 960px) {
-  .hero-container .left > h1 {
-    font-size: 70px;
-    margin-top: -150px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hero-container .left > h1 {
-    font-size: 50px;
-    margin-top: -100px;
-  }
-
-  .hero-container .left > p {
-    font-size: 30px;
-  }
-
-  .btn-mobile {
-    display: block;
-    text-decoration: none;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
+`;

@@ -1,15 +1,38 @@
 import React from "react";
-import "../../../App.css";
-import "../../pages/Products/ProductElements.css";
+import {
+  ProductsContainer,
+  ProductWrapper,
+  ProductsHeading,
+  ProductTitle,
+  ProductCard,
+  ProductImg,
+  ProductInfo,
+  ProductDesc,
+  ProductPrice,
+  ProductButton
+} from "./ProductsElements";
 
-export default function Products(props) {
-  const { product } = props;
+const Products = ({ heading, data }) => {
   return (
-    <div>
-      <img className="small" src="{product.image}" alt="{product.name}" />
-      <h3>{product.name}</h3>
-      <div>{product.desc}</div>
-      <div>${product.price}</div>
-    </div>
+    <ProductsContainer>
+      <ProductsHeading>{heading}</ProductsHeading>
+      <ProductWrapper>
+        {data.map((product, index) => {
+          return (
+            <ProductCard key={index}>
+              <ProductImg src={product.img} alt={product.alt} />
+              <ProductInfo>
+                <ProductTitle>{product.name}</ProductTitle>
+                <ProductDesc>{product.desc}</ProductDesc>
+                <ProductPrice>{product.price}</ProductPrice>
+                <ProductButton>{product.button}</ProductButton>
+              </ProductInfo>
+            </ProductCard>
+          );
+        })}
+      </ProductWrapper>
+    </ProductsContainer>
   );
-}
+};
+
+export default Products;
