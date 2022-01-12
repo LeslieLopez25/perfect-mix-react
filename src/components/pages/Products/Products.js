@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../App.css";
+import { Button } from "../../Button";
 import "../../pages/Products/ProductElements.css";
 
 export default function Products(props) {
