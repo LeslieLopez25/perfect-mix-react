@@ -8,6 +8,49 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
+.home,
+.menu,
+.beverages,
+.desserts,
+.appetizers,
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  height: 600px;
+}
+
+.menu {
+  background: linear-gradient(150deg, #682c0e 40%, #228b22 100%);
+  color: var(--white);
+  font-size: 100px;
+}
+
+.beverages {
+  background: linear-gradient(150deg, #682c0e 40%, #228b22 100%);
+  color: var(--white);
+  font-size: 6.25rem;
+}
+
+.desserts {
+  background: linear-gradient(150deg, #682c0e 40%, #228b22 100%);
+  color: var(--white);
+  font-size: 100px;
+}
+
+.appetizers {
+  background: linear-gradient(150deg, #682c0e 40%, #228b22 100%);
+  color: var(--white);
+  font-size: 100px;
+}
+
+.cart {
+  background: linear-gradient(150deg, #682c0e 40%, #228b22 100%);
+  color: var(--white);
+  font-size: 100px;
+}
+
 img {
   width: 100%;
   height: auto;

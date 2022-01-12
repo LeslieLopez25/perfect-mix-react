@@ -1,59 +1,97 @@
-import React, { useState } from "react";
-import {
-  Nav,
-  NavbarContainer,
-  NavLogo,
-  NavIcon,
-  MobileIcon,
-  NavMenu,
-  NavItem,
-  NavLink
-} from "./NavbarElements";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
+import React, { useState, useEffect } from "react";
+import { Button } from "../Button";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener("resize", showButton);
+
   return (
     <>
-      <IconContext.Provider value={{ color: "#682c0e" }}>
-        <Nav>
-          <NavbarContainer>
-            <NavLogo to="/" onClick={closeMobileMenu}>
-              THE PERFECT MIX <NavIcon />
-            </NavLogo>
-            <MobileIcon onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
-            </MobileIcon>
-            <NavMenu onClick={handleClick} click={click}>
-              <NavItem>
-                <NavLink to="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/menu">Menu</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/beverages">Beverages</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/desserts">Desserts</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/appetizers">Appetizers</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/cart">Place Order</NavLink>
-              </NavItem>
-            </NavMenu>
-          </NavbarContainer>
-        </Nav>
-      </IconContext.Provider>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            THE PERFECT MIX
+            <i class="fas fa-mortar-pestle" />
+          </Link>
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          </div>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/menu" className="nav-links" onClick={closeMobileMenu}>
+                Menu
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/beverages"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Beverages
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/desserts"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Desserts
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/appetizers"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Appetizers
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/cart"
+                className="nav-links-mobile"
+                onClick={closeMobileMenu}
+              >
+                Place Order
+              </Link>
+            </li>
+          </ul>
+          {button && (
+            <Button buttonStyle="btn--primary">
+              <i class="fas fa-shopping-cart" />
+            </Button>
+          )}
+        </div>
+      </nav>
     </>
   );
-};
+}
 
 export default Navbar;

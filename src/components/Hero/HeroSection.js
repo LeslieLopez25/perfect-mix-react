@@ -1,22 +1,15 @@
 import React from "react";
 import "../../App.css";
 import { Button } from "../Button";
-import {
-  HeroContainer,
-  HeroLeft,
-  HeroBtns,
-  HeroRight,
-  HeroSlogan,
-  HeroText
-} from "../Hero/HeroElements";
+import "../Hero/HeroSection.css";
 
 function HeroSection() {
   return (
-    <HeroContainer>
-      <HeroLeft>
-        <HeroSlogan>Food from scratch with love from our kitchens</HeroSlogan>
-        <HeroText>What are you waiting for?</HeroText>
-        <HeroBtns>
+    <div className="hero-container">
+      <div className="left">
+        <h1>Food from scratch with love from our kitchens</h1>
+        <p>What are you waiting for?</p>
+        <div className="hero-btns">
           <Button
             className="btns"
             buttonStyle="btn--primary"
@@ -24,10 +17,10 @@ function HeroSection() {
           >
             Place Order
           </Button>
-        </HeroBtns>
-      </HeroLeft>
-      <HeroRight />
-    </HeroContainer>
+        </div>
+        <div className="right"></div>
+      </div>
+    </div>
   );
 }
 
