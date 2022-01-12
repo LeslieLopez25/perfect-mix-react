@@ -1,69 +1,66 @@
 import React from "react";
-import {FooterContainer, FooterSubscription, FooterSubscriptionHeading, FooterSubscriptionText, InputAreas, FooterInput, FooterLinks, FooterLinkWrapper, FooterLinkItems,  }"./Footer.css";
-import { Button } from "../Button";
+import {
+  FooterContainer,
+  FooterLinks,
+  FooterLinkWrapper,
+  FooterLinkItems,
+  FooterH2,
+  FooterP,
+  SocialMedia,
+  SocialMediaWrap,
+  SocialIcon,
+  WebsiteRights,
+  SocialIcons,
+  SocialIconLink
+} from "./FooterElements";
 import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="footer-container">
-      <section className="footer-subscription">
-        <p className="footer-subscription-heading">
-          Join the adventure newsletter to receive our best vacation deals
-        </p>
-        <p className="footer-subscription-text">
-          You can unsubscribe at any time.
-        </p>
-        <div className="input-areas">
-          <form>
-            <input
-              className="footer-input"
-              name="email"
-              type="email"
-              placeholder="Your Email"
-            />
-            <Button buttonStyle="btn--primary">Subscribe</Button>
-          </form>
-        </div>
-      </section>
-      <div class="footer-links">
-        <div className="footer-link-wrapper">
-          <div class="footer-link-items">
-            <h2>Address</h2>
-            <p>Av Mexico 2097, Guadalajara, Jalisco, Mexico 44600</p>
-          </div>
-          <div class="footer-link-items">
-            <h2>Hours</h2>
-            <p>
+    <FooterContainer>
+      <FooterLinks>
+        <FooterLinkWrapper>
+          <FooterLinkItems>
+            <FooterH2>Address</FooterH2>
+            <FooterP>
+              Av Mexico 2097, Guadalajara, Jalisco, Mexico 44600
+            </FooterP>
+          </FooterLinkItems>
+          <FooterLinkItems>
+            <FooterH2>Hours</FooterH2>
+            <FooterP>
               Monday - Thursday 10:00AM - 11:00PM Friday - Saturday 11:00 -
               3:00AM Sunday: Closed
-            </p>
-          </div>
-        </div>
-        <div className="footer-link-wrapper">
-          <div class="footer-link-items">
-            <h2>Contact Us</h2>
-            <p>Phone Number: 33 3630 2532 Email: theperfectmix@business.com</p>
-          </div>
-          <div class="footer-link-items">
-            <h2>Social Media</h2>
+            </FooterP>
+          </FooterLinkItems>
+        </FooterLinkWrapper>
+        <FooterLinkWrapper>
+          <FooterLinkItems>
+            <FooterH2>Contact Us</FooterH2>
+            <FooterP>
+              Phone Number: 33 3630 2532 Email: theperfectmix@business.com
+            </FooterP>
+          </FooterLinkItems>
+          <FooterLinkItems>
+            <FooterH2>Social Media</FooterH2>
             <Link to="/">Instagram</Link>
             <Link to="/">Facebook</Link>
             <Link to="/">Twitter</Link>
-          </div>
-        </div>
-      </div>
-      <section class="social-media">
-        <div class="social-media-wrap">
-          <div class="footer-logo">
-            <Link to="/" className="social-logo">
+          </FooterLinkItems>
+        </FooterLinkWrapper>
+      </FooterLinks>
+      <SocialMedia>
+        <SocialMediaWrap>
+          <FooterLogo>
+            <SocialIconLink Link to="/">
               THE PERFECT MIX
-              <i class="fas fa-mortar-pestle" />
-            </Link>
-          </div>
-          <small class="website-rights">
+              <SocialIcon />
+            </SocialIconLink>
+          </FooterLogo>
+          <WebsiteRights>
             THE PERFECT MIX © {new Date().getFullYear()}
-          </small>
-          <div class="social-icons">
+          </WebsiteRights>
+          <SocialIcons>
             <Link
               class="social-icon-link facebook"
               to="/"
@@ -88,10 +85,10 @@ function Footer() {
             >
               <i class="fab fa-twitter" />
             </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+          </SocialIcons>
+        </SocialMediaWrap>
+      </SocialMedia>
+    </FooterContainer>
   );
 }
 

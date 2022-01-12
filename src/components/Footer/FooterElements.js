@@ -1,11 +1,15 @@
-.footer-container {
+import styled from "styled-components";
+import { FaMortarPestle } from "react-icons/fa";
+import {Link} from "react-router-dom";
+
+export const FooterContainer = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #682c0e;
   padding: 64px 0 32px 0;
-}
+`
 
 .footer-subscription {
   display: flex;
