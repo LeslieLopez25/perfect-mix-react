@@ -7,43 +7,6 @@
   padding: 64px 0 32px 0;
 }
 
-.footer-subscription {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 24px;
-  padding: 24px;
-}
-
-.footer-subscription>p {
-  font-family: "Signika", 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-}
-
-.footer-subscription-heading {
-  font-size: 24px;
-  margin-bottom: 24px;
-}
-
-.footer-subscription-text {
-  font-size: 20px;
-  margin-bottom: 24px;
-}
-
-.footer-input {
-  font-size: 18px;
-  margin-right: 10px;
-  margin-bottom: 16px;
-  padding: 8px 10px;
-  border: none;
-  border-radius: 2px;
-  outline: none;
-  border: 1px solid #fff;
-}
-
 .footer-links {
   display: flex;
   justify-content: center;
@@ -84,14 +47,6 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s ease-out;
-}
-
-.footer-email-form h2 {
-  margin-bottom: 32px;
-}
-
-.footer-input::placeholder {
-  color: #080808;
 }
 
 /* Social Icons */
@@ -174,14 +129,6 @@
 
   .footer-links {
     padding-top: 32px;
-  }
-
-  .footer-input {
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%;
   }
 
   .footer-link-wrapper {
