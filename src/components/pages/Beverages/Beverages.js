@@ -82,7 +82,7 @@ export default function Beverages() {
               Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib
               chicken and bacon peppers chicken wing.
             </p>
-            <p className="price">$9.99</p>
+            <p className="price">$2.99</p>
             <div className="specials-btns">
               <Button
                 className="btns"
