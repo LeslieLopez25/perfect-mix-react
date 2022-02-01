@@ -14,7 +14,7 @@ export default function Menu() {
     <div className="specials-container">
       <h2 className="specials-heading">Menu</h2>
       <div className="specials-wrapper">
-        <div className="menuList">
+        <div className="productList">
           {MenuList.map((productList, key) => {
             return (
               <Products
