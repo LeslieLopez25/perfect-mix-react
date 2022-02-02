@@ -7,6 +7,7 @@ import Img3 from "../../../images/food-3.jpg";
 import Img4 from "../../../images/food-4.jpg";
 import { MenuList } from "../../Products/data";
 import Products from "../../Products/Products";
+import "../../Products/ProductElements.css";
 import "../../pages/Menu/MenuElements.css";
 
 export default function Menu() {
@@ -14,7 +15,7 @@ export default function Menu() {
     <div className="specials-container">
       <h2 className="specials-heading">Menu</h2>
       <div className="specials-wrapper">
-        <div className="productList">
+        <div className="productCard">
           {MenuList.map((productList, key) => {
             return (
               <Products

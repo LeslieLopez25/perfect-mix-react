@@ -5,6 +5,20 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  font-family: "Signika",
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+}
+
 .home,
 .menu,
 .beverages,
@@ -46,18 +60,4 @@
   background: linear-gradient(150deg, #682c0e 40%, #228b22 100%);
   color: var(--white);
   font-size: 100px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-p {
-  font-family: "Signika",
-    'Lucida Sans Unicode',
-    'Lucida Grande',
-    'Lucida Sans',
-    Arial,
-    sans-serif;
 }
