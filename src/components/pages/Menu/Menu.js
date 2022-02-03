@@ -1,33 +1,43 @@
 import React from "react";
 import "../../../App.css";
 import { Button } from "../../Button";
-import Img1 from "../../../images/food-1.jpg";
-import Img2 from "../../../images/food-2.jpg";
-import Img3 from "../../../images/food-3.jpg";
-import Img4 from "../../../images/food-4.jpg";
+// import Img1 from "../../../images/food-1.jpg";
+// import Img2 from "../../../images/food-2.jpg";
+// import Img3 from "../../../images/food-3.jpg";
+// import Img4 from "../../../images/food-4.jpg";
 import { MenuList } from "../../Products/data";
 import Products from "../../Products/Products";
 import "../../Products/ProductElements.css";
-import "../../pages/Menu/MenuElements.css";
+// import "../../pages/Menu/MenuElements.css";
 
 export default function Menu() {
   return (
     <div className="specials-container">
       <h2 className="specials-heading">Menu</h2>
-      <div className="specials-wrapper">
-        <div className="productCard">
-          {MenuList.map((productList, key) => {
-            return (
-              <Products
-                key={key}
-                image={productList.image}
-                name={productList.name}
-                desc={productList.desc}
-                price={productList.price}
-              />
-            );
-          })}
+      <div className="product-card">
+        {MenuList.map((productList, key) => {
+          return (
+            <Products
+              key={key}
+              image={productList.image}
+              name={productList.name}
+              desc={productList.desc}
+              price={productList.price}
+              button={productList.Button}
+            />
+          );
+        })}
+        <div className="specials-btns">
+          <Button
+            className="btns"
+            buttonStyle="btn--primary"
+            buttonSize="btn--large"
+          >
+            Add To Cart
+          </Button>
         </div>
+      </div>
+      {/* <div className="specials-wrapper">
         <div className="specials-card">
           <img className="specials-img" src={Img1} alt="seafood-enchiladas" />
           <div className="specials-info">
@@ -68,8 +78,8 @@ export default function Menu() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="specials-wrapper">
+      </div> */}
+      {/* <div className="specials-wrapper">
         <div className="specials-card">
           <img className="specials-img" src={Img3} alt="pozole-rojo" />
           <div className="specials-info">
@@ -110,7 +120,7 @@ export default function Menu() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
