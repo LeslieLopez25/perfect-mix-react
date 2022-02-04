@@ -1,15 +1,21 @@
 import React from "react";
+import { Button } from "../Button";
 
 function Product({ image, name, desc, price }) {
   return (
-    <div className="product-container">
-      <div className="product-wrapper">
-        <div className="product-card">
-          <img src={image} alt={image} />
-          <h1> {name} </h1>
-          <p> {desc} </p>
-          <h3> ${price} </h3>
-        </div>
+    <div className="productList">
+      <img src={image} alt={image} />
+      <h3> {name} </h3>
+      <p> {desc} </p>
+      <h4> ${price} </h4>
+      <div className="product-btns">
+        <Button
+          className="btns"
+          buttonStyle="btn--primary"
+          buttonSize="btn--large"
+        >
+          Add To Cart
+        </Button>
       </div>
     </div>
   );
