@@ -13,12 +13,6 @@
     text-transform: uppercase;
 }
 
-.product-card .product-wrapper {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-    place-items: center;
-}
 
 .product-container .product-info {
     display: flex;
@@ -33,6 +27,10 @@
     line-height: 2;
     width: 300px;
     margin: 0 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .productList img {

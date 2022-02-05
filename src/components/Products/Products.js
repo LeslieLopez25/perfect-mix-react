@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../Button";
+import "../Products/ProductElements.css";
 
 function Product({ image, name, desc, price }) {
   return (
