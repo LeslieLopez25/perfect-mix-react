@@ -10,3 +10,14 @@
     max-height: 1000px;
     padding: 0 16px;
 }
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.video-container {
+    max-height: 400px;
+    object-fit: contain;
+}

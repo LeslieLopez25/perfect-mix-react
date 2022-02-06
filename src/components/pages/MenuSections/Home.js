@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../App.css";
-import Cards from "../Cards/Cards";
+import Cards from "../../Cards/Cards";
 import Specials1 from "../../SpecialsSection/SpecialsArea1";
 import Specials2 from "../../SpecialsSection/SpecialsArea2";
 import Banner from "../../Banners/Banner";

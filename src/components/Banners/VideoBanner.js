@@ -1,5 +1,5 @@
 import React from "react";
-import "../Banners/VideoBanner.css";
+import "../Banners/BannersElements.css";
 import Video1 from "../../video/video.mp4";
 
 function VideoBanner() {
