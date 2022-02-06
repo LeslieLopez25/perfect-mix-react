@@ -14,6 +14,10 @@ import Appetizer1 from "../../images/appetizers-1.jpg";
 import Appetizer2 from "../../images/appetizers-2.jpg";
 import Appetizer3 from "../../images/appetizers-3.jpg";
 import Appetizer4 from "../../images/appetizers-4.jpg";
+import Specials1 from "../../images/menu-special.jpg";
+import Specials2 from "../../images/dessert-special.jpg";
+import Specials3 from "../../images/appetizers-special.jpg";
+import Specials4 from "../../images/drink-special.jpg";
 
 export const MenuList = [
   {
@@ -136,5 +140,39 @@ export const AppetizerList = [
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
     price: 0.99
+  }
+];
+
+export const SpecialsList = [
+  {
+    name: "Tacos de Birria",
+    image: Specials1,
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: 5.99
+  },
+  {
+    name: "Churros",
+    image: Specials2,
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: 2.99
+  }
+];
+
+export const SpecialsList2 = [
+  {
+    name: "Tamales",
+    image: Specials3,
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: 1.5
+  },
+  {
+    name: "Red Wine",
+    image: Specials4,
+    desc:
+      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+    price: 9.99
   }
 ];
