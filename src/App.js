@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
-import Home from "./components/pages/Home";
+import Home from "./components/pages/MenuSections/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Menu from "./components/pages/Menu/Menu";
-import Beverages from "./components/pages/Beverages/Beverages";
-import Desserts from "./components/pages/Desserts/Desserts";
-import Appetizers from "./components/pages/Appetizers/Appetizers";
+import Menu from "./components/pages/MenuSections/Menu";
+import Beverages from "./components/pages/MenuSections/Beverages";
+import Desserts from "./components/pages/MenuSections/Desserts";
+import Appetizers from "./components/pages/MenuSections/Appetizers";
 import Cart from "./components/pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
