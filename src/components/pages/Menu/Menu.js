@@ -8,8 +8,8 @@ export default function Menu() {
   return (
     <div className="product-container">
       <h2 className="product-heading">Menu</h2>
-      <div className="product-card">
-        <div className="product-info">
+      <div className="product-wrapper">
+        <div className="product-card">
           {MenuList.map((productList, key) => {
             return (
               <Products
