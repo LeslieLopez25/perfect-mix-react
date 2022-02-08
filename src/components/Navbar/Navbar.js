@@ -85,7 +85,7 @@ function Navbar() {
           </ul>
           {button && (
             <Button buttonStyle="btn--primary">
-              <i class="fas fa-shopping-cart" />
+              <i class="fas fa-shopping-cart" />({Button.length})
             </Button>
           )}
         </div>
