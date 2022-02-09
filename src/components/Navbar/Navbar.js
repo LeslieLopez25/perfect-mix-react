@@ -28,10 +28,10 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+          <div className="navbar-logo" onClick={closeMobileMenu}>
             THE PERFECT MIX
             <i class="fas fa-mortar-pestle" />
-          </Link>
+          </div>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
