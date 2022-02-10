@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
-import Home from "./components/pages/MenuSections/Home";
+import {
+  Home,
+  Menu,
+  Beverages,
+  Desserts,
+  Appetizers
+} from "./components/ExportMenuSection";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Menu from "./components/pages/MenuSections/Menu";
-import Beverages from "./components/pages/MenuSections/Beverages";
-import Desserts from "./components/pages/MenuSections/Desserts";
-import Appetizers from "./components/pages/MenuSections/Appetizers";
 import Cart from "./components/pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
