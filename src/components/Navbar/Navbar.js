@@ -84,9 +84,11 @@ function Navbar() {
             </li>
           </ul>
           {button && (
-            <Button buttonStyle="btn--primary">
-              <i class="fas fa-shopping-cart" />({Button.length})
-            </Button>
+            <Link to="/cart">
+              <Button buttonStyle="btn--primary">
+                <i class="fas fa-shopping-cart" />({Button.length})
+              </Button>
+            </Link>
           )}
         </div>
       </nav>
