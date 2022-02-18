@@ -13,7 +13,7 @@ function Product({ image, name, desc, price }) {
 
   return (
     <div className="productList">
-      <img src={image} alt={image} />
+      <img src={image} alt={name} />
       <h3> {name} </h3>
       <p> {desc} </p>
       <h4> ${price} </h4>

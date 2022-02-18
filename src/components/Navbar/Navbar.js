@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
-import cart from "./../Products/Products";
+import productList from "./../Products/Products";
 import "./Navbar.css";
 
 function Navbar() {
@@ -17,6 +17,13 @@ function Navbar() {
     } else {
       setButton(true);
     }
+  };
+
+  const [cart, setCart] = useState([]);
+
+  const addToCart = productList => {
+    console.log("Added to cart");
+    setCart([...cart, productList]);
   };
 
   useEffect(() => {
@@ -86,7 +93,10 @@ function Navbar() {
           </ul>
           {button && (
             <Link to="/cart">
-              <Button buttonStyle="btn--primary">
+              <Button
+                onClick={() => addToCart(productList)}
+                buttonStyle="btn--primary"
+              >
                 <i class="fas fa-shopping-cart" />
                 {cart.length === 0 ? "" : cart.length}
               </Button>
