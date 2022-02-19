@@ -7,7 +7,6 @@ function Product({ image, name, desc, price }) {
   const [cart, setCart] = useState([]);
 
   const addToCart = productList => {
-    console.log("Added to cart");
     setCart([...cart, productList]);
   };
 

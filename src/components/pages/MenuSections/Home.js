@@ -1,10 +1,8 @@
 import React from "react";
 import "../../../App.css";
 import Cards from "../../Cards/Cards";
-import Specials1 from "../../SpecialsSection/SpecialsArea1";
-import Specials2 from "../../SpecialsSection/SpecialsArea2";
-import Banner from "../../Banners/Banner";
-import Video from "../../Banners/VideoBanner";
+import { Specials1, Specials2 } from "../../ExportSpecialsSection";
+import { Banner, Video } from "../../ExportBannerSection";
 import HeroSection from "../../../components/Hero/HeroSection";
 
 function Home() {

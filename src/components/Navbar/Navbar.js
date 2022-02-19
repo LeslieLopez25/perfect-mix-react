@@ -22,7 +22,6 @@ function Navbar() {
   const [cart, setCart] = useState([]);
 
   const addToCart = productList => {
-    console.log("Added to cart");
     setCart([...cart, productList]);
   };
 
@@ -97,8 +96,7 @@ function Navbar() {
                 onClick={() => addToCart(productList)}
                 buttonStyle="btn--primary"
               >
-                <i class="fas fa-shopping-cart" />
-                {cart.length === 0 ? "" : cart.length}
+                <i class="fas fa-shopping-cart" /> ({cart.length})
               </Button>
             </Link>
           )}
