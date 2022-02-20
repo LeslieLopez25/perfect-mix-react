@@ -23,7 +23,7 @@ function Product({ image, name, desc, price }) {
           buttonStyle="btn--primary"
           buttonSize="btn--large"
         >
-          Add To Cart
+          Add To Cart ({cart.length})
         </Button>
       </div>
     </div>
