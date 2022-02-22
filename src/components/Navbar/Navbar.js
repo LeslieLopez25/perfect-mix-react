@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
-import productList from "./../Products/Products";
 import "./Navbar.css";
 
 function Navbar() {
@@ -19,11 +18,7 @@ function Navbar() {
     }
   };
 
-  const [cart, setCart] = useState([]);
-
-  const addToCart = productList => {
-    setCart([...cart, productList]);
-  };
+  const [cart] = useState([]);
 
   useEffect(() => {
     showButton();
@@ -92,10 +87,7 @@ function Navbar() {
           </ul>
           {button && (
             <Link to="/cart">
-              <Button
-                onClick={() => addToCart(productList)}
-                buttonStyle="btn--primary"
-              >
+              <Button buttonStyle="btn--primary">
                 <i class="fas fa-shopping-cart" /> ({cart.length})
               </Button>
             </Link>
