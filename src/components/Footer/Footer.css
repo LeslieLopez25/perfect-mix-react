@@ -28,12 +28,9 @@
   box-sizing: border-box;
 }
 
-.footer-link-items h2 {
-  margin-bottom: 16px;
-}
-
 .footer-link-items>h2 {
   color: #fff;
+  margin-bottom: 16px;
 }
 
 .footer-link-items a {
@@ -143,5 +140,20 @@
 @media screen and (max-width: 768px) {
   .footer-container {
     width: 100%;
+  }
+
+  .footer-link-items>p {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .social-icons {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .website-rights {
+    padding-top: 10px;
+    text-align: center;
   }
 }
