@@ -18,8 +18,6 @@ function Navbar() {
     }
   };
 
-  const [cart] = useState([]);
-
   useEffect(() => {
     showButton();
   }, []);
@@ -88,7 +86,7 @@ function Navbar() {
           {button && (
             <Link to="/cart">
               <Button buttonStyle="btn--primary">
-                <i class="fas fa-shopping-cart" /> ({cart.length})
+                <i class="fas fa-shopping-cart" />
               </Button>
             </Link>
           )}
