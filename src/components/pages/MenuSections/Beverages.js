@@ -18,7 +18,6 @@ export default function Beverages() {
                 name={productList.name}
                 desc={productList.desc}
                 price={productList.price}
-                button={productList.Button}
               />
             );
           })}

@@ -7,6 +7,11 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  const [cart, setCart] = useState([]);
+  const addToCart = productList => {
+    setCart([...cart, { ...productList }]);
+  };
+
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -16,12 +21,6 @@ function Navbar() {
     } else {
       setButton(true);
     }
-  };
-
-  const [cart, setCart] = useState([]);
-
-  const addToCart = product => {
-    setCart([...cart, product]);
   };
 
   useEffect(() => {
@@ -91,7 +90,7 @@ function Navbar() {
           </ul>
           {button && (
             <Link to="/cart">
-              <Button buttonStyle="btn--primary">
+              <Button addToCart={addToCart} buttonStyle="btn--primary">
                 <i class="fas fa-shopping-cart" /> ({cart.length})
               </Button>
             </Link>

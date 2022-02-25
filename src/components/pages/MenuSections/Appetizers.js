@@ -18,7 +18,6 @@ export default function Appetizers() {
                 name={productList.name}
                 desc={productList.desc}
                 price={productList.price}
-                button={productList.Button}
               />
             );
           })}

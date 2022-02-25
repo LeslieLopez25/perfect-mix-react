@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "../Button/Button";
 import productList from "./../Products/Products";
 import "../Products/ProductElements.css";
 
-function Product({ image, name, desc, price }) {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = productList => {
-    setCart([...cart, productList]);
-  };
-
+function Product({ addToCart, image, name, desc, price }) {
   return (
     <div className="productList">
       <img src={image} alt={name} />
@@ -23,7 +17,7 @@ function Product({ image, name, desc, price }) {
           buttonStyle="btn--primary"
           buttonSize="btn--large"
         >
-          Add To Cart ({cart.length})
+          Add To Cart
         </Button>
       </div>
     </div>

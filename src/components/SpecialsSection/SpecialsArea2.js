@@ -20,7 +20,6 @@ function Specials2Section() {
                 name={productList.name}
                 desc={productList.desc}
                 price={productList.price}
-                button={productList.Button}
               />
             );
           })}
