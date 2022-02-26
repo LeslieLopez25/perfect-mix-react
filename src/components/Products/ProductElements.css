@@ -29,7 +29,7 @@
     justify-content: center;
 }
 
-.productList {
+.productLineUp {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,29 +38,29 @@
     padding: 0 32px 32px 32px;
 }
 
-.productList img {
+.productLineUp img {
     min-width: 300px;
     max-width: 100%;
     height: 300px;
     box-shadow: 8px 8px #228b22;
 }
 
-.productList p {
+.productLineUp p {
     margin-bottom: 16px;
 }
 
-.productList h3 {
+.productLineUp h3 {
     font-size: 26px;
     font-weight: 700;
     margin-top: 16px;
 }
 
-.productList h4 {
+.productLineUp h4 {
     font-size: 24px;
     margin-bottom: 16px;
 }
 
-.productList>.product-btns .btn {
+.productLineUp>.product-btns .btn {
     margin: 6px;
 }
 

@@ -1,27 +1,27 @@
 import React from "react";
 import { Button } from "../Button/Button";
-import productList from "./../Products/Products";
+import products from "../Products/Products";
 import "../Products/ProductElements.css";
 
-function Product({ addToCart, image, name, desc, price }) {
+export default function Product({ image, name, desc, price }) {
   return (
-    <div className="productList">
-      <img src={image} alt={name} />
-      <h3> {name} </h3>
-      <p> {desc} </p>
-      <h4> ${price} </h4>
-      <div className="product-btns">
-        <Button
-          onClick={() => addToCart(productList)}
-          className="btns"
-          buttonStyle="btn--primary"
-          buttonSize="btn--large"
-        >
-          Add To Cart
-        </Button>
+    <>
+      <div className="productLineUp">
+        <img src={image} alt={name} />
+        <h3> {name} </h3>
+        <p> {desc} </p>
+        <h4> ${price} </h4>
+        <div className="product-btns">
+          <Button
+            onClick={() => addToCart(products)}
+            className="btns"
+            buttonStyle="btn--primary"
+            buttonSize="btn--large"
+          >
+            Add To Cart
+          </Button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
-
-export default Product;

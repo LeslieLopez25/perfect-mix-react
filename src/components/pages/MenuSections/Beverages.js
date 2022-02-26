@@ -6,23 +6,25 @@ import "../../Products/ProductElements.css";
 
 export default function Beverages() {
   return (
-    <div className="product-container">
-      <h2 className="product-heading">Beverages</h2>
-      <div className="product-wrapper">
-        <div className="product-card">
-          {BeverageList.map((productList, key) => {
-            return (
-              <Products
-                key={key}
-                image={productList.image}
-                name={productList.name}
-                desc={productList.desc}
-                price={productList.price}
-              />
-            );
-          })}
+    <>
+      <div className="product-container">
+        <h2 className="product-heading">Beverages</h2>
+        <div className="product-wrapper">
+          <div className="product-card">
+            {BeverageList.map((products, key) => {
+              return (
+                <Products
+                  key={key}
+                  image={products.image}
+                  name={products.name}
+                  desc={products.desc}
+                  price={products.price}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

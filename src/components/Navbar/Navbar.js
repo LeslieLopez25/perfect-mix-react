@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
+import "../Products/Products";
 import "./Navbar.css";
 
 function Navbar() {
@@ -8,8 +9,9 @@ function Navbar() {
   const [button, setButton] = useState(true);
 
   const [cart, setCart] = useState([]);
-  const addToCart = productList => {
-    setCart([...cart, { ...productList }]);
+
+  const addToCart = products => {
+    setCart([...cart, { ...products }]);
   };
 
   const handleClick = () => setClick(!click);
