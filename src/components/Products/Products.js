@@ -3,7 +3,7 @@ import { Button } from "../Button/Button";
 import products from "../Products/Products";
 import "../Products/ProductElements.css";
 
-export default function Product({ image, name, desc, price }) {
+export default function Product({ image, name, desc, price, addToCart }) {
   return (
     <>
       <div className="productLineUp">
