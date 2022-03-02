@@ -35,10 +35,10 @@ function Footer() {
       <section class="social-media">
         <div class="social-media-wrap">
           <div class="footer-logo">
-            <Link to="/" className="social-logo">
+            <div className="social-logo">
               THE PERFECT MIX
               <i class="fas fa-mortar-pestle" />
-            </Link>
+            </div>
           </div>
           <small class="website-rights">
             THE PERFECT MIX © {new Date().getFullYear()}

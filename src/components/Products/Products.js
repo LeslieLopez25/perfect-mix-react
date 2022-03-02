@@ -1,9 +1,8 @@
 import React from "react";
 import { Button } from "../Button/Button";
-import products from "../Products/Products";
 import "../Products/ProductElements.css";
 
-export default function Product(props, { addToCart }) {
+export default function Product(props) {
   return (
     <>
       <div className="productLineUp">
@@ -13,8 +12,6 @@ export default function Product(props, { addToCart }) {
         <h4> ${props.price} </h4>
         <div className="product-btns">
           <Button
-            addToCart={addToCart}
-            onClick={() => addToCart(products)}
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
