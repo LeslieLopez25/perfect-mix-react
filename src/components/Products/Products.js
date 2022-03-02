@@ -3,16 +3,17 @@ import { Button } from "../Button/Button";
 import products from "../Products/Products";
 import "../Products/ProductElements.css";
 
-export default function Product({ image, name, desc, price, addToCart }) {
+export default function Product(props, { addToCart }) {
   return (
     <>
       <div className="productLineUp">
-        <img src={image} alt={name} />
-        <h3> {name} </h3>
-        <p> {desc} </p>
-        <h4> ${price} </h4>
+        <img src={props.image} alt={props.name} />
+        <h3> {props.name} </h3>
+        <p> {props.desc} </p>
+        <h4> ${props.price} </h4>
         <div className="product-btns">
           <Button
+            addToCart={addToCart}
             onClick={() => addToCart(products)}
             className="btns"
             buttonStyle="btn--primary"
