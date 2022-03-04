@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../Button/Button";
 import "../Products/ProductElements.css";
 
-export default function Product(props) {
+export default function Product(props, { addToCart }) {
   return (
     <>
       <div className="productLineUp">
