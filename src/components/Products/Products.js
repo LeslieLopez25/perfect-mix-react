@@ -12,7 +12,6 @@ export default function Product(props, { addToCart }) {
         <h4> ${props.price} </h4>
         <div className="product-btns">
           <Button
-            addToCart={addToCart}
             onClick={() => addToCart(props.products)}
             className="btns"
             buttonStyle="btn--primary"
