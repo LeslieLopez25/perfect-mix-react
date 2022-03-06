@@ -10,7 +10,7 @@ function Navbar() {
   const [cart, setCart] = useState([]);
 
   const addToCart = products => {
-    setCart([...cart, { products }]);
+    setCart([...cart, { ...products }]);
   };
 
   const handleClick = () => setClick(!click);
@@ -91,7 +91,7 @@ function Navbar() {
           </ul>
           {button && (
             <Link to="/cart">
-              <Button addToCart={addToCart} buttonStyle="btn--primary">
+              <Button buttonStyle="btn--primary">
                 <i class="fas fa-shopping-cart" /> ({cart.length})
               </Button>
             </Link>
