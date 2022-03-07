@@ -19,7 +19,6 @@ export default function Appetizers() {
                   name={products.name}
                   desc={products.desc}
                   price={products.price}
-                  addToCart={products.addToCart}
                 />
               );
             })}

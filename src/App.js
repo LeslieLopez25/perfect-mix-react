@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import {
@@ -13,10 +13,16 @@ import Cart from "./components/pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = products => {
+    setCart([...cart, { ...products }]);
+  };
+
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar addToCart={addToCart}>({cart.length})</Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
