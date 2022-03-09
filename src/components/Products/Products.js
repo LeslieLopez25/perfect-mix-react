@@ -12,7 +12,6 @@ export default function Product({ image, name, desc, price, addToCart }) {
         <h4> ${price} </h4>
         <div className="product-btns">
           <Button
-            type="submit"
             onClick={() => addToCart(Product)}
             className="btns"
             buttonStyle="btn--primary"
