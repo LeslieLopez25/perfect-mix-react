@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "../Button/Button";
-import products from "../Products/Products";
 import "../Products/ProductElements.css";
 
 export default function Product({ image, name, desc, price, addToCart }) {
@@ -13,7 +12,8 @@ export default function Product({ image, name, desc, price, addToCart }) {
         <h4> ${price} </h4>
         <div className="product-btns">
           <Button
-            onClick={() => addToCart(products)}
+            type="submit"
+            onClick={() => addToCart(Product)}
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
