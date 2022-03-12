@@ -12,7 +12,7 @@ export default function Product({ image, name, desc, price, addToCart }) {
         <h4> ${price} </h4>
         <div className="product-btns">
           <Button
-            onClick={() => addToCart(Product)}
+            addToCart={addToCart}
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
