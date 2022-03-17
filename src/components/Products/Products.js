@@ -12,6 +12,7 @@ export default function Products({ image, name, desc, price, addToCart }) {
         <h4> ${price} </h4>
         <div className="product-btns">
           <Button
+            onClick={() => alert("adding to cart")}
             addToCart={addToCart}
             className="btns"
             buttonStyle="btn--primary"

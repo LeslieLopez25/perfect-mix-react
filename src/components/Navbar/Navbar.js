@@ -91,7 +91,7 @@ function Navbar() {
           </ul>
           {button && (
             <Link to="/cart">
-              <Button buttonStyle="btn--primary">
+              <Button addToCart={addToCart.products} buttonStyle="btn--primary">
                 <i class="fas fa-shopping-cart" /> ({cart.length})
               </Button>
             </Link>
