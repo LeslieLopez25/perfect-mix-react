@@ -10,7 +10,7 @@
   object-fit: contain;
 }
 
-.hero-container > .left {
+.hero-container>.left {
   width: 500px;
   max-height: 500px;
   display: block;
@@ -19,7 +19,7 @@
   top: 230px;
 }
 
-.hero-container .left > h1 {
+.hero-container .left>h1 {
   color: #fff;
   font-size: 50px;
   margin-top: -100px;
@@ -30,7 +30,7 @@
   border-radius: 4px;
 }
 
-.hero-container .left > p {
+.hero-container .left>p {
   color: #fff;
   font-size: 32px;
   font-family: "Signika", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
@@ -58,19 +58,35 @@
 }
 
 @media screen and (max-width: 960px) {
-  .hero-container .left > h1 {
-    font-size: 70px;
+  .hero-container .left {
+    position: relative;
+    top: 180px;
+    left: -200px;
+  }
+
+  .hero-container .left>h1 {
+    font-size: 60px;
     margin-top: -150px;
+  }
+
+  .hero-container .right {
+    max-width: 500px;
+    width: 400px;
+    position: relative;
+    bottom: 400px;
+    left: 530px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hero-container .left > h1 {
+  .hero-container>.left {}
+
+  .hero-container .left>h1 {
     font-size: 50px;
     margin-top: -100px;
   }
 
-  .hero-container .left > p {
+  .hero-container .left>p {
     font-size: 30px;
   }
 
