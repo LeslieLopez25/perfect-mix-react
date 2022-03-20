@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "../Button/Button";
 import "../Products/ProductElements.css";
 
 export default function Products({ image, name, desc, price }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="productLineUp">
