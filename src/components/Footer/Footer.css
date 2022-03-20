@@ -142,7 +142,9 @@
   }
 
   .footer-link-items>p {
-    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
     font-weight: 600;
   }
 
