@@ -32,7 +32,7 @@ h1 {
   margin-bottom: 24px;
 }
 
-.cards__item__link {
+.cards__item__block {
   display: flex;
   flex-flow: column;
   text-decoration: none;
