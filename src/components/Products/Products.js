@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Button } from "../Button/Button";
 import "../Products/ProductElements.css";
 
-export default function Products(props) {
+export default function Products({ image, name, desc, price }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -10,10 +10,10 @@ export default function Products(props) {
   return (
     <>
       <div className="productLineUp">
-        <img src={props.image} alt={props.name} />
-        <h3> {props.name} </h3>
-        <p> {props.desc} </p>
-        <h4> ${props.price} </h4>
+        <img src={image} alt={name} />
+        <h3> {name} </h3>
+        <p> {desc} </p>
+        <h4> ${price} </h4>
         <div className="product-btns">
           <Button
             className="btns"

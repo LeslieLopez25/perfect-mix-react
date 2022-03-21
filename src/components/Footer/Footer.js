@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="footer-container">
-      <div class="footer-links">
-        <div className="footer-link-wrapper">
-          <div class="footer-link-items">
+      <div class="footer-content">
+        <div className="footer-wrapper">
+          <div class="footer-items">
             <h2>Address</h2>
             <p>Av Mexico 2097, Guadalajara, Jalisco, Mexico 44600</p>
           </div>
-          <div class="footer-link-items">
+          <div class="footer-items">
             <h2>Hours</h2>
             <p>
               Monday - Thursday 10:00AM - 11:00PM Friday - Saturday 11:00 -
@@ -19,12 +19,12 @@ function Footer() {
             </p>
           </div>
         </div>
-        <div className="footer-link-wrapper">
-          <div class="footer-link-items">
+        <div className="footer-wrapper">
+          <div class="footer-items">
             <h2>Contact Us</h2>
             <p>Phone Number: 33 3630 2532 Email: theperfectmix@business.com</p>
           </div>
-          <div class="footer-link-items">
+          <div class="footer-items">
             <h2>Social Media</h2>
             <Link to="/">Instagram</Link>
             <Link to="/">Facebook</Link>
