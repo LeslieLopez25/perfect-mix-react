@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Button } from "../Button/Button";
 import "../Products/ProductElements.css";
 
-export default function Products({ image, name, desc, price }) {
+export default function Products({ image, name, desc, price, addToCart }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,6 +19,7 @@ export default function Products({ image, name, desc, price }) {
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
+            onClick={addToCart}
           >
             Add To Cart
           </Button>

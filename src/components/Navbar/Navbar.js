@@ -7,6 +7,11 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  const [cart, setCart] = useState([[]]);
+  const addToCart = products => {
+    setCart([...cart, { ...products }]);
+  };
+
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -85,8 +90,8 @@ function Navbar() {
           </ul>
           {button && (
             <Link to="/cart">
-              <Button buttonStyle="btn--primary">
-                <i class="fas fa-shopping-cart" />
+              <Button addToCart={addToCart} buttonStyle="btn--primary">
+                <i class="fas fa-shopping-cart" /> ({cart.length})
               </Button>
             </Link>
           )}
