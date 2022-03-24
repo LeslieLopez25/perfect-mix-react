@@ -1,6 +1,30 @@
 import React from "react";
 import "../../../App.css";
+import { MenuList } from "../../Products/data";
+import Products from "../../Products/Products";
+import "../../Products/ProductElements.css";
 
-export default function Cart() {
-  return <h1 className="cart">Cart Items</h1>;
+export default function Menu() {
+  return (
+    <>
+      <div className="product-container">
+        <h2 className="product-heading">Cart</h2>
+        <div className="product-wrapper">
+          <div className="product-card">
+            {MenuList.map((products, key) => {
+              return (
+                <Products
+                  key={key}
+                  image={products.image}
+                  name={products.name}
+                  desc={products.desc}
+                  price={products.price}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

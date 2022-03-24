@@ -11,6 +11,12 @@ import {
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./components/pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
+import {
+  MenuList,
+  BeverageList,
+  DessertList,
+  AppetizerList
+} from "./components/Products/data";
 
 function App() {
   return (
@@ -19,10 +25,16 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/beverages" element={<Beverages />} />
-          <Route path="/desserts" element={<Desserts />} />
-          <Route path="/appetizers" element={<Appetizers />} />
+          <Route path="/menu" element={<Menu data={MenuList} />} />
+          <Route
+            path="/beverages"
+            element={<Beverages data={BeverageList} />}
+          />
+          <Route path="/desserts" element={<Desserts data={DessertList} />} />
+          <Route
+            path="/appetizers"
+            element={<Appetizers data={AppetizerList} />}
+          />
           <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />

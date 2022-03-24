@@ -1,17 +1,16 @@
 import React from "react";
 import "../../../App.css";
-import { MenuList } from "../../Products/data";
 import Products from "../../Products/Products";
 import "../../Products/ProductElements.css";
 
-export default function Menu() {
+export default function Menu({ data }) {
   return (
     <>
       <div className="product-container">
         <h2 className="product-heading">Menu</h2>
         <div className="product-wrapper">
           <div className="product-card">
-            {MenuList.map((products, key) => {
+            {data.map((products, key) => {
               return (
                 <Products
                   key={key}
