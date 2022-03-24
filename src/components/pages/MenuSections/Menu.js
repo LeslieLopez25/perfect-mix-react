@@ -10,14 +10,14 @@ export default function Menu({ data }) {
         <h2 className="product-heading">Menu</h2>
         <div className="product-wrapper">
           <div className="product-card">
-            {data.map((products, key) => {
+            {data.map((data, key) => {
               return (
                 <Products
                   key={key}
-                  image={products.image}
-                  name={products.name}
-                  desc={products.desc}
-                  price={products.price}
+                  image={data.image}
+                  name={data.name}
+                  desc={data.desc}
+                  price={data.price}
                 />
               );
             })}

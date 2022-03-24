@@ -7,7 +7,7 @@ import Img3 from "../../images/display-3.jpg";
 import Img4 from "../../images/display-4.jpg";
 import Img5 from "../../images/display-5.jpg";
 
-function Cards() {
+export default function Cards() {
   return (
     <div className="cards">
       <h1>What Are You Eating Today?</h1>
@@ -47,5 +47,3 @@ function Cards() {
     </div>
   );
 }
-
-export default Cards;

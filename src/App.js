@@ -18,7 +18,7 @@ import {
   AppetizerList
 } from "./components/Products/data";
 
-function App() {
+export default function App() {
   return (
     <>
       <Router>
@@ -42,5 +42,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -3,7 +3,7 @@ import "../../App.css";
 import Products from "../Products/Products";
 import "../Products/ProductElements.css";
 
-function SpecialsSection({ data }) {
+export default function SpecialsSection({ data }) {
   return (
     <div className="product-container">
       <h2 className="product-heading">
@@ -11,14 +11,14 @@ function SpecialsSection({ data }) {
       </h2>
       <div className="product-wrapper">
         <div className="product-card">
-          {data.map((productList, key) => {
+          {data.map((data, key) => {
             return (
               <Products
                 key={key}
-                image={productList.image}
-                name={productList.name}
-                desc={productList.desc}
-                price={productList.price}
+                image={data.image}
+                name={data.name}
+                desc={data.desc}
+                price={data.price}
               />
             );
           })}
@@ -27,5 +27,3 @@ function SpecialsSection({ data }) {
     </div>
   );
 }
-
-export default SpecialsSection;

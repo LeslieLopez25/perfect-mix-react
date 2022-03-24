@@ -4,7 +4,7 @@ import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import "../Hero/HeroSection.css";
 
-function HeroSection() {
+export default function HeroSection() {
   return (
     <div className="hero-container">
       <div className="left">
@@ -26,5 +26,3 @@ function HeroSection() {
     </div>
   );
 }
-
-export default HeroSection;

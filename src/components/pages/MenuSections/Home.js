@@ -6,7 +6,7 @@ import { SpecialsList, SpecialsList2 } from "../../Products/data";
 import { Banner, Video } from "../../ExportBannerSection";
 import HeroSection from "../../../components/Hero/HeroSection";
 
-function Home() {
+export default function Home() {
   return (
     <>
       <HeroSection />
@@ -18,5 +18,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

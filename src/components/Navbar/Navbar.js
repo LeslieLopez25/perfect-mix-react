@@ -3,13 +3,13 @@ import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+export default function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
   const [cart, setCart] = useState([[]]);
-  const addToCart = products => {
-    setCart([...cart, { ...products }]);
+  const addToCart = data => {
+    setCart([...cart, { ...data }]);
   };
 
   const handleClick = () => setClick(!click);
@@ -100,5 +100,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;
