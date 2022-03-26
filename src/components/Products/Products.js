@@ -19,7 +19,7 @@ export default function Products({ image, name, desc, price, addToCart }) {
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
-            onClick={addToCart}
+            onClick={() => addToCart({ image, name, desc, price })}
           >
             Add To Cart
           </Button>
