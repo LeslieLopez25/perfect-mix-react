@@ -3,6 +3,7 @@ import { Button } from "../Button/Button";
 import "../Products/ProductElements.css";
 
 export default function Products({ image, name, desc, price, addToCart }) {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,7 +20,7 @@ export default function Products({ image, name, desc, price, addToCart }) {
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
-            onClick={() => addToCart({ image, name, desc, price })}
+            onClick={addToCart}
           >
             Add To Cart
           </Button>
