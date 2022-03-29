@@ -21,6 +21,7 @@ import Specials4 from "../../images/drink-special.jpg";
 
 export const MenuList = [
   {
+    id: 1,
     name: "Seafood Enchiladas",
     image: Food1,
     desc:
@@ -29,6 +30,7 @@ export const MenuList = [
   },
 
   {
+    id: 2,
     name: "Tacos de Carne Asada",
     image: Food2,
     desc:
@@ -37,6 +39,7 @@ export const MenuList = [
   },
 
   {
+    id: 3,
     name: "Pozole Rojo",
     image: Food3,
     desc:
@@ -45,6 +48,7 @@ export const MenuList = [
   },
 
   {
+    id: 4,
     name: "Carnitas",
     image: Food4,
     desc:
@@ -55,6 +59,7 @@ export const MenuList = [
 
 export const BeverageList = [
   {
+    id: 5,
     name: "Cappuccino",
     image: Beverage1,
     desc:
@@ -63,6 +68,7 @@ export const BeverageList = [
   },
 
   {
+    id: 6,
     name: "Orange Juice",
     image: Beverage2,
     desc:
@@ -71,6 +77,7 @@ export const BeverageList = [
   },
 
   {
+    id: 7,
     name: "Coca Cola",
     image: Beverage3,
     desc:
@@ -79,6 +86,7 @@ export const BeverageList = [
   },
 
   {
+    id: 8,
     name: "Corona Extra",
     image: Beverage4,
     desc:
@@ -89,6 +97,7 @@ export const BeverageList = [
 
 export const DessertList = [
   {
+    id: 9,
     name: "Tres Leches Pastel",
     image: Dessert1,
     desc:
@@ -97,6 +106,7 @@ export const DessertList = [
   },
 
   {
+    id: 10,
     name: "Dessert Nachos",
     image: Dessert2,
     desc:
@@ -105,6 +115,7 @@ export const DessertList = [
   },
 
   {
+    id: 11,
     name: "Paletas",
     image: Dessert3,
     desc:
@@ -113,6 +124,7 @@ export const DessertList = [
   },
 
   {
+    id: 12,
     name: "Fresas Con Crema",
     image: Dessert4,
     desc:
@@ -123,6 +135,7 @@ export const DessertList = [
 
 export const AppetizerList = [
   {
+    id: 13,
     name: "Taco Cups",
     image: Appetizer1,
     desc:
@@ -131,6 +144,7 @@ export const AppetizerList = [
   },
 
   {
+    id: 14,
     name: "Guacamole",
     image: Appetizer2,
     desc:
@@ -139,6 +153,7 @@ export const AppetizerList = [
   },
 
   {
+    id: 15,
     name: "Ceviche",
     image: Appetizer3,
     desc:
@@ -147,6 +162,7 @@ export const AppetizerList = [
   },
 
   {
+    id: 16,
     name: "Taquitos",
     image: Appetizer4,
     desc:
@@ -157,6 +173,7 @@ export const AppetizerList = [
 
 export const SpecialsList = [
   {
+    id: 17,
     name: "Tacos de Birria",
     image: Specials1,
     desc:
@@ -165,6 +182,7 @@ export const SpecialsList = [
   },
 
   {
+    id: 18,
     name: "Churros",
     image: Specials2,
     desc:
@@ -175,6 +193,7 @@ export const SpecialsList = [
 
 export const SpecialsList2 = [
   {
+    id: 19,
     name: "Tamales",
     image: Specials3,
     desc:
@@ -183,6 +202,7 @@ export const SpecialsList2 = [
   },
 
   {
+    id: 20,
     name: "Red Wine",
     image: Specials4,
     desc:
