@@ -1,8 +1,21 @@
 import React, { useEffect } from "react";
 import { Button } from "../Button/Button";
+import {MenuList,
+  BeverageList,
+  DessertList,
+  AppetizerList,
+  SpecialsList,
+  SpecialsList2
+} from "../Products/data"
 import "../Products/ProductElements.css";
 
 export default function Products({ image, name, desc, price, addToCart }) {
+  const data = {
+    MenuList,
+    BeverageList,
+    DessertList,
+    AppetizerList, SpecialsList, SpecialsList2
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,7 +33,7 @@ export default function Products({ image, name, desc, price, addToCart }) {
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
-            onClick={addToCart}
+            onClick={() => addToCart(data)}
           >
             Add To Cart
           </Button>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
-import { MenuList, BeverageList, DessertList, AppetizerList, SpecialsList, SpecialsList2 } from "../Products/data";
 import "./Navbar.css";
 
 export default function Navbar() {
