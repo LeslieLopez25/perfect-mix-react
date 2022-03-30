@@ -1,21 +1,9 @@
 import React, { useEffect } from "react";
 import { Button } from "../Button/Button";
-import {MenuList,
-  BeverageList,
-  DessertList,
-  AppetizerList,
-  SpecialsList,
-  SpecialsList2
-} from "../Products/data"
 import "../Products/ProductElements.css";
 
-export default function Products({ image, name, desc, price, addToCart }) {
-  const data = {
-    MenuList,
-    BeverageList,
-    DessertList,
-    AppetizerList, SpecialsList, SpecialsList2
-  };
+export default function Product({ item, handleClick }) {
+  const item = { image, title, desc, price };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,8 +12,8 @@ export default function Products({ image, name, desc, price, addToCart }) {
   return (
     <>
       <div className="productLineUp">
-        <img src={image} alt={name} />
-        <h3> {name} </h3>
+        <img src={image} alt={title} />
+        <h3> {title} </h3>
         <p> {desc} </p>
         <h4> ${price} </h4>
         <div className="product-btns">
@@ -33,7 +21,7 @@ export default function Products({ image, name, desc, price, addToCart }) {
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
-            onClick={() => addToCart(data)}
+            onClick={() => handleClick(item)}
           >
             Add To Cart
           </Button>

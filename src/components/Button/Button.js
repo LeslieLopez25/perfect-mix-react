@@ -9,7 +9,7 @@ export const Button = ({
   onClick,
   buttonStyle,
   buttonSize,
-  addToCart
+  handleClick
 }) => {
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
@@ -20,7 +20,7 @@ export const Button = ({
         className={`btn ${buttonStyle} ${checkButtonSize}`}
         onClick={onClick}
         type={type}
-        addToCart={addToCart}
+        handleClick={handleClick}
       >
         {children}
       </button>
