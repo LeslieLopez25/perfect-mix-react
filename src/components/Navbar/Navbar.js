@@ -6,10 +6,10 @@ import "./Navbar.css";
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-
   const [cart, setCart] = useState([]);
-  const addToCart = data => {
-    setCart([...cart, { ...data }]);
+
+  const addToCart = item => {
+    setCart([...cart, { ...item }]);
   };
 
   const handleClick = () => setClick(!click);

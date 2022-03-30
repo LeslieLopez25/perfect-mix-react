@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import {
@@ -19,21 +19,6 @@ import {
 } from "./components/Products/data";
 
 export default function App() {
-  const [cart, setCart] = useState([]);
-
-  const handleClick = item => {
-    if (cart.indexOf(item) !== -1) return;
-    setCart([...cart, item]);
-  };
-
-    const handleChange = (item, d) => {
-    const ind = cart.indexOf(item);
-    const arr = cart;
-    arr[ind].amount += d;
-
-    if (arr[ind].amount === 0) arr[ind].amount = 1;
-    setCart([...arr]);
-  };
 
   return (
     <>
@@ -49,9 +34,9 @@ export default function App() {
           <Route path="/desserts" element={<Desserts data={DessertList} />} />
           <Route
             path="/appetizers"
-            element={<Appetizers data={AppetizerList} handleClick={handleClick} />}
+            element={<Appetizers data={AppetizerList} />}
           />
-          <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange} />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </Router>

@@ -26,8 +26,7 @@ export const MenuList = [
     image: Food1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 14.99,
-    amount: 1
+    price: 14.99
   },
 
   {
@@ -36,8 +35,7 @@ export const MenuList = [
     image: Food2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 10.99,
-    amount: 1
+    price: 10.99
   },
 
   {
@@ -46,8 +44,7 @@ export const MenuList = [
     image: Food3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 14.99,
-    amount: 1,
+    price: 14.99
   },
 
   {
@@ -56,8 +53,7 @@ export const MenuList = [
     image: Food4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 11.99,
-    amount: 1
+    price: 11.99
   }
 ];
 
@@ -68,8 +64,7 @@ export const BeverageList = [
     image: Beverage1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.5,
-    amount: 1
+    price: 1.5
   },
 
   {
@@ -78,8 +73,7 @@ export const BeverageList = [
     image: Beverage2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 9.99,
-    amount: 1
+    price: 9.99
   },
 
   {
@@ -88,8 +82,7 @@ export const BeverageList = [
     image: Beverage3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.5,
-    amount: 1
+    price: 1.5
   },
 
   {
@@ -98,8 +91,7 @@ export const BeverageList = [
     image: Beverage4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 2.99,
-    amount: 1
+    price: 2.99
   }
 ];
 
@@ -110,8 +102,7 @@ export const DessertList = [
     image: Dessert1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 4.99,
-    amount: 1
+    price: 4.99
   },
 
   {
@@ -120,8 +111,7 @@ export const DessertList = [
     image: Dessert2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 6.99,
-    amount: 1
+    price: 6.99
   },
 
   {
@@ -130,8 +120,7 @@ export const DessertList = [
     image: Dessert3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 0.99,
-    amount: 1
+    price: 0.99
   },
 
   {
@@ -140,8 +129,7 @@ export const DessertList = [
     image: Dessert4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 3.99,
-    amount: 1
+    price: 3.99
   }
 ];
 
@@ -152,8 +140,7 @@ export const AppetizerList = [
     image: Appetizer1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 0.99,
-    amount: 1
+    price: 0.99
   },
 
   {
@@ -162,8 +149,7 @@ export const AppetizerList = [
     image: Appetizer2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.99,
-    amount: 1
+    price: 1.99
   },
 
   {
@@ -172,8 +158,7 @@ export const AppetizerList = [
     image: Appetizer3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.5,
-    amount: 1
+    price: 1.5
   },
 
   {
@@ -182,8 +167,7 @@ export const AppetizerList = [
     image: Appetizer4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 0.99,
-    amount: 1
+    price: 0.99
   }
 ];
 
@@ -194,8 +178,7 @@ export const SpecialsList = [
     image: Specials1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 5.99,
-    amount: 1
+    price: 5.99
   },
 
   {
@@ -204,8 +187,7 @@ export const SpecialsList = [
     image: Specials2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 2.99,
-    amount: 1
+    price: 2.99
   }
 ];
 
@@ -216,8 +198,7 @@ export const SpecialsList2 = [
     image: Specials3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.5,
-    amount: 1
+    price: 1.5
   },
 
   {
@@ -226,7 +207,6 @@ export const SpecialsList2 = [
     image: Specials4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 9.99,
-    amount: 1
+    price: 9.99
   }
 ];

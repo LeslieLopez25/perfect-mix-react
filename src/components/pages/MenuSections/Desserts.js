@@ -10,15 +10,9 @@ export default function Desserts({ data }) {
         <h2 className="product-heading">Desserts</h2>
         <div className="product-wrapper">
           <div className="product-card">
-            {data.map((data, id) => {
+            {data.map((item) => {
               return (
-                <ProductCard
-                  key={id}
-                  image={data.image}
-                  name={data.name}
-                  desc={data.desc}
-                  price={data.price}
-                />
+                <ProductCard key={item.id} item={item} />
               );
             })}
           </div>

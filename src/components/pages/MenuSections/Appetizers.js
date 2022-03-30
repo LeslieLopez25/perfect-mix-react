@@ -3,16 +3,16 @@ import "../../../App.css";
 import ProductCard from "../../Products/ProductCard";
 import "../../Products/ProductElements.css";
 
-export default function Appetizers({ data, handleClick }) {
+export default function Appetizers({ data }) {
   return (
     <>
       <div className="product-container">
         <h2 className="product-heading">Appetizers</h2>
         <div className="product-wrapper">
           <div className="product-card">
-            {data.map((data) => {
+            {data.map((item) => {
               return (
-                <ProductCard key={data.id} data={data} handleClick={handleClick} />
+                <ProductCard key={item.id} item={item} />
               );
             })}
           </div>

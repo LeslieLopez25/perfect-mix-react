@@ -11,15 +11,9 @@ export default function Specials2Section({ data }) {
       </h2>
       <div className="product-wrapper">
         <div className="product-card">
-          {data.map((data, id) => {
-            return (
-              <ProductCard
-                key={id}
-                image={data.image}
-                name={data.name}
-                desc={data.desc}
-                price={data.price}
-              />
+          {data.map((item) => {
+              return (
+                <ProductCard key={item.id} item={item} />
             );
           })}
         </div>
