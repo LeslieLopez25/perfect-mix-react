@@ -9,7 +9,8 @@ export const Button = ({
   onClick,
   buttonStyle,
   buttonSize,
-  addToCart
+  addToCart,
+  removeFromCart
 }) => {
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
@@ -21,6 +22,7 @@ export const Button = ({
         onClick={onClick}
         type={type}
         addToCart={addToCart}
+        removeFromCart={removeFromCart}
       >
         {children}
       </button>
