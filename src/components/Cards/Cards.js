@@ -1,11 +1,11 @@
 import React from "react";
 import "./Cards.css";
 import CardItem from "../Cards/CardItem";
-import Img1 from "../../images/display-1.jpg";
-import Img2 from "../../images/display-2.jpg";
-import Img3 from "../../images/display-3.jpg";
-import Img4 from "../../images/display-4.jpg";
-import Img5 from "../../images/display-5.jpg";
+import Img1 from "../../images/display-1.jpeg";
+import Img2 from "../../images/display-2.jpeg";
+import Img3 from "../../images/display-3.jpeg";
+import Img4 from "../../images/display-4.jpeg";
+import Img5 from "../../images/display-5.jpeg";
 
 export default function Cards() {
   return (

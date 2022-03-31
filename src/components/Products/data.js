@@ -1,28 +1,28 @@
-import Food1 from "../../images/food-1.jpg";
-import Food2 from "../../images/food-2.jpg";
-import Food3 from "../../images/food-3.jpg";
-import Food4 from "../../images/food-4.jpg";
-import Beverage1 from "../../images/drink-1.jpg";
-import Beverage2 from "../../images/drink-2.jpg";
-import Beverage3 from "../../images/drink-3.jpg";
-import Beverage4 from "../../images/drink-4.jpg";
-import Dessert1 from "../../images/dessert-1.jpg";
-import Dessert2 from "../../images/dessert-2.jpg";
-import Dessert3 from "../../images/dessert-3.jpg";
-import Dessert4 from "../../images/dessert-4.jpg";
-import Appetizer1 from "../../images/appetizers-1.jpg";
-import Appetizer2 from "../../images/appetizers-2.jpg";
-import Appetizer3 from "../../images/appetizers-3.jpg";
-import Appetizer4 from "../../images/appetizers-4.jpg";
-import Specials1 from "../../images/menu-special.jpg";
-import Specials2 from "../../images/dessert-special.jpg";
-import Specials3 from "../../images/appetizers-special.jpg";
-import Specials4 from "../../images/drink-special.jpg";
+import Food1 from "../../images/food-1.jpeg";
+import Food2 from "../../images/food-2.jpeg";
+import Food3 from "../../images/food-3.jpeg";
+import Food4 from "../../images/food-4.jpeg";
+import Beverage1 from "../../images/drink-1.jpeg";
+import Beverage2 from "../../images/drink-2.jpeg";
+import Beverage3 from "../../images/drink-3.jpeg";
+import Beverage4 from "../../images/drink-4.jpeg";
+import Dessert1 from "../../images/dessert-1.jpeg";
+import Dessert2 from "../../images/dessert-2.jpeg";
+import Dessert3 from "../../images/dessert-3.jpeg";
+import Dessert4 from "../../images/dessert-4.jpeg";
+import Appetizer1 from "../../images/appetizers-1.jpeg";
+import Appetizer2 from "../../images/appetizers-2.jpeg";
+import Appetizer3 from "../../images/appetizers-3.jpeg";
+import Appetizer4 from "../../images/appetizers-4.jpeg";
+import Specials1 from "../../images/menu-special.jpeg";
+import Specials2 from "../../images/dessert-special.jpeg";
+import Specials3 from "../../images/appetizers-special.jpeg";
+import Specials4 from "../../images/drink-special.jpeg";
 
 export const MenuList = [
   {
     id: 1,
-    name: "Seafood Enchiladas",
+    title: "Seafood Enchiladas",
     image: Food1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -31,7 +31,7 @@ export const MenuList = [
 
   {
     id: 2,
-    name: "Tacos de Carne Asada",
+    title: "Tacos de Carne Asada",
     image: Food2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -40,7 +40,7 @@ export const MenuList = [
 
   {
     id: 3,
-    name: "Pozole Rojo",
+    title: "Pozole Rojo",
     image: Food3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -49,7 +49,7 @@ export const MenuList = [
 
   {
     id: 4,
-    name: "Carnitas",
+    title: "Carnitas",
     image: Food4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -60,7 +60,7 @@ export const MenuList = [
 export const BeverageList = [
   {
     id: 5,
-    name: "Cappuccino",
+    title: "Cappuccino",
     image: Beverage1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -69,7 +69,7 @@ export const BeverageList = [
 
   {
     id: 6,
-    name: "Orange Juice",
+    title: "Orange Juice",
     image: Beverage2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -78,7 +78,7 @@ export const BeverageList = [
 
   {
     id: 7,
-    name: "Coca Cola",
+    title: "Coca Cola",
     image: Beverage3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -87,7 +87,7 @@ export const BeverageList = [
 
   {
     id: 8,
-    name: "Corona Extra",
+    title: "Corona Extra",
     image: Beverage4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -98,7 +98,7 @@ export const BeverageList = [
 export const DessertList = [
   {
     id: 9,
-    name: "Tres Leches Pastel",
+    title: "Tres Leches Pastel",
     image: Dessert1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -107,7 +107,7 @@ export const DessertList = [
 
   {
     id: 10,
-    name: "Dessert Nachos",
+    title: "Dessert Nachos",
     image: Dessert2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -116,7 +116,7 @@ export const DessertList = [
 
   {
     id: 11,
-    name: "Paletas",
+    title: "Paletas",
     image: Dessert3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -125,7 +125,7 @@ export const DessertList = [
 
   {
     id: 12,
-    name: "Fresas Con Crema",
+    title: "Fresas Con Crema",
     image: Dessert4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -136,7 +136,7 @@ export const DessertList = [
 export const AppetizerList = [
   {
     id: 13,
-    name: "Taco Cups",
+    title: "Taco Cups",
     image: Appetizer1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -145,7 +145,7 @@ export const AppetizerList = [
 
   {
     id: 14,
-    name: "Guacamole",
+    title: "Guacamole",
     image: Appetizer2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -154,7 +154,7 @@ export const AppetizerList = [
 
   {
     id: 15,
-    name: "Ceviche",
+    title: "Ceviche",
     image: Appetizer3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -163,7 +163,7 @@ export const AppetizerList = [
 
   {
     id: 16,
-    name: "Taquitos",
+    title: "Taquitos",
     image: Appetizer4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -174,7 +174,7 @@ export const AppetizerList = [
 export const SpecialsList = [
   {
     id: 17,
-    name: "Tacos de Birria",
+    title: "Tacos de Birria",
     image: Specials1,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -183,7 +183,7 @@ export const SpecialsList = [
 
   {
     id: 18,
-    name: "Churros",
+    title: "Churros",
     image: Specials2,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -194,7 +194,7 @@ export const SpecialsList = [
 export const SpecialsList2 = [
   {
     id: 19,
-    name: "Tamales",
+    title: "Tamales",
     image: Specials3,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
@@ -203,7 +203,7 @@ export const SpecialsList2 = [
 
   {
     id: 20,
-    name: "Red Wine",
+    title: "Red Wine",
     image: Specials4,
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
