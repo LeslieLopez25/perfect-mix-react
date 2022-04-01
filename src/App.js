@@ -11,30 +11,23 @@ import {
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./components/pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
-import {
-  MenuList,
-  BeverageList,
-  DessertList,
-  AppetizerList
-} from "./components/Products/data";
 
-export default function App() {
-
+export default function App() {  
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu data={MenuList} />} />
+          <Route path="/menu" element={<Menu />} />
           <Route
             path="/beverages"
-            element={<Beverages data={BeverageList} />}
+            element={<Beverages />}
           />
-          <Route path="/desserts" element={<Desserts data={DessertList} />} />
+          <Route path="/desserts" element={<Desserts />} />
           <Route
             path="/appetizers"
-            element={<Appetizers data={AppetizerList} />}
+            element={<Appetizers />}
           />
           <Route path="/cart" element={<Cart />} />
         </Routes>

@@ -19,7 +19,10 @@ import Specials2 from "../../images/dessert-special.jpeg";
 import Specials3 from "../../images/appetizers-special.jpeg";
 import Specials4 from "../../images/drink-special.jpeg";
 
-export const MenuList = [
+
+
+const data = {
+    MenuList: [
   {
     id: 1,
     title: "Seafood Enchiladas",
@@ -54,124 +57,124 @@ export const MenuList = [
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
     price: 11.99
-  }
-];
+    }
+    ],
 
-export const BeverageList = [
-  {
-    id: 5,
-    title: "Cappuccino",
-    image: Beverage1,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.5
-  },
+    BeverageList: [
+      {
+        id: 5,
+        title: "Cappuccino",
+        image: Beverage1,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 1.5
+      },
 
-  {
-    id: 6,
-    title: "Orange Juice",
-    image: Beverage2,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 9.99
-  },
+      {
+        id: 6,
+        title: "Orange Juice",
+        image: Beverage2,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 9.99
+      },
 
-  {
-    id: 7,
-    title: "Coca Cola",
-    image: Beverage3,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.5
-  },
+      {
+        id: 7,
+        title: "Coca Cola",
+        image: Beverage3,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 1.5
+      },
 
-  {
-    id: 8,
-    title: "Corona Extra",
-    image: Beverage4,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 2.99
-  }
-];
+      {
+        id: 8,
+        title: "Corona Extra",
+        image: Beverage4,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 2.99
+      }
+    ],
+  
+    DessertList: [
+      {
+        id: 9,
+        title: "Tres Leches Pastel",
+        image: Dessert1,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 4.99
+      },
 
-export const DessertList = [
-  {
-    id: 9,
-    title: "Tres Leches Pastel",
-    image: Dessert1,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 4.99
-  },
+      {
+        id: 10,
+        title: "Dessert Nachos",
+        image: Dessert2,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 6.99
+      },
 
-  {
-    id: 10,
-    title: "Dessert Nachos",
-    image: Dessert2,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 6.99
-  },
+      {
+        id: 11,
+        title: "Paletas",
+        image: Dessert3,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 0.99
+      },
 
-  {
-    id: 11,
-    title: "Paletas",
-    image: Dessert3,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 0.99
-  },
+      {
+        id: 12,
+        title: "Fresas Con Crema",
+        image: Dessert4,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 3.99
+      }
+    ],
 
-  {
-    id: 12,
-    title: "Fresas Con Crema",
-    image: Dessert4,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 3.99
-  }
-];
+    AppetizerList: [
+      {
+        id: 13,
+        title: "Taco Cups",
+        image: Appetizer1,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 0.99
+      },
 
-export const AppetizerList = [
-  {
-    id: 13,
-    title: "Taco Cups",
-    image: Appetizer1,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 0.99
-  },
+      {
+        id: 14,
+        title: "Guacamole",
+        image: Appetizer2,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 1.99
+      },
 
-  {
-    id: 14,
-    title: "Guacamole",
-    image: Appetizer2,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.99
-  },
+      {
+        id: 15,
+        title: "Ceviche",
+        image: Appetizer3,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 1.5
+      },
 
-  {
-    id: 15,
-    title: "Ceviche",
-    image: Appetizer3,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.5
-  },
+      {
+        id: 16,
+        title: "Taquitos",
+        image: Appetizer4,
+        desc:
+          "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+        price: 0.99
+      }
+    ],
 
-  {
-    id: 16,
-    title: "Taquitos",
-    image: Appetizer4,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 0.99
-  }
-];
-
-export const SpecialsList = [
+    SpecialsList: [
   {
     id: 17,
     title: "Tacos de Birria",
@@ -188,25 +191,28 @@ export const SpecialsList = [
     desc:
       "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
     price: 2.99
-  }
-];
+    }
+  ],
 
-export const SpecialsList2 = [
-  {
-    id: 19,
-    title: "Tamales",
-    image: Specials3,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 1.5
-  },
+    SpecialsList2: [
+    {
+      id: 19,
+      title: "Tamales",
+      image: Specials3,
+      desc:
+        "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+      price: 1.5
+    },
 
-  {
-    id: 20,
-    title: "Red Wine",
-    image: Specials4,
-    desc:
-      "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
-    price: 9.99
-  }
-];
+    {
+      id: 20,
+      title: "Red Wine",
+      image: Specials4,
+      desc:
+        "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
+      price: 9.99
+    }
+  ]
+}
+
+export default data;
