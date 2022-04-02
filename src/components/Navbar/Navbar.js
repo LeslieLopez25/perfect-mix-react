@@ -3,10 +3,11 @@ import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [cart, setCart] = useState([]);
+
+  const { setCart, cart } = props;
 
   const addToCart = item => {
     setCart([...cart, { ...item }]);
@@ -91,7 +92,7 @@ export default function Navbar() {
           {button && (
             <Link to="/cart">
               <Button addToCart={addToCart} buttonStyle="btn--primary">
-                <i class="fas fa-shopping-cart" /> ({cart.length})
+                <i class="fas fa-shopping-cart" /> ({cart.length}) 
               </Button>
             </Link>
           )}

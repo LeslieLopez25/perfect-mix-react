@@ -21,8 +21,8 @@ export const Button = ({
         className={`btn ${buttonStyle} ${checkButtonSize}`}
         onClick={onClick}
         type={type}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
+        addToCart={() => addToCart()}
+        removeFromCart={() => removeFromCart()}
       >
         {children}
       </button>

@@ -1,18 +1,18 @@
 import React from "react";
 import "../../../App.css";
-import ProductCard from "../../Products/ProductCard";
+import CartCard from "../../pages/Cart/CartCard";
 import "../../Products/ProductElements.css";
 
-export default function Cart({cart, removeFromCart}) {
+export default function Cart({ cart }) {
   return (
     <>
       <div className="product-container">
         <h2 className="product-heading">Cart</h2>
         <div className="product-wrapper">
           <div className="product-card">
-            {cart.map((item) => {
+            {cart.data.map((item) => {
               return (
-                <ProductCard key={item.id} item={item} />
+                <CartCard key={item.id} item={item} />
               );
             })}
           </div>

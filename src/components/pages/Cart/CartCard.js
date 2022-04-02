@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { Button } from "../Button/Button";
-import "../Products/ProductElements.css";
+import { Button } from "../../Button/Button";
+import "../../Products/ProductElements.css";
 
-export default function Product( {item, addToCart} ) {
-  const { image, title, desc, price } = item;
-  
+export default function Product( {item, removeFromCart} ) {
+    const { image, title, desc, price } = item;
+    
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,9 +21,9 @@ export default function Product( {item, addToCart} ) {
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
-            onClick={() => addToCart(item)}
+            onClick={() => removeFromCart(item)}
           >
-            Add To Cart
+            Remove
           </Button>
         </div>
       </div>
