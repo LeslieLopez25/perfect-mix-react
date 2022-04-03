@@ -79,7 +79,7 @@ export default function Navbar() {
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
-                Place Order
+                Gallery
               </Link>
             </li>
           </ul>

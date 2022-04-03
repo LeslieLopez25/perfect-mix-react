@@ -9,15 +9,15 @@ export default function HeroSection() {
     <div className="hero-container">
       <div className="left">
         <h1>Food from scratch with love from our kitchens</h1>
-        <p>What are you waiting for?</p>
+        <p>Check Us Out!</p>
         <div className="hero-btns">
-          <Link to="/cart">
+          <Link to="/gallery">
             <Button
               className="btns"
               buttonStyle="btn--primary"
               buttonSize="btn--large"
             >
-              Place Order
+              Gallery
             </Button>
           </Link>
         </div>

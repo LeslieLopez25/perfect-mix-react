@@ -58,7 +58,7 @@ h1 {
 
 .cards__item__pic-wrap::after {
   content: attr(data-category);
-  background-color: #006994;
+  background-color: #007ba7;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
