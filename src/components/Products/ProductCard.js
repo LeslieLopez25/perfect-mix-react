@@ -21,7 +21,6 @@ export default function Product( {item, addToCart} ) {
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
-            onClick={() => addToCart(item)}
           >
             Add To Cart
           </Button>

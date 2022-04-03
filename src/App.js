@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import {
@@ -9,20 +9,14 @@ import {
   Appetizers
 } from "./components/ExportMenuSection";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Cart from "./components/pages/Cart/Cart";
+import Gallery from "./components/pages/Gallery/Gallery";
 import Footer from "./components/Footer/Footer";
 
-export default function App({addToCart}) { 
-const [cart, setCart] = useState([]);
-
-  const removeFromCart = itemToRemove => {
-    setCart(cart.filter(item => item !== itemToRemove));
-  };
-
+export default function App() {
   return (
     <>
       <Router>
-        <Navbar addToCart={addToCart} />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
@@ -35,7 +29,7 @@ const [cart, setCart] = useState([]);
             path="/appetizers"
             element={<Appetizers />}
           />
-          <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />
       </Router>

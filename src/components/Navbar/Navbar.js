@@ -3,15 +3,9 @@ import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-
-  const { setCart, cart } = props;
-
-  const addToCart = item => {
-    setCart([...cart, { ...item }]);
-  };
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -90,9 +84,9 @@ export default function Navbar(props) {
             </li>
           </ul>
           {button && (
-            <Link to="/cart">
-              <Button addToCart={addToCart} buttonStyle="btn--primary">
-                <i class="fas fa-shopping-cart" /> ({cart.length}) 
+            <Link to="/gallery">
+              <Button buttonStyle="btn--primary">
+                Gallery <i class="fas fa-mortar-pestle" />
               </Button>
             </Link>
           )}
