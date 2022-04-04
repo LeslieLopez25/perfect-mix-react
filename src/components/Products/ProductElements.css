@@ -60,10 +60,6 @@
     margin-bottom: 16px;
 }
 
-.productLineUp>.product-btns .btn {
-    margin: 6px;
-}
-
 @media screen and (max-width: 960px) {
     .product-container>h1 {
         font-size: 70px;
@@ -89,14 +85,5 @@
     .product-wrapper .product-card {
         display: grid;
         grid-template-columns: 1fr;
-    }
-
-    .btn-mobile {
-        display: block;
-        text-decoration: none;
-    }
-
-    .btn {
-        width: 100%;
     }
 }
