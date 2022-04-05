@@ -1,3 +1,13 @@
+.gallery-heading {
+    background-color: #682c0e;
+    color: #fff;
+    font-size: clamp(32px, 2.5vw, 48px);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+}
+
 .gallery {
     -webkit-column-count: 3;
     -moz-column-count: 3;

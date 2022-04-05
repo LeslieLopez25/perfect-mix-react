@@ -14,6 +14,7 @@ export default function Gallery() {
 
   return (
     <>
+      <h2 className="gallery-heading">Gallery</h2>
       <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={""} />
         <i class="fa-solid fa-xmark" onClick={() => setModel(false)} />
