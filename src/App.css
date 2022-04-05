@@ -23,8 +23,7 @@ p {
 .menu,
 .beverages,
 .desserts,
-.appetizers,
-.cart {
+.appetizers {
   display: flex;
   align-items: center;
   justify-content: center;
