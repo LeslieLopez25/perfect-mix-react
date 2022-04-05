@@ -1,26 +1,30 @@
 import React, { useState } from "react";
 import imgData from "../../pages/Gallery/imgData"
+import "../Gallery/GalleryElements.css"
 import "../../../App.css";
 
 export default function Gallery() {
   const [model, setModel] = useState(false);
-  const [tempingSrc, setTempingSrc] = useState('');
+  const [tempimgSrc, setTempImgSrc] = useState("");
 
-  const getImg = (img) => {
-    setTempingSrc(img);
+  const getImg = (imgSrc) => {
+    setTempImgSrc(imgSrc);
     setModel(true);
   };
 
   return (
     <>
       <div className={model ? "model open" : "model"}>
-        <img src={tempingSrc} alt={""} />
+        <img src={tempimgSrc} alt={""} />
+        <i class="fa-solid fa-xmark" onClick={() => setModel(false)} />
       </div>
       <div className="gallery">
         {imgData.map((img, id) => {
           return (
-            <div className="pics" key={id} onClick={() => getImg(img.imgSrc)}>
-              <img src={img.imgSrc} alt={img.title} style={{ width: "100%" }} />
+            <div className="pics"
+              key={id}
+              onClick={() => getImg(img.imgSrc)}>
+              <img src={img.imgSrc} alt={""} />
         </div>
           )
         })}
