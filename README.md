@@ -12,8 +12,7 @@
 
 ### Screenshots
 
-<img src="/src/screenshots/main-page.png" width="400"/> 
-<img src="/src/screenshots/food-section.png" width="400"/> 
+<img src="/src/screenshots/main-page.png" width="400"/><img src="/src/screenshots/food-section.png" width="400"/>
 <img src="/src/screenshots/gallery.png" width="400"/>
 
 ### Link
