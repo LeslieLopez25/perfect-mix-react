@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import imgData from "../../pages/Gallery/imgData"
 import "../Gallery/GalleryElements.css"
 import "../../../App.css";
@@ -11,6 +11,10 @@ export default function Gallery() {
     setTempImgSrc(imgSrc);
     setModel(true);
   };
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
