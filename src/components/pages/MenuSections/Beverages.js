@@ -11,6 +11,7 @@ export default function Beverages() {
         <h2 className="product-heading">Beverages</h2>
         <div className="product-wrapper">
           <div className="product-card">
+            {/* Mapped through the beverage list of products in data file */}
             {data.BeverageList.map((item) => {
               return (
                 <ProductCard key={item.id} item={item} />
