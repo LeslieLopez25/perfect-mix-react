@@ -1,4 +1,4 @@
-# The Perfect Mix :taco: <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+# :tamale: The Perfect Mix :taco:
 
 ## Table of contents
 
@@ -27,4 +27,4 @@
 
 ### Overview
 
-The perfect mix is a restaurant website that is designed to be a fun and easy way to find a variety of food that the restaurant has. The website is built with React JS and uses a CSS Grid to display the food items. The website is also designed to be responsive and mobile friendly.
+The perfect mix is a restaurant website that is designed to be a fun and easy way to find a variety of food that the restaurant has. The website is built with React JS and uses a CSS Grid to display the food items. The website is also designed to be responsive and mobile friendly. This uses the npm package. A custom button was created to have the properties that the website could implement. The JavaScript functions that were created are used to display the food items in the gallery section, for the navigation bar, for the button, and for the food products.
