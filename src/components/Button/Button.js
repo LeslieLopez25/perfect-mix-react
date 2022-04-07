@@ -1,8 +1,10 @@
 import React from "react";
 import "./Button.css";
 
+// Button sizes
 const SIZES = ["btn--medium", "btn--large"];
 
+// Button props
 export const Button = ({
   children,
   type,
@@ -10,8 +12,8 @@ export const Button = ({
   buttonStyle,
   buttonSize
 }) => {
+  // Button styles
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
-
 
   return (
     <div className="btn-mobile">
