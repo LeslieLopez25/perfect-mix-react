@@ -12,7 +12,7 @@ export const Button = ({
   buttonStyle,
   buttonSize
 }) => {
-  // Button styles
+  // Button size
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
