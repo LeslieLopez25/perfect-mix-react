@@ -11,6 +11,7 @@ export default function Menu() {
         <h2 className="product-heading">Menu</h2>
         <div className="product-wrapper">
           <div className="product-card">
+            {/* Mapped through the main menu list of products in data file */}
             {data.MenuList.map((item) => {
               return (
                 <ProductCard key={item.id} item={item} />
