@@ -7,11 +7,13 @@ export default function Gallery() {
   const [model, setModel] = useState(false);
   const [tempimgSrc, setTempImgSrc] = useState("");
 
+  // To determine if the image is clicked to open the model and close the model when the xmark is clicked
   const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc);
     setModel(true);
   };
 
+  // To have the page start at the top of the page
    useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
