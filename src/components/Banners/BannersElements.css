@@ -11,6 +11,26 @@
     padding: 0 1rem;
 }
 
+.banner2-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../images/banner-2.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+    max-height: 62.5rem;
+    padding: 0 1rem;
+    
+}
+
+.banner2-container:hover {
+    transition: .3s ease;
+    transform: scale(1.1);
+    background-image: url("../../images/overlay.jpeg");
+}
+
 video {
     object-fit: cover;
     width: 100%;
