@@ -1,5 +1,6 @@
 import React from "react";
 
+// CardItem component for the Card component
 export default function CardItem({ label, src, text }) {
   return (
     <>
