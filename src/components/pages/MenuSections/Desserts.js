@@ -11,6 +11,7 @@ export default function Desserts() {
         <h2 className="product-heading">Desserts</h2>
         <div className="product-wrapper">
           <div className="product-card">
+            {/* Mapped through the dessert list of products in data file */}
             {data.DessertList.map((item) => {
               return (
                 <ProductCard key={item.id} item={item} />
