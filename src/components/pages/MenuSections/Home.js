@@ -6,6 +6,7 @@ import { Banner, Banner2, Video } from "../../ExportBannerSection";
 import HeroSection from "../../../components/Hero/HeroSection";
 
 export default function Home() {
+// What the home page when you click on the website will display first 
   return (
     <>
       <HeroSection />
