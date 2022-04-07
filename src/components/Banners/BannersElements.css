@@ -22,13 +22,13 @@
     height: 25rem;
     max-height: 62.5rem;
     padding: 0 1rem;
-    
+    transition: all 0.2s linear;
 }
 
 .banner2-container:hover {
-    transition: .3s ease;
-    transform: scale(1.1);
     background-image: url("../../images/overlay.jpeg");
+    transform: scale(1.1);
+    transition: .3s ease;
 }
 
 video {
