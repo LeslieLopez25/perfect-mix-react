@@ -25,6 +25,7 @@
     transition: all 0.2s linear;
 }
 
+/* Rollover Image Effect */
 .banner2-container:hover {
     background-image: url("../../images/overlay.jpeg");
     transform: scale(1.1);
