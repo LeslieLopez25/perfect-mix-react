@@ -7,9 +7,12 @@ export default function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  // handleClick to determine if the icon is clicked
   const handleClick = () => setClick(!click);
+  // closeMobileMenu to close the mobile menu
   const closeMobileMenu = () => setClick(false);
 
+  // Displays button if the screen is less than 960px
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -18,10 +21,12 @@ export default function Navbar() {
     }
   };
 
+  // To render the button
   useEffect(() => {
     showButton();
   }, []);
 
+  // When the screen size changes, the button is displayed or not
   window.addEventListener("resize", showButton);
 
   return (
