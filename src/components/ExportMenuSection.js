@@ -1,3 +1,4 @@
+// Created export main pages
 export { default as Home } from "./pages/MenuSections/Home";
 export { default as Menu } from "./pages/MenuSections/Menu";
 export { default as Beverages } from "./pages/MenuSections/Beverages";
