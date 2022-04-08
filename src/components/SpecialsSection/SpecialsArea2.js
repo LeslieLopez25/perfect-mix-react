@@ -12,6 +12,7 @@ export default function Specials2Section() {
       </h2>
       <div className="product-wrapper">
         <div className="product-card">
+          {/* Mapped through the second specials of the week list of products in data file */}
           {data.SpecialsList2.map((item) => {
               return (
                 <ProductCard key={item.id} item={item} />
