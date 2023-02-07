@@ -2,7 +2,7 @@ import React from "react";
 import "../../App.css";
 import { Button } from "../Button/button.component";
 import { Link } from "react-router-dom";
-import "../Hero/heroSection.styles.css";
+import "../Hero/hero-section.styles.css";
 
 export default function HeroSection() {
   return (

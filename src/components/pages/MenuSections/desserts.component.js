@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../App.css";
 import data from "../../Products/data";
-import ProductCard from "../../Products/productCard.component";
+import ProductCard from "../../Products/product-card.component";
 import "../../Products/product.styles.css";
 
 export default function Desserts() {
