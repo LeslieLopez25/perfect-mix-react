@@ -1,8 +1,8 @@
 import React from "react";
 import "../../App.css";
 import data from "../Products/data";
-import ProductCard from "../Products/ProductCard";
-import "../Products/ProductElements.css";
+import ProductCard from "../Products/productCard.component";
+import "../Products/product.styles.css";
 
 export default function Specials2Section() {
   return (
@@ -14,9 +14,7 @@ export default function Specials2Section() {
         <div className="product-card">
           {/* Mapped through the second specials of the week list of products in data file */}
           {data.SpecialsList2.map((item) => {
-              return (
-                <ProductCard key={item.id} item={item} />
-            );
+            return <ProductCard key={item.id} item={item} />;
           })}
         </div>
       </div>
