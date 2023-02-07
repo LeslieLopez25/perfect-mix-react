@@ -1,5 +1,5 @@
 import React from "react";
-import "../Banners/BannersElements.css";
+import "../Banners/banners.styles.css";
 
 export default function Banners() {
   return (
