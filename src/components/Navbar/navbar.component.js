@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "../Button/Button";
+import { Button } from "../Button/button.component";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./navbar.styles.css";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
