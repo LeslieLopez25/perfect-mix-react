@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button.css";
+import "./button.styles.css";
 
 // Button sizes
 const SIZES = ["btn--medium", "btn--large"];
@@ -10,7 +10,7 @@ export const Button = ({
   type,
   onClick,
   buttonStyle,
-  buttonSize
+  buttonSize,
 }) => {
   // Button size
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
