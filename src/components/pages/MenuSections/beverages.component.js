@@ -1,8 +1,8 @@
 import React from "react";
 import "../../../App.css";
 import data from "../../Products/data";
-import ProductCard from "../../Products/ProductCard";
-import "../../Products/ProductElements.css";
+import ProductCard from "../../Products/productCard.component";
+import "../../Products/product.styles.css";
 
 export default function Beverages() {
   return (
@@ -13,9 +13,7 @@ export default function Beverages() {
           <div className="product-card">
             {/* Mapped through the beverage list of products in data file */}
             {data.BeverageList.map((item) => {
-              return (
-                <ProductCard key={item.id} item={item} />
-              );
+              return <ProductCard key={item.id} item={item} />;
             })}
           </div>
         </div>
