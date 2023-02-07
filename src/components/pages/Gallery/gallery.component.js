@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import imgData from "../../pages/Gallery/imgData"
-import "../Gallery/GalleryElements.css"
+import imgData from "./imgData";
+import "../Gallery/gallery.styles.css";
 import "../../../App.css";
 
 export default function Gallery() {
@@ -14,7 +14,7 @@ export default function Gallery() {
   };
 
   // To have the page start at the top of the page
-   useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
@@ -28,14 +28,12 @@ export default function Gallery() {
       <div className="gallery">
         {imgData.map((img, id) => {
           return (
-            <div className="pics"
-              key={id}
-              onClick={() => getImg(img.imgSrc)}>
+            <div className="pics" key={id} onClick={() => getImg(img.imgSrc)}>
               <img src={img.imgSrc} alt={""} />
-        </div>
-          )
+            </div>
+          );
         })}
-        </div>
+      </div>
     </>
   );
 }
