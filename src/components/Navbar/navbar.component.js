@@ -78,20 +78,29 @@ export default function Navbar() {
                 Appetizers
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="/gallery"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Gallery
+              </Link>
+            </li>
             <li>
               <Link
                 to="/cart"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
-                Gallery
+                Cart
               </Link>
             </li>
           </ul>
           {button && (
-            <Link to="/gallery">
+            <Link to="/cart">
               <Button buttonStyle="btn--primary">
-                Gallery <i class="fas fa-mortar-pestle" />
+                Cart <i class="fas fa-mortar-pestle" />
               </Button>
             </Link>
           )}

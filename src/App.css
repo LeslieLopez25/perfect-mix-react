@@ -64,3 +64,9 @@ p {
   color: hsl(0, 0%, 100%);
   font-size: 6.25rem;
 }
+
+.cart {
+  background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 40%, hsl(120, 60.7%, 33.9%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-size: 6.25rem;
+}
