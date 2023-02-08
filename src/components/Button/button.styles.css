@@ -7,9 +7,9 @@
 }
 
 .btn--primary {
-  background-color: hsl(195.8,100%,32.7%);
-  color: hsl(0,0%,100%);
-  border: 1px solid hsl(195.8,100%,32.7%);
+  background-color: hsl(120, 60.7%, 33.9%);
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(120, 60.7%, 33.9%);
 }
 
 .btn--medium {
@@ -25,8 +25,8 @@
 .btn--large:hover,
 .btn--medium:hover {
   background: none;
-  color: hsl(195.1,100%,50%);
-  border: 1px solid hsl(195.1,100%,50%);
+  color: hsl(20.5, 89%, 64.5%);
+  border: 1px solid hsl(20.5, 89%, 64.5%);
   transition: all 0.3s ease-out;
   transition: 250ms;
 }

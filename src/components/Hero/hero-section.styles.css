@@ -22,7 +22,7 @@
 
 .hero-container .left>h1 {
   background-color: hsl(20.5, 89%, 64.5%, 0.7);
-  color: hsl(0,0%,100%);
+  color: hsl(0, 0%, 100%);
   font-size: 3.125rem;
   text-transform: uppercase;
   margin-top: -6.25rem;
@@ -32,7 +32,7 @@
 }
 
 .hero-container .left>p {
-  color: hsl(0,0%,100%);
+  color: hsl(0, 0%, 100%);
   font-family: "Signika", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
   font-size: 2rem;
