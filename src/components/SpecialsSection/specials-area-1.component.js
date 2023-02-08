@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import data from "../Products/data";
+import data from "../../data";
 import ProductCard from "../Products/product-card.component";
 import "../Products/product.styles.css";
 
