@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Button } from "../Button/button.component";
-import { ShopContext } from "../context/shop-context";
+import { ShopContext } from "../Context/shop-context";
 
 import "../Products/product.styles.css";
 
