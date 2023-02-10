@@ -4,9 +4,9 @@ import { ShopContext } from "../Context/shop-context";
 
 import "../Products/product.styles.css";
 
-export default function Product({ item }) {
+export const Product = (props) => {
   // Created a function to handle the main properties of the products
-  const { id, img, title, desc, price } = item;
+  const { id, img, title, desc, price } = props.data;
   const { addToCart, cartItems } = useContext(ShopContext);
 
   const cartItemAmount = cartItems[id];
@@ -17,7 +17,6 @@ export default function Product({ item }) {
   }, []);
 
   return (
-    // The main product card
     <>
       <div className="productLineUp">
         <img src={img} alt={title} />
@@ -35,4 +34,4 @@ export default function Product({ item }) {
       </div>
     </>
   );
-}
+};

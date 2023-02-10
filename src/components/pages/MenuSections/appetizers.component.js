@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../App.css";
 import { DATA } from "../../../data";
-import ProductCard from "../../Products/product-card.component";
+import { Product } from "../../Products/product-card.component";
 import "../../Products/product.styles.css";
 
 export default function Appetizers() {
@@ -12,9 +12,9 @@ export default function Appetizers() {
         <div className="product-wrapper">
           <div className="product-card">
             {/* Mapped through the appetizer list of products in data file */}
-            {DATA.AppetizerList.map((item) => {
-              return <ProductCard key={item.id} item={item} />;
-            })}
+            {DATA.AppetizerList.map((product) => (
+              <Product key={product.id} data={product} />
+            ))}
           </div>
         </div>
       </div>
