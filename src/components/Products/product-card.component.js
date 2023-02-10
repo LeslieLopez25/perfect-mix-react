@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Button } from "../Button/button.component";
 import { ShopContext } from "../context/shop-context";
+
 import "../Products/product.styles.css";
 
 export default function Product({ item }) {
