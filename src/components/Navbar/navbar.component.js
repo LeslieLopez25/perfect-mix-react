@@ -30,82 +30,76 @@ export default function Navbar() {
   window.addEventListener("resize", showButton);
 
   return (
-    <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <div className="navbar-logo" onClick={closeMobileMenu}>
-            THE PERFECT MIX
-            <i class="fas fa-mortar-pestle" />
-          </div>
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/menu" className="nav-links" onClick={closeMobileMenu}>
-                Menu
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/beverages"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Beverages
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/desserts"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Desserts
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/appetizers"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Appetizers
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/gallery"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/cart"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                Cart
-              </Link>
-            </li>
-          </ul>
-          {button && (
-            <Link to="/cart">
-              <Button buttonStyle="btn--primary">
-                Cart <i class="fas fa-mortar-pestle" />
-              </Button>
-            </Link>
-          )}
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-logo" onClick={closeMobileMenu}>
+          THE PERFECT MIX
+          <i class="fas fa-mortar-pestle" />
         </div>
-      </nav>
-    </>
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/menu" className="nav-links" onClick={closeMobileMenu}>
+              Menu
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/beverages"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Beverages
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/desserts"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Desserts
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/appetizers"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Appetizers
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/gallery" className="nav-links" onClick={closeMobileMenu}>
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/cart"
+              className="nav-links-mobile"
+              onClick={closeMobileMenu}
+            >
+              Cart
+            </Link>
+          </li>
+        </ul>
+        {button && (
+          <Link to="/cart">
+            <Button buttonStyle="btn--primary">
+              Cart <i class="fas fa-mortar-pestle" />
+            </Button>
+          </Link>
+        )}
+      </div>
+    </nav>
   );
 }

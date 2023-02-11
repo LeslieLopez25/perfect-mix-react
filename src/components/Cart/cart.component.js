@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ShopContext } from "../Context/shop-context";
 import { DATA } from "../../data";
 import { CartItem } from "./cart-item.component";
@@ -11,6 +11,10 @@ export const Cart = () => {
   const totalAmount = getTotalCartAmount();
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="cart">

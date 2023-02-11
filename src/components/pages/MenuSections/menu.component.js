@@ -6,18 +6,16 @@ import "../../Products/product.styles.css";
 
 export default function Menu() {
   return (
-    <>
-      <div className="product-container">
-        <h2 className="product-heading">Menu</h2>
-        <div className="product-wrapper">
-          <div className="product-card">
-            {/* Mapped through the main menu list of products in data file */}
-            {DATA.MenuList.map((product) => (
-              <Product key={product.id} data={product} />
-            ))}
-          </div>
+    <div className="product-container">
+      <h2 className="product-heading">Menu</h2>
+      <div className="product-wrapper">
+        <div className="product-card">
+          {/* Mapped through the main menu list of products in data file */}
+          {DATA.MenuList.map((product) => (
+            <Product key={product.id} data={product} />
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
