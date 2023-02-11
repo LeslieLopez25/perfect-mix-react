@@ -15,10 +15,10 @@ export const Cart = () => {
   return (
     <div className="cart">
       <div>
-        <h1>Your Cart Items</h1>
+        <h2 className="cart-heading">Your Cart Items</h2>
       </div>
       <div className="cartItems">
-        {DATA.map((product) => {
+        {Array.from(DATA).map((product) => {
           if (cartItems[product.id] !== 0) {
             return <CartItem data={product} />;
           }

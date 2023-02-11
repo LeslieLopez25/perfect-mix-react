@@ -3,6 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 35%, hsl(153.6, 100%, 21%) 100%);
+    color: hsl(0, 0%, 100%);
+    padding: 5rem calc((100vw - 81.25rem) / 2);
+    width: 100%;
+    min-height: 100%;
+}
+
+.cart .cart-heading {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
 }
 
 .cartItem {
@@ -40,4 +52,13 @@
     border-radius: 8px;
     margin: 10px;
     cursor: pointer;
+}
+
+.productLineUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem 2rem 2rem;
 }
