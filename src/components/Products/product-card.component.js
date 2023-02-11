@@ -17,21 +17,19 @@ export const Product = (props) => {
   }, []);
 
   return (
-    <>
-      <div className="productLineUp">
-        <img src={img} alt={title} />
-        <h3> {title} </h3>
-        <p> {desc} </p>
-        <h4> ${price} </h4>
-        <Button
-          className="btns"
-          buttonStyle="btn--primary"
-          buttonSize="btn--large"
-          onClick={() => addToCart(id)}
-        >
-          Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
-        </Button>
-      </div>
-    </>
+    <div className="productLineUp">
+      <img src={img} alt={title} />
+      <h3> {title} </h3>
+      <p> {desc} </p>
+      <h4> ${price} </h4>
+      <Button
+        className="btns"
+        buttonStyle="btn--primary"
+        buttonSize="btn--large"
+        onClick={() => addToCart(id)}
+      >
+        Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
+      </Button>
+    </div>
   );
 };
