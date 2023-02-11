@@ -18,10 +18,8 @@
 }
 
 .cartItem {
-    width: 700px;
     height: 250px;
     display: flex;
-
     align-items: center;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
@@ -29,12 +27,25 @@
 }
 
 .cartItem img {
-    width: 200px;
+    min-width: 10rem;
+    max-width: 40%;
+    height: 15.5rem;
 }
 
 .cartItem .description {
     width: 100%;
     font-size: 30px;
+}
+
+.cartItem h3,
+h4 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.countHandler {
+    text-align: center;
 }
 
 .countHandler input {
@@ -52,13 +63,4 @@
     border-radius: 8px;
     margin: 10px;
     cursor: pointer;
-}
-
-.productLineUp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 2rem 2rem 2rem;
 }
