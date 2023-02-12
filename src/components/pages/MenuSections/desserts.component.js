@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../App.css";
-import { DATA } from "../../../data";
+import { PRODUCTS } from "../../../data";
 import { Product } from "../../Products/product-card.component";
 import "../../Products/product.styles.css";
 
@@ -11,7 +11,7 @@ export default function Desserts() {
       <div className="product-wrapper">
         <div className="product-card">
           {/* Mapped through the dessert list of products in data file */}
-          {DATA.DessertList.map((product) => (
+          {PRODUCTS.DessertList.map((product) => (
             <Product key={product.id} data={product} />
           ))}
         </div>

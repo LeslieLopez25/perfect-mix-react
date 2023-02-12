@@ -20,7 +20,7 @@ import Specials3 from "./images/appetizers-special.jpeg";
 import Specials4 from "./images/drink-special.jpeg";
 
 // Created an array of objects to store the data of the products
-export const DATA = {
+export const PRODUCTS = {
   MenuList: [
     {
       id: 1,
