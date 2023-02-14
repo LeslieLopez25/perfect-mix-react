@@ -16,6 +16,8 @@ export const Product = (props) => {
     window.scrollTo(0, 0);
   }, []);
 
+  console.log(onclick);
+
   return (
     <div className="productLineUp">
       <img src={img} alt={title} />
