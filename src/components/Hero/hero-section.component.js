@@ -9,7 +9,7 @@ export default function HeroSection() {
     <div className="hero-container">
       <div className="left">
         <h1>Food from scratch with love from our kitchens</h1>
-        <p>Check Us Out!</p>
+        <p>Come Check Us Out!</p>
         <div className="hero-btns">
           <Link to="/gallery">
             <Button

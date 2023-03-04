@@ -1,37 +1,22 @@
-import React, { useContext, useEffect } from "react";
-import { Button } from "../Button/button.component";
-import { ShopContext } from "../Context/shop-context";
+import React, { useEffect } from "react";
 
 import "../Products/product.styles.css";
 
-export const Product = (props) => {
+export const Product = (product) => {
   // Created a function to handle the main properties of the products
-  const { id, img, title, desc, price } = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
-
-  const cartItemAmount = cartItems[id];
+  const { img, title, desc, price } = product.data;
 
   // To have the page start at the top of the page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(onclick);
-
   return (
     <div className="productLineUp">
       <img src={img} alt={title} />
       <h3> {title} </h3>
       <p> {desc} </p>
-      <h4> ${price} </h4>
-      <Button
-        className="btns"
-        buttonStyle="btn--primary"
-        buttonSize="btn--large"
-        onClick={() => addToCart(id)}
-      >
-        Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
-      </Button>
+      <h4> ${price.toFixed(2)} </h4>
     </div>
   );
 };
