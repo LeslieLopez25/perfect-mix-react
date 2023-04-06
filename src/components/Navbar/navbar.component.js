@@ -89,9 +89,7 @@ export default function Navbar() {
         </ul>
         {button && (
           <Link to="/gallery">
-            <Button buttonStyle="btn--primary">
-              Gallery <i class="fas fa-mortar-pestle" />
-            </Button>
+            <Button buttonStyle="btn--primary">Gallery</Button>
           </Link>
         )}
       </div>

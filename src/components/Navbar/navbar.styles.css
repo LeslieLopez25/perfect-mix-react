@@ -68,10 +68,6 @@
   transition: all 0.2s ease-out;
 }
 
-Button .fa-mortar-pestle {
-  font-size: 1.25rem;
-}
-
 .fa-bars {
   color: hsl(0, 0%, 100%);
 }
