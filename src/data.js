@@ -1,7 +1,7 @@
-import Food1 from "./images/food-1.jpeg";
-import Food2 from "./images/food-2.jpeg";
-import Food3 from "./images/food-3.jpeg";
-import Food4 from "./images/food-4.jpeg";
+import Main1 from "./images/main-1.jpeg";
+import Main2 from "./images/main-2.jpeg";
+import Main3 from "./images/main-3.jpeg";
+import Main4 from "./images/main-4.jpeg";
 import Beverage1 from "./images/drink-1.jpeg";
 import Beverage2 from "./images/drink-2.jpeg";
 import Beverage3 from "./images/drink-3.jpeg";
@@ -21,11 +21,11 @@ import Specials4 from "./images/drink-special.jpeg";
 
 // Created an array of objects to store the data of the products
 export const PRODUCTS = {
-  MenuList: [
+  MainList: [
     {
       id: 1,
       title: "Seafood Enchiladas",
-      img: Food1,
+      img: Main1,
       desc: "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
       price: 14.99,
     },
@@ -33,7 +33,7 @@ export const PRODUCTS = {
     {
       id: 2,
       title: "Tacos de Carne Asada",
-      img: Food2,
+      img: Main2,
       desc: "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
       price: 10.99,
     },
@@ -41,7 +41,7 @@ export const PRODUCTS = {
     {
       id: 3,
       title: "Pozole Rojo",
-      img: Food3,
+      img: Main3,
       desc: "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
       price: 14.99,
     },
@@ -49,7 +49,7 @@ export const PRODUCTS = {
     {
       id: 4,
       title: "Carnitas",
-      img: Food4,
+      img: Main4,
       desc: "Pizza ipsum dolor amet lasagna sauteed onions hawaiian, bbq rib chicken and bacon peppers chicken wing.",
       price: 11.99,
     },

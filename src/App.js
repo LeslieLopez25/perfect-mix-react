@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/navbar.component";
 import {
   Home,
-  Menu,
+  Main,
   Beverages,
   Desserts,
   Appetizers,
@@ -18,7 +18,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
+        <Route path="/main" element={<Main />} />
         <Route path="/beverages" element={<Beverages />} />
         <Route path="/desserts" element={<Desserts />} />
         <Route path="/appetizers" element={<Appetizers />} />
