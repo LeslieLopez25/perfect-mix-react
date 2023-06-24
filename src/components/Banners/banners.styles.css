@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../../images/banner.jpeg");
+    background-image: url("../../assets/images/banner.jpeg");
     background-position: center;
     background-size: cover;
     height: 25rem;
@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../../images/banner-2.jpeg");
+    background-image: url("../../assets/images/banner-2.jpeg");
     background-position: center;
     background-size: cover;
     height: 25rem;
@@ -27,7 +27,7 @@
 
 /* Rollover Image Effect */
 .banner2-container:hover {
-    background-image: url("../../images/overlay.jpeg");
+    background-image: url("../../assets/images/overlay.jpeg");
     transform: scale(1.1);
     transition: .3s ease;
 }
