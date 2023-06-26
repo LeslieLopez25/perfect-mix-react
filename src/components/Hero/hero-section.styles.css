@@ -1,5 +1,5 @@
 .hero-container {
-  background-image: url("../../images/pattern.png");
+  background-image: url("../../assets/images/pattern.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@
 }
 
 .hero-container .right {
-  content: url("../../images/hero-img.png");
+  content: url("../../assets/images/hero-img.png");
   position: relative;
   left: 40.625rem;
   bottom: 22.5rem;
