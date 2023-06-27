@@ -44,10 +44,12 @@
   content: url("../../assets/images/hero-img.png");
   position: relative;
   left: 40.625rem;
-  bottom: 22.5rem;
+  bottom: 23.75rem;
   width: 100%;
   max-width: 31.25rem;
   max-height: 31.25rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .hero-btns {
