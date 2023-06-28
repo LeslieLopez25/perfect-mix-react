@@ -34,7 +34,7 @@ export const PRODUCTS = {
       id: 1,
       title: "Seafood Enchiladas",
       img: Main1,
-      desc: "Seafood Enchiladas are flour tortillas filled with a cheesy seafood filling, topped, and baked with a homemade creamy sauce.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 14.99,
     },
 
@@ -42,7 +42,7 @@ export const PRODUCTS = {
       id: 2,
       title: "Tacos de Carne Asada",
       img: Main2,
-      desc: "Meat that is placed in a corn tortilla and topped with guacamole, onions, chili peppers, and lime.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 10.99,
     },
 
@@ -50,7 +50,7 @@ export const PRODUCTS = {
       id: 3,
       title: "Pozole Rojo",
       img: Main3,
-      desc: "t is made from hominy with meat (typically chicken or pork), and can be seasoned and garnished with shredded lettuce or cabbage, chilli peppers, onion, garlic, radishes, avocado, salsa or limes.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 14.99,
     },
 
@@ -58,7 +58,7 @@ export const PRODUCTS = {
       id: 4,
       title: "Carnitas",
       img: Main4,
-      desc: "Served as tacos with chopped onion and cilantro with several slices of lime on the side and salsa.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 11.99,
     },
 
@@ -66,7 +66,7 @@ export const PRODUCTS = {
       id: 5,
       title: "Menudo",
       img: Main5,
-      desc: "Served with garlic, onion, chili, oregano and with several slices of lime on the side.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 15.99,
     },
 
@@ -74,7 +74,7 @@ export const PRODUCTS = {
       id: 6,
       title: "Mole",
       img: Main6,
-      desc: "A mild spicy sauce served over chicken with red rice and onions cooked in lime on the side.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 12.99,
     },
   ],
@@ -84,7 +84,7 @@ export const PRODUCTS = {
       id: 7,
       title: "Cappuccino",
       img: Beverage1,
-      desc: "Espresso-based coffee drink that is traditionally prepared with steamed milk foam.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 1.5,
     },
 
@@ -92,7 +92,7 @@ export const PRODUCTS = {
       id: 8,
       title: "Orange Juice",
       img: Beverage2,
-      desc: "A sweet and juicy drink with orange bits made from freshly squeezed oranges.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 9.99,
     },
 
@@ -100,7 +100,7 @@ export const PRODUCTS = {
       id: 9,
       title: "Coca Cola",
       img: Beverage3,
-      desc: "A soft drink.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 1.5,
     },
 
@@ -108,7 +108,7 @@ export const PRODUCTS = {
       id: 10,
       title: "Corona Extra",
       img: Beverage4,
-      desc: "a light and crisp pale lager.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 2.99,
     },
 
@@ -116,7 +116,7 @@ export const PRODUCTS = {
       id: 11,
       title: "Water",
       img: Beverage5,
-      desc: "Mineral water.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 0.99,
     },
 
@@ -124,7 +124,7 @@ export const PRODUCTS = {
       id: 12,
       title: "Tea",
       img: Beverage6,
-      desc: "Chamomile tea.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 1.99,
     },
   ],
@@ -134,7 +134,7 @@ export const PRODUCTS = {
       id: 13,
       title: "Tres Leches Pastel",
       img: Dessert1,
-      desc: "There is the normal tres leches flavor and the strawberry flavor.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 4.99,
     },
 
@@ -142,7 +142,7 @@ export const PRODUCTS = {
       id: 14,
       title: "Dessert Nachos",
       img: Dessert2,
-      desc: "Cinnamon sugar chips, whipped cream, homemade chocolate sauce, and fresh berries. Ingredients. Fresh Whipped Cream.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 6.99,
     },
 
@@ -150,7 +150,7 @@ export const PRODUCTS = {
       id: 15,
       title: "Paletas",
       img: Dessert3,
-      desc: "Flavors that we have are strawberry, mango, lime, cookies and cream with Oreo, jamaica, and coco con leche.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 0.99,
     },
 
@@ -158,7 +158,7 @@ export const PRODUCTS = {
       id: 16,
       title: "Fresas Con Crema",
       img: Dessert4,
-      desc: "Made with fresh strawberries mixed into a sweet and creamy sauce.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 3.99,
     },
 
@@ -166,7 +166,7 @@ export const PRODUCTS = {
       id: 17,
       title: "Flan",
       img: Dessert5,
-      desc: "A baked custard dessert topped with caramel.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 4.99,
     },
 
@@ -174,7 +174,7 @@ export const PRODUCTS = {
       id: 18,
       title: "Jericalla",
       img: Dessert6,
-      desc: "It's similar to flan but has an iconic burnt top.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 2.99,
     },
   ],
@@ -184,7 +184,7 @@ export const PRODUCTS = {
       id: 19,
       title: "Taco Cups",
       img: Appetizer1,
-      desc: "Seasoned ground beef & lots of cheese baked inside crispy wonton wrappers.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 0.99,
     },
 
@@ -192,7 +192,7 @@ export const PRODUCTS = {
       id: 20,
       title: "Guacamole",
       img: Appetizer2,
-      desc: "Mixed with avocados, onion, tomatoes, cilantro, jalapeno pepper, lime juice, garlic, and salt.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 1.99,
     },
 
@@ -200,7 +200,7 @@ export const PRODUCTS = {
       id: 21,
       title: "Ceviche",
       img: Appetizer3,
-      desc: "Raw fish cooked in lime juice with crab, cilantro, onion, tomato, salt, and avocado all mixed in together.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 1.5,
     },
 
@@ -208,7 +208,7 @@ export const PRODUCTS = {
       id: 22,
       title: "Taquitos",
       img: Appetizer4,
-      desc: "Small rolled-up tortilla that contains beef or chicken and cheese, dipped in salsa or guacamole.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 0.99,
     },
 
@@ -216,7 +216,7 @@ export const PRODUCTS = {
       id: 23,
       title: "Shrimp Cocktails",
       img: Appetizer5,
-      desc: "Tender shrimp, fresh tomato, cucumber, avocado, red onion and cilantro in a lightly spicy tomatoe based sauce.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 5.99,
     },
 
@@ -224,7 +224,7 @@ export const PRODUCTS = {
       id: 24,
       title: "Salsa with Chips",
       img: Appetizer6,
-      desc: "Tortilla chips served with salsa mixed with tomatoes, lime juice, cilantro, onion, and seasoning.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 2.99,
     },
   ],
@@ -234,7 +234,7 @@ export const PRODUCTS = {
       id: 25,
       title: "Tacos de Birria",
       img: Specials1,
-      desc: "Chuck roast slowed cooked seasoned and mixed with chiles put into a tortilla that is dipped into consomme.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 5.99,
     },
 
@@ -242,7 +242,7 @@ export const PRODUCTS = {
       id: 26,
       title: "Churros",
       img: Specials2,
-      desc: "A deep-fried pastry that is dusted with cinnamon sugar.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 2.99,
     },
   ],
@@ -252,7 +252,7 @@ export const PRODUCTS = {
       id: 27,
       title: "Tamales",
       img: Specials3,
-      desc: "A dish consisting of cornmeal dough around a filling as of minced meat and red peppers, the whole then wrapped in corn husks or plantain leaves and cooked by steaming.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 1.5,
     },
 
@@ -260,7 +260,7 @@ export const PRODUCTS = {
       id: 28,
       title: "Red Wine",
       img: Specials4,
-      desc: "Pinot Noir.",
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 9.99,
     },
   ],
