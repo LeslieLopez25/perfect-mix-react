@@ -28,8 +28,11 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2rem;
-  text-decoration: none;
   margin-left: 1.25rem;
+}
+
+.logo {
+  text-decoration: none;
 }
 
 .fa-mortar-pestle {

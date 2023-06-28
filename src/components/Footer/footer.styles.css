@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(20,76.3%,23.1%);
+  background-color: hsl(20, 76.3%, 23.1%);
   padding: 4rem 0 2rem 0;
 }
 
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
 }
 
 .footer-wrapper {
@@ -30,18 +30,21 @@
 }
 
 .footer-items>h2 {
-  color: hsl(0,0%,100%);
+  color: hsl(0, 0%, 100%);
   margin-bottom: 1rem;
 }
 
 .footer-items a {
-  color: hsl(0,0%,100%);
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
   margin-bottom: 0.5rem;
 }
 
 .footer-items a:hover {
-  background-color: hsl(20.5,89%,64.5%);
+  background: linear-gradient(150deg,
+      hsl(20.5, 89%, 64.5%) 0%,
+      hsl(120, 60.7%, 33.9%) 100%);
+  ;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s ease-out;
@@ -50,19 +53,21 @@
 /* Social Icons */
 .footer-items>p {
   font-size: 1rem;
-  color: hsl(0,0%,100%);
+  color: hsl(0, 0%, 100%);
   width: 90%;
   line-height: 1.6;
   display: flex;
 }
 
 .social-icon-link {
-  color: hsl(0,0%,100%);
+  color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
 }
 
 .social-icon-link:hover {
-  background-color: hsl(20.5,89%,64.5%);
+  background: linear-gradient(150deg,
+      hsl(20.5, 89%, 64.5%) 0%,
+      hsl(120, 60.7%, 33.9%) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -77,6 +82,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 2.5rem auto 0 auto;
+  padding-top: 3.125rem;
   width: 90%;
   max-width: 62.5rem;
 }
@@ -96,8 +102,8 @@
   justify-self: start;
   align-items: center;
   background: linear-gradient(90deg,
-      hsl(20.5,89%,64.5%) 0%,
-      #228b22 100%);
+      hsl(20.5, 89%, 64.5%) 0%,
+      hsl(120, 60.7%, 33.9%) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2rem;
@@ -113,7 +119,7 @@
 }
 
 .website-rights {
-  color: hsl(0,0%,100%);
+  color: hsl(0, 0%, 100%);
   position: relative;
   top: 2.5rem;
   right: 0.625rem;

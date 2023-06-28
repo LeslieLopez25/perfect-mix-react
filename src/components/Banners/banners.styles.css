@@ -9,6 +9,13 @@
     height: 25rem;
     max-height: 62.5rem;
     padding: 0 1rem;
+    opacity: 0.8;
+    transition: 500ms;
+}
+
+.banner-container:hover {
+    opacity: 1;
+    transition: 500ms;
 }
 
 .banner2-container {
@@ -22,12 +29,12 @@
     height: 25rem;
     max-height: 62.5rem;
     padding: 0 1rem;
+    opacity: 0.8;
     transition: all 0.2s linear;
 }
 
-/* Rollover Image Effect */
 .banner2-container:hover {
-    background-image: url("../../assets/images/overlay.jpeg");
+    opacity: 1;
     transform: scale(1.1);
     transition: .5s ease;
 }
