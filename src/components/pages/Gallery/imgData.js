@@ -10,7 +10,7 @@ import Gallery9 from "../../../assets/images/gallery-9.jpeg";
 import Gallery10 from "../../../assets/images/gallery-10.jpeg";
 import Gallery11 from "../../../assets/images/gallery-11.jpeg";
 import Gallery12 from "../../../assets/images/gallery-12.jpeg";
-import Gallery13 from "../../../assets/images/gallery-13.jpeg";
+import Gallery13 from "../../../assets/images/gallery-13.jpg";
 import Gallery14 from "../../../assets/images/gallery-14.jpeg";
 import Gallery15 from "../../../assets/images/gallery-15.jpeg";
 import Gallery16 from "../../../assets/images/gallery-16.jpeg";
