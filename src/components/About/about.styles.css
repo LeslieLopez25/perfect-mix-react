@@ -1,0 +1,42 @@
+.about-container {
+    background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 35%, hsl(153.6, 100%, 21%) 100%);
+    color: hsl(0, 0%, 100%);
+    padding: 5rem calc((100vw - 81.25rem) / 2);
+    width: 100%;
+    min-height: 100%;
+}
+
+.about-container .about-heading {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.about-container>p {
+    padding: 20px 0 30px 0;
+}
+
+.about-container>.about-section_1 {
+    position: relative;
+    top: 250px;
+    left: 50px;
+    width: 500px;
+}
+
+.about-container>.about-section_2 {
+    position: relative;
+    bottom: 180px;
+    left: 770px;
+    width: 500px;
+}
+
+.about-img {
+    background-image: url("../../assets/images/motar.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: 550px;
+    width: 200px;
+    height: 200px;
+}
