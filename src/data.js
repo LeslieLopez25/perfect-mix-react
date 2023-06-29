@@ -35,7 +35,7 @@ export const PRODUCTS = {
       title: "Seafood Enchiladas",
       img: Main1,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 14.99,
+      price: 120.0,
     },
 
     {
@@ -43,7 +43,7 @@ export const PRODUCTS = {
       title: "Tacos de Carne Asada",
       img: Main2,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 10.99,
+      price: 90.0,
     },
 
     {
@@ -51,7 +51,7 @@ export const PRODUCTS = {
       title: "Pozole Rojo",
       img: Main3,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 14.99,
+      price: 150.0,
     },
 
     {
@@ -59,7 +59,7 @@ export const PRODUCTS = {
       title: "Carnitas",
       img: Main4,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 11.99,
+      price: 100.0,
     },
 
     {
@@ -67,7 +67,7 @@ export const PRODUCTS = {
       title: "Menudo",
       img: Main5,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 15.99,
+      price: 150.0,
     },
 
     {
@@ -75,7 +75,7 @@ export const PRODUCTS = {
       title: "Mole",
       img: Main6,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 12.99,
+      price: 130.0,
     },
   ],
 
@@ -85,7 +85,7 @@ export const PRODUCTS = {
       title: "Cappuccino",
       img: Beverage1,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 1.5,
+      price: 50.0,
     },
 
     {
@@ -93,7 +93,7 @@ export const PRODUCTS = {
       title: "Orange Juice",
       img: Beverage2,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 9.99,
+      price: 30.0,
     },
 
     {
@@ -101,7 +101,7 @@ export const PRODUCTS = {
       title: "Coca Cola",
       img: Beverage3,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 1.5,
+      price: 20.0,
     },
 
     {
@@ -109,7 +109,7 @@ export const PRODUCTS = {
       title: "Corona Extra",
       img: Beverage4,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 2.99,
+      price: 15.0,
     },
 
     {
@@ -117,7 +117,7 @@ export const PRODUCTS = {
       title: "Water",
       img: Beverage5,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 0.99,
+      price: 10.0,
     },
 
     {
@@ -125,7 +125,7 @@ export const PRODUCTS = {
       title: "Tea",
       img: Beverage6,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 1.99,
+      price: 15.0,
     },
   ],
 
@@ -135,7 +135,7 @@ export const PRODUCTS = {
       title: "Tres Leches Pastel",
       img: Dessert1,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 4.99,
+      price: 50.0,
     },
 
     {
@@ -143,7 +143,7 @@ export const PRODUCTS = {
       title: "Dessert Nachos",
       img: Dessert2,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 6.99,
+      price: 20.0,
     },
 
     {
@@ -151,7 +151,7 @@ export const PRODUCTS = {
       title: "Paletas",
       img: Dessert3,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 0.99,
+      price: 15.0,
     },
 
     {
@@ -159,7 +159,7 @@ export const PRODUCTS = {
       title: "Fresas Con Crema",
       img: Dessert4,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 3.99,
+      price: 15.0,
     },
 
     {
@@ -167,7 +167,7 @@ export const PRODUCTS = {
       title: "Flan",
       img: Dessert5,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 4.99,
+      price: 10.0,
     },
 
     {
@@ -175,7 +175,7 @@ export const PRODUCTS = {
       title: "Jericalla",
       img: Dessert6,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 2.99,
+      price: 10.0,
     },
   ],
 
@@ -185,7 +185,7 @@ export const PRODUCTS = {
       title: "Taco Cups",
       img: Appetizer1,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 0.99,
+      price: 20.0,
     },
 
     {
@@ -193,7 +193,7 @@ export const PRODUCTS = {
       title: "Guacamole",
       img: Appetizer2,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 1.99,
+      price: 15.0,
     },
 
     {
@@ -201,7 +201,7 @@ export const PRODUCTS = {
       title: "Ceviche",
       img: Appetizer3,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 1.5,
+      price: 15.0,
     },
 
     {
@@ -209,7 +209,7 @@ export const PRODUCTS = {
       title: "Taquitos",
       img: Appetizer4,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 0.99,
+      price: 15.0,
     },
 
     {
@@ -217,7 +217,7 @@ export const PRODUCTS = {
       title: "Shrimp Cocktails",
       img: Appetizer5,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 5.99,
+      price: 25.0,
     },
 
     {
@@ -225,7 +225,7 @@ export const PRODUCTS = {
       title: "Salsa with Chips",
       img: Appetizer6,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 2.99,
+      price: 10.0,
     },
   ],
 
@@ -235,7 +235,7 @@ export const PRODUCTS = {
       title: "Tacos de Birria",
       img: Specials1,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 5.99,
+      price: 50.0,
     },
 
     {
@@ -243,7 +243,7 @@ export const PRODUCTS = {
       title: "Churros",
       img: Specials2,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 2.99,
+      price: 20.0,
     },
   ],
 
@@ -253,7 +253,7 @@ export const PRODUCTS = {
       title: "Tamales",
       img: Specials3,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 1.5,
+      price: 15.0,
     },
 
     {
@@ -261,7 +261,7 @@ export const PRODUCTS = {
       title: "Red Wine",
       img: Specials4,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
-      price: 9.99,
+      price: 75.0,
     },
   ],
 };
