@@ -8,9 +8,9 @@
 
 ### Screenshots
 
-<img src="/src/screenshots/main-page.png" width="400"/>
-<img src="/src/screenshots/food-section.png" width="400"/>
-<img src="/src/screenshots/gallery.png" width="400"/>
+<img src="/src/assets/screenshots/screenshot.png" width="400"/>
+<img src="/src/assets/screenshots/screenshot-2.png" width="400"/>
+<img src="/src/assets/screenshots/screenshot-3.png" width="400"/>
 
 <p>The perfect mix is a restaurant website that is designed to be a fun and easy way to find a variety of food that the restaurant has. The website is built with React JS and uses a CSS Grid to display the food items. The website is also designed to be responsive and mobile friendly. This uses the npm package. A custom button was created to have the properties that the website could implement. The JavaScript functions that were created are used to display the food items in the gallery section, for the navigation bar, for the button, and for the food products.</p>
 
