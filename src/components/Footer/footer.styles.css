@@ -125,8 +125,9 @@
   right: 0.625rem;
 }
 
-@media screen and (max-width: 51.25rem) {
+@media screen and (max-width: 60em) {
   .footer-container {
+    padding-top: 10.3125rem;
     position: absolute;
   }
 
@@ -141,10 +142,16 @@
   .social-media-wrap {
     flex-direction: column;
   }
+
+  .social-icons {
+    position: relative;
+    left: 3.75rem;
+  }
 }
 
 @media screen and (max-width: 48em) {
   .footer-container {
+    padding-top: 11.25rem;
     width: 100%;
     overflow-x: hidden;
   }
@@ -162,7 +169,7 @@
 
   .social-icons {
     display: flex;
-    align-self: flex-end;
+    align-self: center;
   }
 
   .website-rights {
