@@ -16,6 +16,7 @@
 }
 
 .footer-content {
+  margin: 3rem 0 0 5rem;
   width: 100%;
   max-width: 40rem;
 }
@@ -132,8 +133,12 @@
     height: 100vh;
   }
 
+  .footer-heading {
+    padding-right: 5rem;
+  }
+
   .footer-content {
-    padding: 4rem 0 0 4rem;
+    padding: 4rem 4rem 0 0;
     max-width: 100vw;
     width: 100vw;
   }
@@ -144,7 +149,7 @@
 
   .social-media-wrap {
     flex-direction: row;
-    margin-top: 6rem;
+    margin: 2rem 0 0 2rem;
   }
 
   .social-icons {
@@ -155,8 +160,16 @@
 
 @media screen and (max-width: 48em) {
   .footer-container {
-    padding-top: 11.25rem;
+    padding-top: 1.2rem;
     width: 100%;
+  }
+
+  .footer-heading {
+    margin-left: 5rem;
+  }
+
+  .footer-content {
+    margin-left: 7rem;
   }
 
   .footer-items {
@@ -168,6 +181,14 @@
     justify-items: center;
     font-size: 1.0625rem;
     font-weight: 600;
+  }
+
+  .social-media-wrap {
+    margin: 1rem 4rem 0 3rem;
+  }
+
+  .social-logo {
+    width: 38vw;
   }
 
   .social-icons {
