@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <div className="footer-container">
+      <h2 className="footer-heading">Come Visit Us</h2>
       <div class="footer-content">
         <div className="footer-wrapper">
           <div class="footer-items">
