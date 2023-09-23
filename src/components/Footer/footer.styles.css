@@ -1,24 +1,25 @@
+/* Common styles for all screen sizes */
 .footer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: hsl(20, 76.3%, 23.1%);
-  padding: 4rem 0 2rem 0;
+  padding: 5rem calc((100vw - 81.25rem) / 2);
   text-align: center;
 }
 
-.footer-container .footer-heading {
+.footer-heading {
   color: hsl(0, 0%, 100%);
   font-size: clamp(2rem, 2.5vw, 3rem);
-  text-align: center;
   text-transform: uppercase;
 }
 
 .footer-content {
   margin: 3rem 0 0 5rem;
-  width: 100%;
   max-width: 40rem;
+  width: 100%;
+  text-align: left;
 }
 
 .footer-wrapper {
@@ -30,13 +31,13 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  margin: 1rem 3.125rem 1rem 3.125rem;
+  margin: 1rem 3.125rem;
   max-width: 31.25rem;
   width: 50%;
   box-sizing: border-box;
 }
 
-.footer-items>h2 {
+.footer-items h2 {
   color: hsl(0, 0%, 100%);
   margin-bottom: 1rem;
 }
@@ -51,14 +52,13 @@
   background: linear-gradient(150deg,
       hsl(20.5, 89%, 64.5%) 0%,
       hsl(120, 60.7%, 33.9%) 100%);
-  ;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s ease-out;
 }
 
 /* Social Icons */
-.footer-items>p {
+.footer-items p {
   font-size: 1rem;
   color: hsl(0, 0%, 100%);
   width: 90%;
@@ -69,6 +69,7 @@
 .social-icon-link {
   color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 .social-icon-link:hover {
@@ -80,33 +81,29 @@
 }
 
 .social-media {
-  width: 100%;
   max-width: 62.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 3.125rem;
 }
 
 .social-media-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2.5rem auto 0 auto;
-  padding-top: 3.125rem;
-  width: 90%;
-  max-width: 62.5rem;
+  margin: 2.5rem 7rem 0 2rem;
 }
 
 .social-icons {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 7.5rem;
-  margin-right: 9.375rem;
+  margin-right: 3.125rem;
 }
 
 .social-logo {
   display: flex;
-  justify-self: start;
   align-items: center;
-  background: linear-gradient(90deg,
+  background: linear-gradient(150deg,
       hsl(20.5, 89%, 64.5%) 0%,
       hsl(120, 60.7%, 33.9%) 100%);
   background-clip: text;
@@ -123,82 +120,75 @@
 
 .website-rights {
   color: hsl(0, 0%, 100%);
-  position: relative;
-  top: 2.5rem;
+  margin-top: 2.5rem;
+  text-align: center;
 }
 
+/* Media Queries */
 @media screen and (max-width: 60em) {
   .footer-container {
-    position: absolute;
-    height: 100vh;
+    height: auto;
   }
 
   .footer-heading {
-    padding-right: 5rem;
+    padding-right: 0;
   }
 
   .footer-content {
-    padding: 4rem 4rem 0 0;
-    max-width: 100vw;
-    width: 100vw;
+    padding: 2rem;
   }
 
   .footer-wrapper {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .social-media-wrap {
-    flex-direction: row;
-    margin: 2rem 0 0 2rem;
+    flex-direction: column;
+    margin: 2rem 0;
   }
 
   .social-icons {
-    position: relative;
-    left: 3.75rem;
+    position: static;
+    margin: 0;
   }
 }
 
 @media screen and (max-width: 48em) {
   .footer-container {
     padding-top: 1.2rem;
-    width: 100%;
   }
 
   .footer-heading {
-    margin-left: 5rem;
+    margin-left: 0;
   }
 
   .footer-content {
-    margin-left: 7rem;
+    margin-left: 0;
   }
 
   .footer-items {
     width: 85%;
   }
 
-  .footer-items>p {
-    display: flex;
+  .footer-items p {
     justify-items: center;
     font-size: 1.0625rem;
     font-weight: 600;
   }
 
   .social-media-wrap {
-    margin: 1rem 4rem 0 3rem;
+    margin: 1rem 3rem 0 3rem;
   }
 
   .social-logo {
-    width: 38vw;
+    width: auto;
   }
 
   .social-icons {
-    display: flex;
-    align-self: center;
     margin-top: -0.5rem;
   }
 
   .website-rights {
     padding-top: 0.625rem;
-    text-align: center;
   }
 }
