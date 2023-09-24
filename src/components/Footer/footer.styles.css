@@ -54,6 +54,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s ease-out;
+  cursor: pointer;
 }
 
 /* Social Icons */
@@ -165,11 +166,11 @@
   }
 
   .footer-heading {
-    margin-left: 0;
+    /* margin-left: 0; */
   }
 
   .footer-content {
-    margin-left: 0;
+    margin-left: auto;
   }
 
   .footer-items {
@@ -197,4 +198,36 @@
   .website-rights {
     padding-top: 0.625rem;
   }
+}
+
+@media screen and (max-width: 35em) {
+  .footer-container {
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-heading {
+    margin-left: 0;
+    padding-bottom: 1rem;
+  }
+
+  .footer-content {
+    margin: 0 5rem 0 0;
+    height: 50%;
+  }
+
+  .social-media-wrap {
+    margin-top: 14rem;
+  }
+}
+
+@media screen and (max-width: 25.125em) {
+  .footer-content {
+    margin: 0 10rem 0 0;
+  }
+
+  .social-logo {
+    margin-left: 1.25rem;
+  }
+
 }
