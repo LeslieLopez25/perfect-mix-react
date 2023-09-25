@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   background-color: hsl(20, 76.3%, 23.1%);
-  padding: 5rem calc((100vw - 81.25rem) / 2);
+  padding: 5rem calc((100vw - 81.25rem) / 3);
   text-align: center;
 }
 
@@ -165,10 +165,6 @@
     padding-top: 1.2rem;
   }
 
-  .footer-heading {
-    /* margin-left: 0; */
-  }
-
   .footer-content {
     margin-left: auto;
   }
@@ -222,6 +218,10 @@
 }
 
 @media screen and (max-width: 25.125em) {
+  .footer-container {
+    width: 100%;
+  }
+
   .footer-content {
     margin: 0 13rem 0 0;
     height: 50%;
