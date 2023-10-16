@@ -1,14 +1,38 @@
 .loader-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url("../../assets/images/mexican-pattern.png");
-    background-position: center;
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-img {
-    width: 300px;
-    height: 300px;
+.spinner-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/images/mexican-pattern.png");
+  width: 100vw;
+  height: 100vh;
+}
+
+.spinner-container {
+  display: inline-block;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 3px solid hsl(120, 60.7%, 33.9%, 0.6);
+  border-radius: 50%;
+  border-top-color: hsl(120, 60.7%, 33.9%);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
