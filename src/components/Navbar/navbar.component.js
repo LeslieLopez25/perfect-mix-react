@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="navbar-logo" onClick={closeMobileMenu}>
           <Link to="/" className="logo">
             THE PERFECT MIX
-            <i class="fas fa-mortar-pestle" />
+            <i class="fas fa-mortar-pestle navbar-icon" />
           </Link>
         </div>
         <div className="menu-icon" onClick={handleClick}>

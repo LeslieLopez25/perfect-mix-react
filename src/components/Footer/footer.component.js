@@ -38,7 +38,7 @@ export default function Footer() {
           <div class="footer-logo">
             <div className="social-logo">
               THE PERFECT MIX
-              <i class="fas fa-mortar-pestle" />
+              <i class="fas fa-mortar-pestle footer-icon" />
             </div>
           </div>
           <small class="website-rights">
