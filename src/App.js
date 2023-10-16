@@ -9,7 +9,7 @@ import {
   Appetizers,
 } from "./components/export-menu-section.component";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Gallery from "./components/pages/Gallery/gallery.component";
+import Gallery from "./pages/Gallery/gallery.component";
 import Footer from "./components/Footer/footer.component";
 import Loader from "./components/Loader/loader.component";
 

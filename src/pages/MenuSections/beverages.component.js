@@ -1,8 +1,8 @@
 import React from "react";
-import "../../../App.css";
-import { PRODUCTS } from "../../../data";
-import { Product } from "../../Products/product-card.component";
-import "../../Products/product.styles.css";
+import "../../App.css";
+import { PRODUCTS } from "../../data";
+import { Product } from "../../components/Products/product-card.component";
+import "../../components/Products/product.styles.css";
 
 export default function Beverages() {
   return (
