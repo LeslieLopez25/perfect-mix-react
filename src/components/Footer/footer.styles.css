@@ -128,6 +128,18 @@
 }
 
 /* Media Queries */
+@media screen and (min-width: 87.75em) {
+  .footer-container {
+    padding: 5rem calc((100vw - 81.25rem) / 2);
+  }
+
+  .footer-content {
+    width: 100%;
+    min-width: 100%;
+
+  }
+}
+
 @media screen and (max-width: 60em) {
   .footer-container {
     margin: 0 auto;
