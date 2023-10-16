@@ -16,9 +16,9 @@
 
 .spinner-container {
   display: inline-block;
-  width: 3.125rem;
-  height: 3.125rem;
-  border: 3px solid hsl(120, 60.7%, 33.9%, 0.6);
+  width: 10rem;
+  height: 10rem;
+  border: 15px solid hsl(120, 60.7%, 33.9%, 0.6);
   border-radius: 50%;
   border-top-color: hsl(120, 60.7%, 33.9%);
   animation: spin 1s ease-in-out infinite;
