@@ -4,9 +4,9 @@
   align-items: center;
   background-color: hsl(20, 76.3%, 23.1%);
   font-size: 1.25rem;
+  height: 5rem;
   position: sticky;
   top: 0;
-  height: 5rem;
   z-index: 999;
 }
 
@@ -36,8 +36,8 @@
 
 .navbar-icon {
   font-size: 1.875rem;
-  margin-left: 0.5rem;
   margin-bottom: 1rem;
+  margin-left: 0.5rem;
   vertical-align: middle;
 }
 
@@ -46,9 +46,9 @@
   justify-content: end;
   grid-template-columns: repeat(6, auto);
   grid-gap: 0.625rem;
-  text-align: center;
   margin-right: 2rem;
   width: 50rem;
+  text-align: center;
   list-style: none;
 }
 
@@ -60,9 +60,9 @@
   display: flex;
   align-items: center;
   color: hsl(0, 0%, 100%);
-  text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  text-decoration: none;
 }
 
 .nav-links:hover {
@@ -91,11 +91,11 @@
   .nav-menu {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100vh;
     position: absolute;
     top: 5rem;
     left: -100%;
-    width: 100%;
-    height: 100vh;
     opacity: 1;
     transition: all 0.5s ease;
   }
@@ -110,11 +110,11 @@
 
   .nav-links {
     display: table;
-    text-align: center;
     padding: 1.25rem;
+    width: 100%;
     position: relative;
     top: 3.125rem;
-    width: 100%;
+    text-align: center;
   }
 
   .nav-links:hover {
@@ -124,17 +124,17 @@
   }
 
   .navbar-logo {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 1.25rem;
     left: 2.5rem;
-    display: flex;
-    align-items: center;
   }
 
   .navbar-icon {
     font-size: 1.875rem;
-    margin-left: 0.5rem;
     margin-bottom: 0.8rem;
+    margin-left: 0.5rem;
     vertical-align: middle;
   }
 
@@ -158,11 +158,11 @@
     background-color: hsl(120, 60.7%, 33.9%);
     color: hsl(0, 0%, 100%);
     font-size: 1.5rem;
-    text-align: center;
-    text-decoration: none;
     margin: 4.375rem auto;
     padding: 0.875rem 1.25rem;
     width: 80%;
+    text-align: center;
+    text-decoration: none;
     border-radius: 4px;
     border: 1px solid hsl(120, 60.7%, 33.9%);
     transition: all 0.3s ease-out;

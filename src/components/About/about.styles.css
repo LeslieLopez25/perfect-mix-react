@@ -2,8 +2,8 @@
     background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 35%, hsl(153.6, 100%, 21%) 100%);
     color: hsl(0, 0%, 100%);
     padding: 5rem calc((100vw - 81.25rem) / 2);
-    width: 100%;
     min-height: 100%;
+    width: 100%;
 }
 
 .about-container .about-heading {
@@ -26,17 +26,17 @@
     grid-gap: 2rem;
     justify-content: center;
     align-items: center;
-    max-width: 81.25rem;
     margin: 0 auto;
-    padding: 2rem
+    padding: 2rem;
+    max-width: 81.25rem;
 }
 
 .about-img {
     background-image: url("../../assets/images/motar.png");
     background-size: cover;
     background-position: center;
-    width: 100%;
     padding-bottom: 100%;
+    width: 100%;
 }
 
 @media screen and (max-width: 60em) {

@@ -1,12 +1,12 @@
 .hero-container {
-  background-image: url("../../assets/images/pattern.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("../../assets/images/pattern.png");
   padding: 5rem calc((100vw - 81.25rem) / 2);
-  width: 100%;
   min-height: 100%;
+  width: 100%;
   box-shadow: inset 0 0 0 62.5rem hsl(197.5, 44.4%, 10.6%, 0.4);
   object-fit: contain;
 }
@@ -14,8 +14,8 @@
 .hero-container>.left {
   display: block;
   position: relative;
-  left: -18.75rem;
   top: 14.375rem;
+  left: -18.75rem;
   width: 31.25rem;
   max-height: 31.25rem;
 }
@@ -24,9 +24,9 @@
   background-color: hsl(20.5, 89%, 64.5%, 0.7);
   color: hsl(0, 0%, 100%);
   font-size: 3.125rem;
-  text-transform: uppercase;
   margin-top: -6.25rem;
   margin-bottom: 1.875rem;
+  text-transform: uppercase;
   box-shadow: 0.5rem 0.5rem hsl(120, 60.7%, 33.9%, 0.7);
   border-radius: 4px;
 }
@@ -36,25 +36,25 @@
   font-family: "Signika", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
   font-size: 2rem;
-  text-align: center;
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 .hero-container .right {
   content: url("../../assets/images/hero-img.png");
+  max-width: 31.25rem;
+  width: 100%;
+  max-height: 31.25rem;
   position: relative;
   left: 40.625rem;
   bottom: 23.75rem;
-  width: 100%;
-  max-width: 31.25rem;
-  max-height: 31.25rem;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
 .hero-btns {
-  text-align: center;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .fa-play-circle {
@@ -63,10 +63,10 @@
 
 @media screen and (max-width: 60em) {
   .hero-container>.left {
+    padding: 5rem calc((100vw - 81.25rem) / 2);
     position: relative;
     top: 11.25rem;
     left: -12.5rem;
-    padding: 5rem calc((100vw - 81.25rem) / 2);
   }
 
   .hero-container .left>h1 {
@@ -78,17 +78,17 @@
     position: relative;
     bottom: 25rem;
     left: 33.125rem;
-    width: 25rem;
     max-width: 31.25rem;
+    width: 25rem;
   }
 }
 
 @media screen and (max-width: 48em) {
   .hero-container>.left {
+    width: 65%;
     position: relative;
     top: 3.125rem;
     left: 0;
-    width: 65%;
   }
 
   .hero-container .left>h1 {
@@ -113,5 +113,3 @@
     width: 100%;
   }
 }
-
-/* font-size: 6.25rem */

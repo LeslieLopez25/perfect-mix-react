@@ -8,9 +8,9 @@
 
 .product-container .product-heading {
     font-size: clamp(2rem, 2.5vw, 3rem);
+    margin-bottom: 5rem;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 5rem;
 }
 
 .product-container .product-wrapper {
@@ -34,8 +34,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 0 2rem 2rem 2rem;
+    text-align: center;
 }
 
 .productLineUp img {
