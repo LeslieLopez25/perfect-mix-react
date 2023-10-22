@@ -1,8 +1,18 @@
 <h1>The Perfect Mix :taco:</h1>
 
-<h2>A restaurant website built using React and CSS.</h2>
+<h2>Welcome to The Perfect Mix, a captivating restaurant website meticulously crafted using React and CSS to provide a delightful culinary journey.</h2>
 
-<p>The Perfect Mix is a restaurant website that is designed to be a fun and easy way to find a variety of food that the restaurant provides. It is mobile responsive and has a custom button, separate pages for the different kinds of food the restaurant has, and a gallery section as well. This project is all frontend that uses just React JS and CSS to style it. </p>
+<p>
+Key Features
+
+- Mobile Responsiveness: The Perfect Mix ensures an exceptional experience on any device, be it your smartphone, tablet, or desktop.
+
+- Custom Button: Experience our restaurant like never before with a thoughtfully designed custom button that adds a touch of elegance to your navigation.
+
+- Diverse Menu Pages: Discover the plethora of culinary treasures our restaurant boasts with dedicated pages for each category of food, making your choices easier and more enjoyable.
+
+- Captivating Gallery: Immerse yourself in the visual feast of our mouthwatering dishes through our gallery section. Get a glimpse of the culinary artistry that awaits you.
+</p>
 
 ### Link
 
