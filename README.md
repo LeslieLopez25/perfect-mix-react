@@ -2,9 +2,9 @@
 
 <h2>Welcome to The Perfect Mix, a captivating restaurant website meticulously crafted using React and CSS to provide a delightful culinary journey.</h2>
 
-<p>
-Key Features
+### Key Features
 
+<p>
 - Mobile Responsiveness: The Perfect Mix ensures an exceptional experience on any device, be it your smartphone, tablet, or desktop.
 
 - Custom Button: Experience our restaurant like never before with a thoughtfully designed custom button that adds a touch of elegance to your navigation.
