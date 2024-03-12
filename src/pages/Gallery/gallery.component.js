@@ -23,7 +23,7 @@ export default function Gallery() {
       <h2 className="gallery-heading">Gallery</h2>
       <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={""} />
-        <i class="fa-solid fa-xmark" onClick={() => setModel(false)} />
+        <i className="fa-solid fa-xmark" onClick={() => setModel(false)} />
       </div>
       <div className="gallery">
         {imgData.map((img, id) => {
