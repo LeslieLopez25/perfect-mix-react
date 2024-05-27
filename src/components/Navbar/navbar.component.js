@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Button } from "../Button/button.component";
 import { Link } from "react-router-dom";
 import "./navbar.styles.css";
+import CartContext from "../../Context/CartContext";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const { cart } = useContext(CartContext);
 
   // handleClick to determine if the icon is clicked
   const handleClick = () => setClick(!click);
@@ -89,6 +91,14 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
+        <div className="cart-icon">
+          <Link to="/cart" className="nav-links">
+            <i className="fas fa-shopping-cart" />
+            {cart.length > 0 && (
+              <span className="cart-count">{cart.length}</span>
+            )}
+          </Link>
+        </div>
         {button && (
           <Link to="/gallery">
             <Button buttonStyle="btn--primary">Gallery</Button>
