@@ -91,15 +91,15 @@ export default function Navbar() {
               Gallery
             </Link>
           </li>
+          <li>
+            <Link to="/cart" className="nav-links">
+              <i className="fas fa-shopping-cart" />
+              {cart.length > 0 && (
+                <span className="cart-count">{cart.length}</span>
+              )}
+            </Link>
+          </li>
         </ul>
-        <div className="cart-icon">
-          <Link to="/cart" className="nav-links">
-            <i className="fas fa-shopping-cart" />
-            {cart.length > 0 && (
-              <span className="cart-count">{cart.length}</span>
-            )}
-          </Link>
-        </div>
         {button && (
           <Link to="/gallery">
             <Button buttonStyle="btn--primary btn-medium">Gallery</Button>

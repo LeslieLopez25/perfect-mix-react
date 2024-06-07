@@ -44,7 +44,7 @@
 .nav-menu {
   display: grid;
   justify-content: end;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(7, auto);
   grid-gap: 0.625rem;
   margin-right: 2rem;
   width: 50rem;
@@ -69,6 +69,23 @@
   color: hsl(20.5, 89%, 64.5%);
   border-bottom: 4px solid hsl(20.5, 89%, 64.5%);
   transition: all 0.2s ease-out;
+}
+
+.cart-count {
+  color: hsl(20, 76.3%, 23.1%);
+  position: absolute;
+  right: 220px;
+  top: 21px;
+}
+
+.cart-count:hover {
+  color: hsl(0, 0%, 100%);
+  transition: all 0.2s ease-out;
+  top: 19px
+}
+
+.fa-shopping-cart {
+  font-size: 2rem;
 }
 
 .fa-bars {
