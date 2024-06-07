@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
+import CartContext from "../../Context/CartContext";
 import { Button } from "../Button/button.component";
 import { Link } from "react-router-dom";
+
 import "./navbar.styles.css";
-import CartContext from "../../Context/CartContext";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -101,7 +102,7 @@ export default function Navbar() {
         </div>
         {button && (
           <Link to="/gallery">
-            <Button buttonStyle="btn--primary">Gallery</Button>
+            <Button buttonStyle="btn--primary btn-medium">Gallery</Button>
           </Link>
         )}
       </div>

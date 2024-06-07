@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from "react";
+import CartContext from "../../Context/CartContext";
+import { Button } from "../Button/button.component";
 
 import "../Products/product.styles.css";
-import CartContext from "../../Context/CartContext";
 
 export const Product = ({ data }) => {
   const { addToCart } = useContext(CartContext);
@@ -21,7 +22,9 @@ export const Product = ({ data }) => {
       <h3>{data.title}</h3>
       <p>{data.desc}</p>
       <h4>${data.price.toFixed(2)}</h4>
-      <button onClick={handleClick}>Add to Cart</button>
+      <Button buttonStyle="btn-secondary btn--large" onClick={handleClick}>
+        Add to Cart
+      </Button>
     </div>
   );
 };

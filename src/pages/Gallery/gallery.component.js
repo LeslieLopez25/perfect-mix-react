@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import imgData from "./imgData";
+
 import "../Gallery/gallery.styles.css";
 import "../../App.css";
 
