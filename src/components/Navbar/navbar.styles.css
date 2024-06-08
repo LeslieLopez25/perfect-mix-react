@@ -71,21 +71,28 @@
   transition: all 0.2s ease-out;
 }
 
-.cart-count {
-  color: hsl(20, 76.3%, 23.1%);
-  position: absolute;
-  right: 220px;
-  top: 21px;
+.cart-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cart-count:hover {
-  color: hsl(0, 0%, 100%);
-  transition: all 0.2s ease-out;
-  top: 19px
+.cart-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(120, 60.7%, 33.9%);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.3rem;
+  margin-left: -2rem;
+  margin-top: -0.7rem;
 }
 
 .fa-shopping-cart {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .fa-bars {

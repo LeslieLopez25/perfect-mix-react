@@ -93,10 +93,10 @@ export default function Navbar() {
           </li>
           <li>
             <Link to="/cart" className="nav-links">
-              <i className="fas fa-shopping-cart" />
-              {cart.length > 0 && (
+              <div className="cart-icon-wrapper">
+                <i className="fas fa-shopping-cart" />
                 <span className="cart-count">{cart.length}</span>
-              )}
+              </div>
             </Link>
           </li>
         </ul>
