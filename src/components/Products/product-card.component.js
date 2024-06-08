@@ -22,7 +22,7 @@ export const Product = ({ data }) => {
       <h3>{data.title}</h3>
       <p>{data.desc}</p>
       <h4>${data.price.toFixed(2)}</h4>
-      <Button buttonStyle="btn-secondary btn--large" onClick={handleClick}>
+      <Button buttonStyle="btn--secondary btn--large" onClick={handleClick}>
         Add to Cart
       </Button>
     </div>

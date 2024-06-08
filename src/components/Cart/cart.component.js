@@ -1,5 +1,7 @@
-import React, { useContext } from "react";
-import CartContext from "../Context/CartContext";
+import React, { useEffect, useContext } from "react";
+import CartContext from "../../Context/CartContext";
+import { Button } from "../Button/button.component";
+
 import "./cart.styles.css";
 
 const Cart = () => {
@@ -19,6 +21,11 @@ const Cart = () => {
       .toFixed(2);
   };
 
+  // To have the page start at the top of the page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="cart-container">
       <h2>Your Cart</h2>
@@ -33,9 +40,19 @@ const Cart = () => {
                 <h3>{item.title}</h3>
                 <p>${item.price.toFixed(2)}</p>
                 <div className="cart-item-quantity">
-                  <button onClick={() => decreaseQuantity(item)}>-</button>
+                  <Button
+                    buttonStyle="btn--primary btn--medium"
+                    onClick={() => decreaseQuantity(item)}
+                  >
+                    -
+                  </Button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => increaseQuantity(item)}>+</button>
+                  <Button
+                    buttonStyle="btn--primary btn--medium"
+                    onClick={() => increaseQuantity(item)}
+                  >
+                    +
+                  </Button>
                 </div>
               </div>
               <div className="cart-item-total">

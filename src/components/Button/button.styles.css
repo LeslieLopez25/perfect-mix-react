@@ -12,7 +12,7 @@
   border: 1px solid hsl(120, 60.7%, 33.9%);
 }
 
-.btn-secondary {
+.btn--secondary {
   background-color: hsl(20.5, 89%, 64.5%);
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(20.5, 89%, 64.5%);

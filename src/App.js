@@ -13,7 +13,7 @@ import Gallery from "./pages/Gallery/gallery.component";
 import Footer from "./components/Footer/footer.component";
 import Loader from "./components/Loader/loader.component";
 import { CartProvider } from "./Context/CartContext";
-import Cart from "./Cart/cart.component";
+import Cart from "./components/Cart/cart.component";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
