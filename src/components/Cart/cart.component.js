@@ -28,9 +28,9 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h2>Your Cart</h2>
+      <h2 className="cart-heading">Your Cart</h2>
       {cart.length === 0 ? (
-        <p>Your cart is empty</p>
+        <p className="cart-message">Your cart is empty</p>
       ) : (
         <div className="cart-items">
           {cart.map((item) => (
