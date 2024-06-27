@@ -41,14 +41,14 @@ const Cart = () => {
                 <p>${item.price.toFixed(2)}</p>
                 <div className="cart-item-quantity">
                   <Button
-                    buttonStyle="btn--primary btn--medium"
+                    buttonStyle="btn--cart"
                     onClick={() => decreaseQuantity(item)}
                   >
                     -
                   </Button>
                   <span>{item.quantity}</span>
                   <Button
-                    buttonStyle="btn--primary btn--medium"
+                    buttonStyle="btn--cart"
                     onClick={() => increaseQuantity(item)}
                   >
                     +
