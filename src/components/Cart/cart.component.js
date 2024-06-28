@@ -32,39 +32,41 @@ const Cart = () => {
       {cart.length === 0 ? (
         <p className="cart-message">Your Cart Is Empty</p>
       ) : (
-        <div className="cart-items">
-          {cart.map((item) => (
-            <div key={item.id} className="cart-item">
-              <img src={item.img} alt={item.title} />
-              <div className="cart-item-details">
-                <h3>{item.title}</h3>
-                <p>${item.price.toFixed(2)}</p>
-                <div className="cart-item-quantity">
-                  <Button
-                    buttonStyle="btn--cart"
-                    onClick={() => decreaseQuantity(item)}
-                  >
-                    -
-                  </Button>
-                  <span>{item.quantity}</span>
-                  <Button
-                    buttonStyle="btn--cart"
-                    onClick={() => increaseQuantity(item)}
-                  >
-                    +
-                  </Button>
+        <>
+          <div className="cart-items">
+            {cart.map((item) => (
+              <div key={item.id} className="cart-item">
+                <img src={item.img} alt={item.title} />
+                <div className="cart-item-details">
+                  <h3>{item.title}</h3>
+                  <p>${item.price.toFixed(2)}</p>
+                  <div className="cart-item-quantity">
+                    <Button
+                      buttonStyle="btn--cart"
+                      onClick={() => decreaseQuantity(item)}
+                    >
+                      -
+                    </Button>
+                    <span>{item.quantity}</span>
+                    <Button
+                      buttonStyle="btn--cart"
+                      onClick={() => increaseQuantity(item)}
+                    >
+                      +
+                    </Button>
+                  </div>
+                </div>
+                <div className="cart-item-total">
+                  ${(item.price * item.quantity).toFixed(2)}
                 </div>
               </div>
-              <div className="cart-item-total">
-                ${(item.price * item.quantity).toFixed(2)}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+          <div className="cart-total">
+            <h3>Total: ${calculateTotal()}</h3>
+          </div>
+        </>
       )}
-      <div className="cart-total">
-        <h3>Total: ${calculateTotal()}</h3>
-      </div>
     </div>
   );
 };

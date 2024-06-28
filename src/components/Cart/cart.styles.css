@@ -79,6 +79,12 @@ p {
         padding-left: 200px;
     }
 
+    .cart-item img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .cart-item-total {
         padding-right: 200px;
     }
