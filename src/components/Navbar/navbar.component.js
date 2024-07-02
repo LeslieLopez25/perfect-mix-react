@@ -25,6 +25,7 @@ export default function Navbar() {
     }
   };
 
+  // Update cart count whenever cart changes
   useEffect(() => {
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
     setCartCount(totalItems);
