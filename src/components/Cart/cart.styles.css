@@ -63,7 +63,7 @@ p {
 .cart-item-total {
     font-size: 1.5rem;
     font-weight: bold;
-    padding-right: 400px;
+    margin-right: 400px;
 }
 
 .cart-total {
@@ -86,7 +86,7 @@ p {
     }
 
     .cart-item-total {
-        padding-right: 200px;
+        margin-right: 200px;
     }
 
     .cart-total {
@@ -124,7 +124,7 @@ p {
     }
 
     .cart-item-total {
-        padding-right: 0;
+        margin: 0;
         font-size: 1.2rem;
         text-align: center;
         margin-top: 10px;
