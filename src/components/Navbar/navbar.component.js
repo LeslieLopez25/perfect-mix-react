@@ -8,6 +8,7 @@ import "./navbar.styles.css";
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [cartCount, setCartCount] = useState(0);
   const { cart } = useContext(CartContext);
 
   // handleClick to determine if the icon is clicked
@@ -23,6 +24,11 @@ export default function Navbar() {
       setButton(true);
     }
   };
+
+  useEffect(() => {
+    const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+    setCartCount(totalItems);
+  }, [cart]);
 
   // To render the button
   useEffect(() => {
@@ -95,7 +101,7 @@ export default function Navbar() {
             <Link to="/cart" className="nav-links">
               <div className="cart-icon-wrapper">
                 <i className="fas fa-shopping-cart" />
-                <span className="cart-count">{cart.length}</span>
+                <span className="cart-count">{cartCount}</span>
               </div>
             </Link>
           </li>
