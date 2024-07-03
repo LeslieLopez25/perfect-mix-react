@@ -8,6 +8,7 @@
   padding: 5rem calc((100vw - 81.25rem) / 2);
   min-height: 100%;
   width: 100%;
+  max-width: 100%;
 }
 
 .footer-container .footer-heading {

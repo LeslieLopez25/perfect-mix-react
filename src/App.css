@@ -5,7 +5,8 @@
   padding: 0;
 }
 
-body {
+body,
+html {
   background: linear-gradient(150deg,
       hsl(20.5, 89%, 64.5%) 0%,
       hsl(120, 60.7%, 33.9%) 100%);
