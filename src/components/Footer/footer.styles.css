@@ -199,11 +199,14 @@
     grid-row-gap: 2rem;
     justify-content: center;
     padding: 0;
+    margin: 0;
   }
 
   .footer-wrapper {
     flex-direction: column;
     align-items: center;
+    margin-left: 100px;
+    margin-top: 20px;
   }
 
   .social-media-wrap {
@@ -233,8 +236,12 @@
   .footer-content {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 4rem;
+    margin-right: 30px;
     height: 50%;
+  }
+
+  .footer-wrapper {
+    margin-top: 0;
   }
 
   .social-media-wrap {
@@ -252,6 +259,11 @@
   .footer-content {
     margin: 0 auto;
     width: 100%;
+  }
+
+  .footer-items {
+    width: 100%;
+    margin-left: 0;
   }
 
   .social-logo {
