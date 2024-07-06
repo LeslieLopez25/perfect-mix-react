@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="navbar-logo" onClick={closeMobileMenu}>
           <Link to="/" className="logo">
             THE PERFECT MIX
-            <i class="fas fa-mortar-pestle navbar-icon" />
+            <i className="fas fa-mortar-pestle navbar-icon" />
           </Link>
         </div>
         <div className="menu-icon" onClick={handleClick}>
@@ -90,20 +90,20 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="/cart" className="nav-links" onClick={closeMobileMenu}>
+              <div className="cart-icon-wrapper">
+                <i className="fas fa-shopping-cart" />
+                <span className="cart-count">{cartCount}</span>
+              </div>
+            </Link>
+          </li>
+          <li>
             <Link
               to="/gallery"
               className="nav-links-mobile"
               onClick={closeMobileMenu}
             >
               Gallery
-            </Link>
-          </li>
-          <li>
-            <Link to="/cart" className="nav-links">
-              <div className="cart-icon-wrapper">
-                <i className="fas fa-shopping-cart" />
-                <span className="cart-count">{cartCount}</span>
-              </div>
             </Link>
           </li>
         </ul>
