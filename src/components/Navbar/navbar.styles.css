@@ -208,6 +208,12 @@
     border: 1px solid hsl(20.5, 89%, 64.5%);
     transition: 250ms;
   }
+
+  .cart-icon-wrapper {
+    order: -1;
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 @media screen and (max-width: 48em) {
