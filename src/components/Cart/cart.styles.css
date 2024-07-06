@@ -6,6 +6,7 @@
 .cart-container .cart-heading {
     font-size: clamp(2rem, 2.5vw, 3rem);
     margin-bottom: 5rem;
+    padding-top: 4rem;
     text-align: center;
     text-transform: uppercase;
 }

@@ -5,10 +5,11 @@
   background-color: hsl(20, 76.3%, 23.1%);
   font-size: 1.25rem;
   height: 5rem;
-  position: sticky;
+  width: 100%;
   top: 0;
   z-index: 999;
   padding: 0 1rem;
+  position: fixed;
 }
 
 .navbar-container {
@@ -93,8 +94,8 @@
   align-items: center;
   color: hsl(120, 60.7%, 33.9%);
   font-size: 1.1rem;
-  margin-left: -1.5rem;
-  margin-top: -0.5rem;
+  margin-left: -1.6rem;
+  margin-top: -0.7rem;
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
@@ -117,6 +118,10 @@
 }
 
 @media screen and (max-width: 60em) {
+  .navbar-container {
+    position: fixed;
+  }
+
   .NavbarItems {
     flex-wrap: wrap;
     padding: 0 1.5rem;
