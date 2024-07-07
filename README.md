@@ -20,9 +20,10 @@
 
 ### Screenshots
 
-<img src="/src/assets/screenshots/screenshot.png" width="400"/>
-<img src="/src/assets/screenshots/screenshot-2.png" width="400"/>
-<img src="/src/assets/screenshots/screenshot-3.png" width="400"/>
+<img src="/src/assets/screenshots/home.png" width="400"/>
+<img src="/src/assets/screenshots/main.png" width="400"/>
+<img src="/src/assets/screenshots/gallery.png" width="400"/>
+<img src="/src/assets/screenshots/cart.png" width="400"/>
 
 ---
 
