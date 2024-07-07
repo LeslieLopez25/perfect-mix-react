@@ -12,6 +12,10 @@
 - Diverse Menu Pages: Discover the plethora of culinary treasures our restaurant boasts with dedicated pages for each category of food, making your choices easier and more enjoyable.
 
 - Captivating Gallery: Immerse yourself in the visual feast of our mouthwatering dishes through our gallery section. Get a glimpse of the culinary artistry that awaits you.
+
+* Updated as of July 2024:
+
+- Enhanced Cart Functionality: Easily add items to your cart, adjust quantities, and view the total amount for each item with our intuitive add-to-cart feature.
 </p>
 
 ### Link
