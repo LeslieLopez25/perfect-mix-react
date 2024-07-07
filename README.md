@@ -5,7 +5,7 @@
 ### Key Features
 
 <p>
-- Mobile Responsiveness: The Perfect Mix ensures an exceptional experience on any device, be it your smartphone, tablet, or desktop.
+- Mobile Responsiveness: Enjoy a seamless experience on any device, whether it's a smartphone, tablet, or desktop.
 
 - Custom Button: Experience our restaurant like never before with a thoughtfully designed custom button that adds a touch of elegance to your navigation.
 
@@ -13,7 +13,7 @@
 
 - Captivating Gallery: Immerse yourself in the visual feast of our mouthwatering dishes through our gallery section. Get a glimpse of the culinary artistry that awaits you.
 
-* Updated as of July 2024:
+\*\* Updated as of July 2024:
 
 - Enhanced Cart Functionality: Easily add items to your cart, adjust quantities, and view the total amount for each item with our intuitive add-to-cart feature.
 </p>
