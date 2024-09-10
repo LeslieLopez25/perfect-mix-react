@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  font-family: "Signika", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  background: linear-gradient(150deg,
+      hsl(20.5, 89%, 64.5%) 0%,
+      hsl(120, 60.7%, 33.9%) 100%);
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  font-family: "Signika",
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+}
+
+.home,
+.menu,
+.beverages,
+.desserts,
+.appetizers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 37.5rem;
+}
+
+.menu {
+  background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 40%, hsl(120, 60.7%, 33.9%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-size: 6.25rem;
+}
+
+.beverages {
+  background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 40%, hsl(120, 60.7%, 33.9%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-size: 6.25rem;
+}
+
+.desserts {
+  background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 40%, hsl(120, 60.7%, 33.9%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-size: 6.25rem;
+}
+
+.appetizers {
+  background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 40%, hsl(120, 60.7%, 33.9%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-size: 6.25rem;
+}
+
+.gallery {
+  background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 40%, hsl(120, 60.7%, 33.9%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-size: 6.25rem;
+}
