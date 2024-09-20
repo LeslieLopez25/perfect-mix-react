@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import CartContext from "../../Context/CartContext";
 import { Button } from "../Button/button.component";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import "./navbar.styles.css";
 
@@ -10,6 +11,7 @@ export default function Navbar() {
   const [button, setButton] = useState(true);
   const [cartCount, setCartCount] = useState(0);
   const { cart } = useContext(CartContext);
+  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   // handleClick to determine if the icon is clicked
   const handleClick = () => setClick(!click);
@@ -106,12 +108,25 @@ export default function Navbar() {
               Gallery
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
-              Login
-            </Link>
-          </li>
         </ul>
+        {isAuthenticated ? (
+          <div className="auth-buttons">
+            <span className="nav-links user-email">{user.email}</span>
+            <Button
+              buttonStyle="btn--primary btn--medium"
+              onClick={() => logout({ returnTo: window.location.origin })}
+            >
+              Logout
+            </Button>
+          </div>
+        ) : (
+          <Button
+            buttonStyle="btn--primary btn--medium"
+            onClick={() => loginWithRedirect()}
+          >
+            Login
+          </Button>
+        )}
         {button && (
           <Link to="/gallery">
             <Button buttonStyle="btn--primary btn-medium">Gallery</Button>
