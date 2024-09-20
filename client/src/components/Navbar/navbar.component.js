@@ -106,6 +106,11 @@ export default function Navbar() {
               Gallery
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+              Login
+            </Link>
+          </li>
         </ul>
         {button && (
           <Link to="/gallery">
