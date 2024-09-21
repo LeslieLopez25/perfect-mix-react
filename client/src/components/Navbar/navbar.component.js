@@ -108,25 +108,28 @@ export default function Navbar() {
               Gallery
             </Link>
           </li>
+          {!isAuthenticated ? (
+            <li className="nav-item">
+              <span className="nav-links" onClick={() => loginWithRedirect()}>
+                Login
+              </span>
+            </li>
+          ) : (
+            <li className="nav-item">
+              <div className="user-dropdown">
+                <span className="nav-email">{user.email}</span>
+                <div className="dropdown-content">
+                  <span
+                    className="logout"
+                    onClick={() => logout({ returnTo: window.location.origin })}
+                  >
+                    Logout
+                  </span>
+                </div>
+              </div>
+            </li>
+          )}
         </ul>
-        {isAuthenticated ? (
-          <div className="auth-buttons">
-            <span className="nav-links user-email">{user.email}</span>
-            <Button
-              buttonStyle="btn--primary btn--medium"
-              onClick={() => logout({ returnTo: window.location.origin })}
-            >
-              Logout
-            </Button>
-          </div>
-        ) : (
-          <Button
-            buttonStyle="btn--primary btn--medium"
-            onClick={() => loginWithRedirect()}
-          >
-            Login
-          </Button>
-        )}
         {button && (
           <Link to="/gallery">
             <Button buttonStyle="btn--primary btn-medium">Gallery</Button>

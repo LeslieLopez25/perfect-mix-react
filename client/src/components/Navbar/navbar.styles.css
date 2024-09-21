@@ -72,12 +72,25 @@
   height: 100%;
   text-decoration: none;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .nav-links:hover {
   color: hsl(20.5, 89%, 64.5%);
   border-bottom: 4px solid hsl(20.5, 89%, 64.5%);
   transition: all 0.2s ease-out;
+}
+
+.nav-email {
+  display: flex;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  margin-top: 0;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  font-size: 1.1rem;
+  line-height: 4rem;
+  cursor: pointer;
 }
 
 .cart-icon-wrapper {
@@ -107,6 +120,36 @@
 
 .fa-bars {
   color: hsl(0, 0%, 100%);
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content .logout {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content .logout:hover {
+  background-color: #ddd;
 }
 
 .nav-links-mobile {
