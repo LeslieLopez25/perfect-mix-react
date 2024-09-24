@@ -91,6 +91,14 @@
   font-size: 1.1rem;
   line-height: 4rem;
   cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.nav-email:hover {
+  color: hsl(20.5, 89%, 64.5%);
+  border-bottom: 4px solid hsl(20.5, 89%, 64.5%);
+  transform: translateY(-4px);
+  transition: all 0.2s ease-out;
 }
 
 .cart-icon-wrapper {
@@ -167,7 +175,7 @@
   display: none;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 80em) {
   .navbar-container {
     position: fixed;
   }
@@ -211,6 +219,21 @@
     background-color: hsl(20.5, 89%, 64.5%);
     color: hsl(0, 0%, 3.1%);
     border-radius: 0;
+  }
+
+  .nav-email {
+    position: absolute;
+    right: 3.5rem;
+    top: 1.25rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .dropdown-content {
+    left: auto;
+    right: 0;
+    top: 4rem;
+    margin-top: 0;
   }
 
   .navbar-logo {
@@ -272,6 +295,26 @@
 }
 
 @media screen and (max-width: 48em) {
+  .nav-email {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .dropdown-content {
+    position: static;
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-content .logout {
+    padding: 1rem 0;
+    background-color: hsl(20, 76.3%, 23.1%);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
   .navbar-logo {
     font-size: 1.6rem;
     left: 0;
@@ -283,6 +326,20 @@
 }
 
 @media screen and (max-width: 25.125em) {
+  .nav-email {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .dropdown-content {
+    top: 3rem;
+    right: 0;
+  }
+
+  .dropdown-content .logout {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  }
 
   .navbar-logo {
     font-size: clamp(1.6rem, 2.5vw, 3rem);
