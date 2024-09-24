@@ -119,12 +119,13 @@ export default function Navbar() {
               <div className="user-dropdown">
                 <span className="nav-email">{user.email}</span>
                 <div className="dropdown-content">
-                  <span
+                  <Button
+                    buttonStyle="btn--primary btn--medium"
                     className="logout"
                     onClick={() => logout({ returnTo: window.location.origin })}
                   >
                     Logout
-                  </span>
+                  </Button>
                 </div>
               </div>
             </li>
