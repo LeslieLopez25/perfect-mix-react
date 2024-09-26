@@ -222,11 +222,11 @@
   }
 
   .nav-email {
-    position: absolute;
-    right: 3.5rem;
-    top: 1.25rem;
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    right: 1rem;
+    top: 0;
   }
 
   .dropdown-content {
@@ -255,7 +255,7 @@
     font-size: 1.8125rem;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 3rem;
     transform: translate(-100%, 60%);
     cursor: pointer;
   }
