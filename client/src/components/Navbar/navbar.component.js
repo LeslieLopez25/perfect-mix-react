@@ -10,6 +10,7 @@ export default function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [cartCount, setCartCount] = useState(0);
+  const [dropdownOpen, setDropdownOpen] = useState();
   const { cart } = useContext(CartContext);
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
@@ -39,7 +40,16 @@ export default function Navbar() {
   }, []);
 
   // When the screen size changes, the button is displayed or not
-  window.addEventListener("resize", showButton);
+  useEffect(() => {
+    window.addEventListener("resize", showButton);
+    return () => {
+      window.removeEventListener("resize", showButton);
+    };
+  }, []);
+
+  const handleEmailClick = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
 
   return (
     <nav className="navbar">
@@ -53,6 +63,40 @@ export default function Navbar() {
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
+
+        {!isAuthenticated ? (
+          <li className="nav-item">
+            <span
+              className="login-links mobile-login"
+              onClick={() => loginWithRedirect()}
+            >
+              Login
+            </span>
+          </li>
+        ) : (
+          <li className="nav-item">
+            <div
+              className={`user-dropdown ${dropdownOpen ? "dropdown-open" : ""}`}
+            >
+              <span
+                className="nav-email mobile-login"
+                onClick={handleEmailClick}
+              >
+                {user.email}
+              </span>
+              <div className="dropdown-content">
+                <Button
+                  buttonStyle="btn--primary btn--medium"
+                  className="logout"
+                  onClick={() => logout({ returnTo: window.location.origin })}
+                >
+                  Logout
+                </Button>
+              </div>
+            </div>
+          </li>
+        )}
+
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
@@ -108,29 +152,8 @@ export default function Navbar() {
               Gallery
             </Link>
           </li>
-          {!isAuthenticated ? (
-            <li className="nav-item">
-              <span className="nav-links" onClick={() => loginWithRedirect()}>
-                Login
-              </span>
-            </li>
-          ) : (
-            <li className="nav-item">
-              <div className="user-dropdown">
-                <span className="nav-email">{user.email}</span>
-                <div className="dropdown-content">
-                  <Button
-                    buttonStyle="btn--primary btn--medium"
-                    className="logout"
-                    onClick={() => logout({ returnTo: window.location.origin })}
-                  >
-                    Logout
-                  </Button>
-                </div>
-              </div>
-            </li>
-          )}
         </ul>
+
         {button && (
           <Link to="/gallery">
             <Button buttonStyle="btn--primary btn-medium">Gallery</Button>
