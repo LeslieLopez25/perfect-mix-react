@@ -64,39 +64,6 @@ export default function Navbar() {
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
 
-        {!isAuthenticated ? (
-          <li className="nav-item">
-            <span
-              className="login-links mobile-login"
-              onClick={() => loginWithRedirect()}
-            >
-              Login
-            </span>
-          </li>
-        ) : (
-          <li className="nav-item">
-            <div
-              className={`user-dropdown ${dropdownOpen ? "dropdown-open" : ""}`}
-            >
-              <span
-                className="nav-email mobile-login"
-                onClick={handleEmailClick}
-              >
-                {user.email}
-              </span>
-              <div className="dropdown-content">
-                <Button
-                  buttonStyle="btn--primary btn--medium"
-                  className="logout"
-                  onClick={() => logout({ returnTo: window.location.origin })}
-                >
-                  Logout
-                </Button>
-              </div>
-            </div>
-          </li>
-        )}
-
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
@@ -154,9 +121,44 @@ export default function Navbar() {
           </li>
         </ul>
 
+        {!isAuthenticated ? (
+          <li className="nav-item">
+            <span
+              className="login-links mobile-login"
+              onClick={() => loginWithRedirect()}
+            >
+              Login
+            </span>
+          </li>
+        ) : (
+          <li className="nav-item">
+            <div
+              className={`user-dropdown ${dropdownOpen ? "dropdown-open" : ""}`}
+            >
+              <span
+                className="nav-email mobile-login"
+                onClick={handleEmailClick}
+              >
+                {user.email}
+              </span>
+              <div className="dropdown-content">
+                <Button
+                  buttonStyle="btn--primary btn--medium"
+                  className="logout"
+                  onClick={() => logout({ returnTo: window.location.origin })}
+                >
+                  Logout
+                </Button>
+              </div>
+            </div>
+          </li>
+        )}
+
         {button && (
           <Link to="/gallery">
-            <Button buttonStyle="btn--primary btn-medium">Gallery</Button>
+            <Button buttonStyle="btn--primary btn-medium btn-mobile">
+              Gallery
+            </Button>
           </Link>
         )}
       </div>

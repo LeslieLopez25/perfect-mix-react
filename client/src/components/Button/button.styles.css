@@ -57,9 +57,3 @@
   transition: all 0.3s ease-out;
   transition: 250ms;
 }
-
-@media screen and (max-width: 80em) {
-  .btn-mobile {
-    display: none;
-  }
-}
