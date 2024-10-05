@@ -87,6 +87,9 @@
 .login-links {
   position: relative;
   right: 1.5rem;
+  padding: 0.5rem 0;
+  padding-left: 3rem;
+  padding-right: 1rem;
 }
 
 .nav-email {
@@ -165,14 +168,6 @@
   cursor: pointer;
 }
 
-.user-dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content .logout:hover {
-  background-color: #ddd;
-}
-
 .nav-links-mobile {
   display: none;
 }
@@ -183,10 +178,11 @@
 
 @media screen and (max-width: 80em) {
   .navbar-container {
-    position: fixed;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0 2rem;
   }
 
   .NavbarItems {
@@ -231,22 +227,24 @@
   }
 
   .mobile-login {
-    position: absolute;
-    top: 0;
-    left: 62rem;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    z-index: 2
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    z-index: 2;
   }
 
   .nav-email {
-    top: 0.7rem;
-    left: 50rem;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    z-index: 2
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    left: 56rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    z-index: 2;
+    margin-right: 2rem;
   }
 
   .btn-mobile {
@@ -254,17 +252,35 @@
   }
 
   .user-dropdown .dropdown-content {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 2.5rem;
-    left: 56rem;
-    visibility: visible;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
+    top: 3rem;
+    left: 59.5rem;
+    min-width: 150px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
   }
 
   .user-dropdown:hover .dropdown-content {
     visibility: visible;
     opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .dropdown-content .logout {
+    color: black;
+    padding: 12px 16px;
+    cursor: pointer;
+    text-align: center;
+    background-color: hsl(20, 76.3%, 23.1%);
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown-content .logout:hover {
+    background-color: #ddd;
   }
 
   .navbar-logo {
@@ -326,12 +342,18 @@
 }
 
 @media screen and (max-width: 48em) {
+  .navbar-container {
+    flex-direction: column;
+  }
+
   .nav-email {
     font-size: 0.875rem;
     padding: 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
   }
 
-  .dropdown-content {
+  .user-dropdown .dropdown-content {
     position: static;
     margin-top: 0.5rem;
     width: 100%;
@@ -343,6 +365,11 @@
     background-color: hsl(20, 76.3%, 23.1%);
     color: hsl(0, 0%, 100%);
     font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .login-links {
+    padding: 0.5rem;
     text-align: center;
   }
 
@@ -358,6 +385,11 @@
 
 @media screen and (max-width: 25.125em) {
   .nav-email {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .login-links {
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
   }
