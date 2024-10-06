@@ -136,12 +136,12 @@ export default function Navbar() {
               className={`user-dropdown ${dropdownOpen ? "dropdown-open" : ""}`}
             >
               <span
-                className="nav-email mobile-login"
+                className="nav-email mobile-email"
                 onClick={handleEmailClick}
               >
                 {user.email}
               </span>
-              <div className="dropdown-content">
+              <div className="dropdown-content mobile-dropdown">
                 <Button
                   buttonStyle="btn--primary btn--medium"
                   className="logout"
