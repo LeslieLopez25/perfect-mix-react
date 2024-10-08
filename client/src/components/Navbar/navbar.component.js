@@ -121,38 +121,36 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {!isAuthenticated ? (
-          <li className="nav-item">
-            <span
-              className="login-links mobile-login"
-              onClick={() => loginWithRedirect()}
-            >
-              Login
-            </span>
-          </li>
-        ) : (
-          <li className="nav-item">
-            <div
-              className={`user-dropdown ${dropdownOpen ? "dropdown-open" : ""}`}
-            >
-              <span
-                className="nav-email mobile-email"
-                onClick={handleEmailClick}
-              >
-                {user.email}
+        <div className="nav-flex-container">
+          {!isAuthenticated ? (
+            <li className="nav-item">
+              <span className="login-link" onClick={() => loginWithRedirect()}>
+                Login
               </span>
-              <div className="dropdown-content mobile-dropdown">
-                <Button
-                  buttonStyle="btn--primary btn--medium"
-                  className="logout"
-                  onClick={() => logout({ returnTo: window.location.origin })}
-                >
-                  Logout
-                </Button>
+            </li>
+          ) : (
+            <li className="nav-item">
+              <div
+                className={`user-dropdown ${
+                  dropdownOpen ? "dropdown-open" : ""
+                }`}
+              >
+                <span className="nav-email" onClick={handleEmailClick}>
+                  {user.email}
+                </span>
+                <div className="dropdown-content">
+                  <Button
+                    buttonStyle="btn--primary btn--medium"
+                    className="logout"
+                    onClick={() => logout({ returnTo: window.location.origin })}
+                  >
+                    Logout
+                  </Button>
+                </div>
               </div>
-            </div>
-          </li>
-        )}
+            </li>
+          )}
+        </div>
 
         {button && (
           <Link to="/gallery">
