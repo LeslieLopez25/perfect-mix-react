@@ -13,6 +13,7 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState();
   const { cart } = useContext(CartContext);
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   // handleClick to determine if the icon is clicked
   const handleClick = () => setClick(!click);
@@ -50,6 +51,20 @@ export default function Navbar() {
   const handleEmailClick = () => {
     setDropdownOpen(!dropdownOpen);
   };
+
+  // Determine if the screen size is smaller than 25.125em (approx. 400px)
+  const checkScreenSize = () => {
+    setIsSmallScreen(window.innerWidth <= 400);
+  };
+
+  // Runs on window resize and first render to check screen size
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
 
   return (
     <nav className="navbar">
@@ -136,7 +151,11 @@ export default function Navbar() {
                 }`}
               >
                 <span className="nav-email" onClick={handleEmailClick}>
-                  {user.email}
+                  {isSmallScreen ? (
+                    <i className="fas fa-envelope" />
+                  ) : (
+                    user.email
+                  )}
                 </span>
                 <div className="dropdown-content">
                   <Button

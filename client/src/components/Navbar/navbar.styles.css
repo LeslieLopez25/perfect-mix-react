@@ -408,12 +408,73 @@
     font-size: 1.2rem;
     margin-top: 0.5rem;
   }
+}
 
-  /* Optionally hide email on very small screens */
-  @media screen and (max-width: 25em) {
-    .nav-email {
-      display: none;
-      /* Hide email on smaller screens */
-    }
+@media screen and (max-width: 25em) {
+  .nav-flex-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+
+  .login-link,
+  .nav-email,
+  .dropdown-content {
+    font-size: 0.9rem;
+    padding: 0.25rem;
+  }
+
+  .nav-email {
+    font-size: 1.2rem;
+    padding-left: 0;
+    padding-top: 1.8rem;
+  }
+
+  .nav-email i {
+    font-size: 1.5rem;
+  }
+
+  .dropdown-content {
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+  }
+
+  .dropdown-content .logout {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .navbar-logo {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .navbar-icon {
+    font-size: 1.3rem;
+  }
+
+  .menu-icon {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .user-dropdown .dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+  }
+
+  .user-dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
   }
 }
