@@ -215,12 +215,6 @@
     flex-shrink: 0;
   }
 
-  .login-link,
-  .nav-email,
-  .dropdown-content {
-    padding: 0.5rem;
-  }
-
   .nav-links {
     display: block;
     padding: 1.25rem;
@@ -321,12 +315,17 @@
 
 @media screen and (max-width: 48em) {
   .navbar-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav-flex-container {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    width: auto;
+    gap: 0.5rem;
   }
 
   .menu-icon {
@@ -336,22 +335,16 @@
   .login-link,
   .nav-email,
   .dropdown-content {
-    padding: 0.5rem;
+    padding-right: 0.5rem;
     text-align: center;
-    width: 100%;
   }
 
   .nav-email {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.5rem;
-    margin-top: 0.5rem;
-    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .user-dropdown .dropdown-content {
-    position: static;
-    margin-top: 0.5rem;
-    width: 100%;
     text-align: center;
   }
 
@@ -369,19 +362,32 @@
   }
 
   .navbar-logo {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     left: 0;
   }
 
   .navbar-icon {
-    margin-bottom: 0.9rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media screen and (max-width: 25.125em) {
+  .nav-flex-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+
+  .login-link,
+  .nav-email,
+  .dropdown-content {
+    font-size: 0.9rem;
+    padding: 0.25rem;
+  }
+
   .nav-email {
     font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
+    padding-left: 9rem;
   }
 
   .dropdown-content {
@@ -395,11 +401,16 @@
   }
 
   .navbar-logo {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .navbar-icon {
     font-size: 1.3rem;
+    margin-top: 0.5rem;
+  }
+
+  .menu-icon {
+    font-size: 1.5rem;
     margin-top: 0.5rem;
   }
 }
