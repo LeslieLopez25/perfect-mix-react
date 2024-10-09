@@ -371,7 +371,7 @@
   }
 }
 
-@media screen and (max-width: 25.125em) {
+@media screen and (max-width: 33.625em) {
   .nav-flex-container {
     flex-direction: row;
     justify-content: flex-end;
@@ -381,36 +381,39 @@
   .login-link,
   .nav-email,
   .dropdown-content {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     padding: 0.25rem;
   }
 
   .nav-email {
-    font-size: 0.75rem;
-    padding-left: 9rem;
+    padding-left: 0;
   }
 
   .dropdown-content {
     top: 3rem;
-    right: 0;
-  }
-
-  .dropdown-content .logout {
-    padding: 0.75rem 0;
-    font-size: 0.9rem;
+    left: auto;
+    width: 100%;
   }
 
   .navbar-logo {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .navbar-icon {
-    font-size: 1.3rem;
-    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
   }
 
   .menu-icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
+  }
+
+  /* Optionally hide email on very small screens */
+  @media screen and (max-width: 25em) {
+    .nav-email {
+      display: none;
+      /* Hide email on smaller screens */
+    }
   }
 }
