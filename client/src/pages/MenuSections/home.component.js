@@ -11,7 +11,6 @@ import {
   Video,
 } from "../../components/export-banner-section.component";
 import HeroSection from "../../components/Hero/hero-section.component";
-import About from "../../components/About/about.component";
 
 export default function Home() {
   // What the home page when you click on the website will display first
@@ -24,7 +23,6 @@ export default function Home() {
       <Video />
       <Specials2 />
       <Banner2 />
-      <About />
     </>
   );
 }
