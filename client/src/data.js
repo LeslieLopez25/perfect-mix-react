@@ -26,6 +26,8 @@ import Specials1 from "./assets/images/menu-special.jpeg";
 import Specials2 from "./assets/images/dessert-special.jpeg";
 import Specials3 from "./assets/images/appetizers-special.jpeg";
 import Specials4 from "./assets/images/drink-special.jpeg";
+import Specials5 from "./assets/images/extra-special-1.jpg";
+import Specials6 from "./assets/images/extra-special-2.jpg";
 
 // Created an array of objects to store the data of the products
 export const PRODUCTS = {
@@ -245,9 +247,6 @@ export const PRODUCTS = {
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 20.0,
     },
-  ],
-
-  SpecialsList2: [
     {
       id: 27,
       title: "Tamales",
@@ -262,6 +261,21 @@ export const PRODUCTS = {
       img: Specials4,
       desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
       price: 75.0,
+    },
+    {
+      id: 29,
+      title: "Mangonada",
+      img: Specials5,
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
+      price: 16.0,
+    },
+
+    {
+      id: 30,
+      title: "Tortas Ahogadas",
+      img: Specials6,
+      desc: "Bacon ipsum dolor amet andouille officia pariatur ullamco tail beef ribs shoulder sint cupidatat.",
+      price: 50.0,
     },
   ],
 };
