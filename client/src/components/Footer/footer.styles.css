@@ -19,8 +19,7 @@
 
 .footer-content {
   margin: 3rem 0 0 5rem;
-  padding: 5rem calc((100vw - 81.25rem) / 2);
-  max-width: 40rem;
+  max-width: 70rem;
   width: 100%;
   text-align: left;
 }
@@ -86,7 +85,6 @@
 
 .social-media {
   margin: 0 auto;
-  padding-top: 3.125rem;
   max-width: 62.5rem;
   width: 100%;
 }

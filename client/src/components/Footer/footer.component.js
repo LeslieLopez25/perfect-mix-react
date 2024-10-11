@@ -19,8 +19,6 @@ export default function Footer() {
               3:00AM Sunday: Closed
             </p>
           </div>
-        </div>
-        <div className="footer-wrapper">
           <div className="footer-items">
             <h2>Contact Us</h2>
             <p>Phone Number: 33 3630 2532 Email: theperfectmix@business.com</p>
