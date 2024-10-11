@@ -144,7 +144,7 @@
     margin: 0 auto;
     padding: 1rem calc((100vw - 81.25rem) / 2);
     width: 100%;
-    position: absolute;
+    position: relative;
   }
 
   .footer-heading {
