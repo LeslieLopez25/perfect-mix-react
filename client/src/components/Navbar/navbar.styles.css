@@ -213,6 +213,7 @@
   .nav-flex-container {
     justify-content: flex-end;
     flex-shrink: 0;
+    padding: 0;
   }
 
   .nav-links {
@@ -313,6 +314,16 @@
   }
 }
 
+@media screen and (max-width: 60em) {
+  .nav-flex-container {
+    padding-right: 2.5rem;
+  }
+
+  .menu-icon {
+    padding-right: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 48em) {
   .navbar-container {
     flex-direction: row;
@@ -326,10 +337,12 @@
     flex-shrink: 0;
     width: auto;
     gap: 0.5rem;
+    padding-right: 1rem;
   }
 
   .menu-icon {
     align-self: flex-start;
+    padding: 0;
   }
 
   .login-link,
@@ -376,6 +389,7 @@
     flex-direction: row;
     justify-content: flex-end;
     gap: 0.25rem;
+    padding: 0;
   }
 
   .login-link,
