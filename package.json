@@ -1,0 +1,25 @@
+{
+  "name": "perfect-mix-react",
+  "version": "1.0.0",
+  "description": "<h1>The Perfect Mix :taco:</h1>",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start-client\" \"npm run start-server\" ",
+    "start-client": "npm run start --prefix client",
+    "start-server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeslieLopez25/perfect-mix-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeslieLopez25/perfect-mix-react/issues"
+  },
+  "homepage": "https://github.com/LeslieLopez25/perfect-mix-react#readme",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
