@@ -4,7 +4,6 @@ import Cards from "../../components/Cards/cards.component";
 import { Specials } from "../../components/export-specials-section.component";
 import {
   Banner,
-  Banner2,
   Video,
 } from "../../components/export-banner-section.component";
 
@@ -15,11 +14,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <Banner />
       <Cards />
       <Video />
       <Specials />
-      <Banner2 />
+      <Banner />
     </>
   );
 }

@@ -3,26 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../../assets/images/banner.jpeg");
-    background-position: center;
-    background-size: cover;
-    padding: 0 1rem;
-    max-height: 62.5rem;
-    height: 25rem;
-    opacity: 0.8;
-    transition: 500ms;
-}
-
-.banner-container:hover {
-    opacity: 1;
-    transition: 500ms;
-}
-
-.banner2-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-image: url("../../assets/images/banner-2.jpeg");
     background-position: center;
     background-size: cover;
@@ -33,7 +13,7 @@
     transition: all 0.2s linear;
 }
 
-.banner2-container:hover {
+.banner-container:hover {
     opacity: 1;
     transform: scale(1.1);
     transition: .5s ease;
