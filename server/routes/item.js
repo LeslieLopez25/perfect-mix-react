@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     const items = await prisma.item.findMany();
     res.json(items);
   } catch (error) {
-    res.status(500).json({ error: "Failed to fetch items" });
+    res.status(500).json({ error: "Unable to fetch items" });
   }
 });
 
