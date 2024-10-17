@@ -1,5 +1,6 @@
 const express = require("express");
 const { PrismaClient } = require("@prisma/client");
+const itemsRoute = require("./routes/item");
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -7,6 +8,7 @@ const prisma = new PrismaClient();
 const app = express();
 
 app.use(express.json());
+app.use("/api/items", itemsRoute);
 
 app.get("/", (req, res) => {
   {
