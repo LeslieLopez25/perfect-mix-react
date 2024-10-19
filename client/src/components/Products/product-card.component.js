@@ -12,7 +12,7 @@ export const Product = () => {
   useEffect(() => {
     // Fetch product data from the backend
     axios
-      .get("/api/items")
+      .get("http://localhost:5000/api/items")
       .then((response) => {
         setProductData(response.data);
       })
@@ -32,9 +32,9 @@ export const Product = () => {
     <div className="productLineUp">
       {productData.map((data) => (
         <div key={data.id}>
-          <img src={data.img} alt={data.title} />
-          <h3>{data.title}</h3>
-          <p>{data.desc}</p>
+          <img src={data.image} alt={data.name} />
+          <h3>{data.name}</h3>
+          <p>{data.description}</p>
           <h4>${data.price.toFixed(2)}</h4>
           <Button
             buttonStyle="btn--secondary btn--large"
