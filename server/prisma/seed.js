@@ -2,10 +2,13 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 async function main() {
+  // Cleanup existing data
+  await prisma.item.deleteMany({});
+
   const MainList = [
     {
       name: "Seafood Enchiladas",
-      image: "/client/src/assets/images/main-1.jpeg",
+      image: "/images/main-1.jpeg",
       price: 120.0,
       description:
         "Soft corn tortillas filled with a mix of seasoned seafood, topped with creamy sauce and melted cheese.",
@@ -13,7 +16,7 @@ async function main() {
     },
     {
       name: "Tacos de Carne Asada",
-      image: "/client/src/assets/images/main-2.jpeg",
+      image: "/images/main-2.jpeg",
       price: 90.0,
       description:
         "Grilled marinated steak served in soft corn tortillas with fresh toppings like cilantro, onions, and salsa.",
@@ -21,7 +24,7 @@ async function main() {
     },
     {
       name: "Pozole Rojo",
-      image: "/client/src/assets/images/main-3.jpeg",
+      image: "/images/main-3.jpeg",
       price: 100.0,
       description:
         "A traditional Mexican soup made with hominy, pork, and a rich red chili broth, garnished with fresh vegetables.",
@@ -29,7 +32,7 @@ async function main() {
     },
     {
       name: "Carnitas",
-      image: "/client/src/assets/images/main-4.jpeg",
+      image: "/images/main-4.jpeg",
       price: 60.0,
       description:
         "Tender, slow-cooked pork with a crispy finish, served in tacos, burritos, or as a main dish with rice and beans.",
@@ -37,7 +40,7 @@ async function main() {
     },
     {
       name: "Menudo",
-      image: "/client/src/assets/images/main-5.jpeg",
+      image: "/images/main-5.jpeg",
       price: 100.0,
       description:
         "A hearty soup made from beef tripe and hominy in a flavorful broth, often enjoyed as a weekend or celebratory dish.",
@@ -45,7 +48,7 @@ async function main() {
     },
     {
       name: "Mole",
-      image: "/client/src/assets/images/main-6.jpeg",
+      image: "/images/main-6.jpeg",
       price: 100.0,
       description:
         "A rich and complex sauce made with a blend of chili peppers, chocolate, spices, and nuts, typically served over chicken or enchiladas.",
@@ -62,7 +65,7 @@ async function main() {
   const BeverageList = [
     {
       name: "Cappuccino",
-      image: "/client/src/assets/images/drink-1.jpeg",
+      image: "/images/drink-1.jpeg",
       price: 50.0,
       description:
         "A rich espresso-based coffee drink topped with steamed milk and a thick layer of frothy foam.",
@@ -70,7 +73,7 @@ async function main() {
     },
     {
       name: "Orange Juice",
-      image: "/client/src/assets/images/drink-2.jpeg",
+      image: "/images/drink-2.jpeg",
       price: 30.0,
       description:
         "Freshly squeezed juicy oranges, offering a refreshing and zesty flavor.",
@@ -78,7 +81,7 @@ async function main() {
     },
     {
       name: "Coca Cola",
-      image: "/client/src/assets/images/drink-3.jpeg",
+      image: "/images/drink-3.jpeg",
       price: 20.0,
       description:
         "A classic, sweet, and fizzy carbonated soft drink with a distinct cola flavor, enjoyed worldwide.",
@@ -86,7 +89,7 @@ async function main() {
     },
     {
       name: "Corona Extra",
-      image: "/client/src/assets/images/drink-4.jpeg",
+      image: "/images/drink-4.jpeg",
       price: 15.0,
       description:
         "A light, crisp Mexican lager with a mild flavor, often served with a wedge of lime.",
@@ -94,7 +97,7 @@ async function main() {
     },
     {
       name: "Water",
-      image: "/client/src/assets/images/drink-5.jpeg",
+      image: "/images/drink-5.jpeg",
       price: 10.0,
       description:
         "Refreshing and hydrating, pure still or sparkling water to quench your thirst.",
@@ -102,7 +105,7 @@ async function main() {
     },
     {
       name: "Tea",
-      image: "/client/src/assets/images/drink-6.jpeg",
+      image: "/images/drink-6.jpeg",
       price: 15.0,
       description:
         "A soothing and aromatic drink made by steeping tea leaves in hot water, available in various flavors like black, green, or herbal.",
@@ -119,7 +122,7 @@ async function main() {
   const DessertList = [
     {
       name: "Tres Leches Pastel",
-      image: "/client/src/assets/images/dessert-1.jpeg",
+      image: "/images/dessert-1.jpeg",
       price: 50.0,
       description:
         "A moist sponge cake soaked in a blend of three milks—evaporated, condensed, and cream—topped with whipped cream..",
@@ -128,7 +131,7 @@ async function main() {
 
     {
       name: "Dessert Nachos",
-      image: "/client/src/assets/images/dessert-2.jpeg",
+      image: "/images/dessert-2.jpeg",
       price: 20.0,
       description:
         "Crispy tortilla chips sprinkled with cinnamon and sugar, topped with sweet sauces, fruit, and ice cream.",
@@ -137,7 +140,7 @@ async function main() {
 
     {
       name: "Paletas",
-      image: "/client/src/assets/images/dessert-3.jpeg",
+      image: "/images/dessert-3.jpeg",
       price: 15.0,
       description:
         "Mexican-style ice pops made from fresh fruit or creamy ingredients, offering a variety of refreshing flavors",
@@ -146,7 +149,7 @@ async function main() {
 
     {
       name: "Fresas Con Crema",
-      image: "/client/src/assets/images/dessert-4.jpeg",
+      image: "/images/dessert-4.jpeg",
       price: 15.0,
       description:
         "A simple yet delicious dessert of fresh strawberries mixed with a sweet and creamy sauce.",
@@ -155,7 +158,7 @@ async function main() {
 
     {
       name: "Flan",
-      image: "/client/src/assets/images/dessert-5.jpeg",
+      image: "/images/dessert-5.jpeg",
       price: 10.0,
       description:
         "A rich, creamy caramel custard with a smooth texture and a golden caramel topping.",
@@ -164,7 +167,7 @@ async function main() {
 
     {
       name: "Jericalla",
-      image: "/client/src/assets/images/dessert-6.jpeg",
+      image: "/images/dessert-6.jpeg",
       price: 10.0,
       description:
         "A traditional Mexican custard similar to crème brûlée, flavored with vanilla and cinnamon, and baked until golden on top.",
@@ -181,7 +184,7 @@ async function main() {
   const AppetizerList = [
     {
       name: "Taco Cups",
-      image: "/client/src/assets/images/appetizers-1.jpeg",
+      image: "/images/appetizers-1.jpeg",
       price: 20.0,
       description:
         "Bite-sized tacos made by baking tortillas into cup shapes, filled with seasoned meat, cheese, and toppings.",
@@ -190,7 +193,7 @@ async function main() {
 
     {
       name: "Guacamole",
-      image: "/client/src/assets/images/appetizers-2.jpeg",
+      image: "/images/appetizers-2.jpeg",
       price: 15.0,
       description:
         "A creamy dip made from mashed avocados, lime juice, cilantro, and spices, perfect for pairing with chips or tacos.",
@@ -199,7 +202,7 @@ async function main() {
 
     {
       name: "Ceviche",
-      image: "/client/src/assets/images/appetizers-3.jpeg",
+      image: "/images/appetizers-3.jpeg",
       price: 15.0,
       description:
         "Fresh seafood marinated in citrus juices, mixed with tomatoes, onions, cilantro, and chili peppers for a tangy, refreshing dish.",
@@ -208,7 +211,7 @@ async function main() {
 
     {
       name: "Taquitos",
-      image: "/client/src/assets/images/appetizers-4.jpeg",
+      image: "/images/appetizers-4.jpeg",
       price: 15.0,
       description:
         "Crispy, rolled tortillas filled with seasoned meat or cheese, fried until golden and served with salsa or sour cream.",
@@ -217,7 +220,7 @@ async function main() {
 
     {
       name: "Shrimp Cocktails",
-      image: "/client/src/assets/images/appetizers-5.jpg",
+      image: "/images/appetizers-5.jpg",
       price: 25.0,
       description:
         "Chilled shrimp mixed with a tangy tomato sauce, avocado, and fresh vegetables, served in a glass for a refreshing starter.",
@@ -226,7 +229,7 @@ async function main() {
 
     {
       name: "Salsa with Chips",
-      image: "/client/src/assets/images/appetizers-6.jpg",
+      image: "/images/appetizers-6.jpg",
       price: 10.0,
       description:
         "Freshly made salsa, usually with tomatoes, onions, cilantro, and chili peppers, served with crispy tortilla chips for dipping.",
@@ -243,7 +246,7 @@ async function main() {
   const SpecialsList = [
     {
       name: "Tacos de Birria",
-      image: "/client/src/assets/images/menu-special.jpeg",
+      image: "/images/menu-special.jpeg",
       price: 50.0,
       description:
         "Flavorful, slow-cooked beef or goat stew served in tacos, often accompanied by a rich, dipping consommé.",
@@ -252,7 +255,7 @@ async function main() {
 
     {
       name: "Churros",
-      image: "/client/src/assets/images/dessert-special.jpeg",
+      image: "/images/dessert-special.jpeg",
       price: 20.0,
       description:
         "Crispy, deep-fried dough sticks coated in cinnamon and sugar, often served with chocolate or caramel dipping sauce.",
@@ -261,7 +264,7 @@ async function main() {
 
     {
       name: "Tamales",
-      image: "/client/src/assets/images/appetizers-special.jpeg",
+      image: "/images/appetizers-special.jpeg",
       price: 15.0,
       description:
         "Steamed masa dough filled with meats, cheeses, or vegetables, wrapped in corn husks or banana leaves.",
@@ -270,7 +273,7 @@ async function main() {
 
     {
       name: "Red Wine",
-      image: "/client/src/assets/images/drink-special.jpeg",
+      image: "/images/drink-special.jpeg",
       price: 75.0,
       description:
         "A bold and fruity alcoholic beverage made from fermented dark grapes, perfect for pairing with rich meals.",
@@ -279,7 +282,7 @@ async function main() {
 
     {
       name: "Mangonada",
-      image: "/client/src/assets/images/extra-special-1.jpg",
+      image: "/images/extra-special-1.jpg",
       price: 16.0,
       description:
         "A refreshing frozen drink made from mango, layered with chamoy, lime, and chili powder for a sweet and spicy treat.",
@@ -288,7 +291,7 @@ async function main() {
 
     {
       name: "Tortas Ahogadas",
-      image: "/client/src/assets/images/extra-special-2.jpg",
+      image: "/images/extra-special-2.jpg",
       price: 50.0,
       description:
         "A traditional Mexican sandwich filled with pork and drenched in a spicy tomato sauce, known for its bold flavors and messy delight.",
@@ -311,6 +314,6 @@ main()
     console.error(e);
     process.exit(1);
   })
-  .finally(() => {
-    prisma.$disconnect();
+  .finally(async () => {
+    await prisma.$disconnect();
   });

@@ -1,2 +1,2 @@
 // Created export specials section
-export { default as Specials } from "./SpecialsSection/specials.component";
+export { default as Specials } from "../pages/MenuSections/specials.component";

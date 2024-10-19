@@ -5,14 +5,14 @@ import { Button } from "../Button/button.component";
 
 import "../Products/product.styles.css";
 
-export const Product = () => {
+export const Product = ({ category }) => {
   const { addToCart } = useContext(CartContext);
   const [productData, setProductData] = useState([]);
 
   useEffect(() => {
     // Fetch product data from the backend
     axios
-      .get("http://localhost:5000/api/items")
+      .get(`http://localhost:5000/api/items?category=${category}`)
       .then((response) => {
         setProductData(response.data);
       })
@@ -22,7 +22,7 @@ export const Product = () => {
 
     // Start page at the top
     window.scrollTo(0, 0);
-  }, []);
+  }, [category]);
 
   const handleClick = (data) => {
     addToCart(data);
@@ -32,7 +32,7 @@ export const Product = () => {
     <div className="productLineUp">
       {productData.map((data) => (
         <div key={data.id}>
-          <img src={data.image} alt={data.name} />
+          <img src={`http://localhost:5000${data.image}`} alt={data.name} />
           <h3>{data.name}</h3>
           <p>{data.description}</p>
           <h4>${data.price.toFixed(2)}</h4>
