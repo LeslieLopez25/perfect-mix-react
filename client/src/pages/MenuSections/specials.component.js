@@ -9,9 +9,7 @@ export default function SpecialsSection() {
     <div className="product-container">
       <h2 className="product-heading">Specials This Week</h2>
       <div className="product-wrapper">
-        <div className="product-card">
-          <Product category="Specials" />
-        </div>
+        <Product category="Specials" />
       </div>
     </div>
   );

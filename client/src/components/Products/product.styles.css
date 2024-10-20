@@ -21,20 +21,17 @@
 }
 
 .product-wrapper .product-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
     margin: 0 2rem;
     width: 18.75rem;
     line-height: 2;
 }
 
 .productLineUp {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     justify-content: center;
-    align-items: center;
-    padding: 0 2rem 2rem 2rem;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -67,9 +64,8 @@
         margin-top: -9.375rem;
     }
 
-    .product-wrapper .product-card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .productLineUp {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -83,8 +79,8 @@
         font-size: 1.875rem;
     }
 
-    .product-wrapper .product-card {
-        display: grid;
+    .productLineUp {
         grid-template-columns: 1fr;
+        padding: 0 1rem
     }
 }

@@ -9,9 +9,7 @@ export default function Desserts() {
     <div className="product-container">
       <h2 className="product-heading">Desserts</h2>
       <div className="product-wrapper">
-        <div className="product-card">
-          <Product category="Dessert" />
-        </div>
+        <Product category="Dessert" />
       </div>
     </div>
   );

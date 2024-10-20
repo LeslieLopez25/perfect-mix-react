@@ -31,7 +31,7 @@ export const Product = ({ category }) => {
   return (
     <div className="productLineUp">
       {productData.map((data) => (
-        <div key={data.id}>
+        <div key={data.id} className="product-card">
           <img src={`http://localhost:5000${data.image}`} alt={data.name} />
           <h3>{data.name}</h3>
           <p>{data.description}</p>

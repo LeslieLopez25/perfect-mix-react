@@ -9,9 +9,7 @@ export default function Main() {
     <div className="product-container">
       <h2 className="product-heading">Main</h2>
       <div className="product-wrapper">
-        <div className="product-card">
-          <Product category="Main" />
-        </div>
+        <Product category="Main" />
       </div>
     </div>
   );
