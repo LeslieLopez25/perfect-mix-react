@@ -40,7 +40,7 @@ async function main() {
     },
     {
       name: "Menudo",
-      image: "/images/main-5.jpeg",
+      image: "/images/main-5.jpg",
       price: 100.0,
       description:
         "A hearty soup made from beef tripe and hominy in a flavorful broth, often enjoyed as a weekend or celebratory dish.",
@@ -48,7 +48,7 @@ async function main() {
     },
     {
       name: "Mole",
-      image: "/images/main-6.jpeg",
+      image: "/images/main-6.jpg",
       price: 100.0,
       description:
         "A rich and complex sauce made with a blend of chili peppers, chocolate, spices, and nuts, typically served over chicken or enchiladas.",
@@ -97,7 +97,7 @@ async function main() {
     },
     {
       name: "Water",
-      image: "/images/drink-5.jpeg",
+      image: "/images/drink-5.jpg",
       price: 10.0,
       description:
         "Refreshing and hydrating, pure still or sparkling water to quench your thirst.",
@@ -105,7 +105,7 @@ async function main() {
     },
     {
       name: "Tea",
-      image: "/images/drink-6.jpeg",
+      image: "/images/drink-6.jpg",
       price: 15.0,
       description:
         "A soothing and aromatic drink made by steeping tea leaves in hot water, available in various flavors like black, green, or herbal.",
@@ -158,7 +158,7 @@ async function main() {
 
     {
       name: "Flan",
-      image: "/images/dessert-5.jpeg",
+      image: "/images/dessert-5.jpg",
       price: 10.0,
       description:
         "A rich, creamy caramel custard with a smooth texture and a golden caramel topping.",

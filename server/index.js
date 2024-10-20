@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/items", itemsRoute);
-app.use("/images", express.static("client/src/assets/images"));
+app.use("/images", express.static("public/images"));
 
 app.get("/", (req, res) => {
   {

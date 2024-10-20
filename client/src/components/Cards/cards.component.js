@@ -1,6 +1,6 @@
 import React from "react";
 import "./cards.styles.css";
-import CardItem from "./card-item.component";
+import CardItem from "../Cards/card-item.component";
 import Img1 from "../../assets/images/display-1.jpeg";
 import Img2 from "../../assets/images/display-2.jpeg";
 import Img3 from "../../assets/images/display-3.jpeg";
