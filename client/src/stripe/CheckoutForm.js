@@ -1,57 +1,77 @@
 import React, { useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import axios from "axios";
 
-export const CheckoutForm = ({ cartItems, totalAmount }) => {
+export const CheckoutForm = ({ name, items }) => {
   const stripe = useStripe();
   const elements = useElements();
-  const [error, setError] = useState(null);
-  const [processing, setProcessing] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [receiptData, setReceiptData] = useState(null);
+
+  const calculateTotalAmount = (items) => {
+    return items.reduce((total, item) => total + item.price, 0);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setProcessing(true);
 
     const cardElement = elements.getElement(CardElement);
 
-    const res = await fetch("http://localhost:5000/create-payment-intent", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ items: cartItems, amount: totalAmount }),
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
+      card: cardElement,
     });
 
-    const { clientSecret } = await res.json();
+    if (!error) {
+      try {
+        const { id } = paymentMethod;
 
-    const paymentResult = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: cardElement,
-        billing_details: {
-          name: "Your customer name",
-        },
-      },
-    });
+        const response = await axios.post("/api/payment", {
+          id,
+          amount: calculateTotalAmount(items),
+        });
 
-    if (paymentResult.error) {
-      setError(paymentResult.error.message);
-      setProcessing(false);
-    } else {
-      if (paymentResult.paymentIntent.status === "succeeded") {
-        setSuccess(true);
-        setProcessing(false);
+        if (response.data.success) {
+          setPaymentSuccess(true);
+          setReceiptData({
+            name,
+            items,
+            total: calculateTotalAmount(items),
+            date: new Date().toLocaleString(),
+          });
+        }
+      } catch (error) {
+        console.log("Payment failed", error);
       }
+    } else {
+      console.log("Stripe error:", error.message);
     }
   };
+
+  if (paymentSuccess) {
+    return (
+      <div className="receipt">
+        <h2>Receipt</h2>
+        <p>Thank you, {receiptData.name}!</p>
+        <p>Date: {receiptData.date}</p>
+        <ul>
+          {receiptData.items.map((item, index) => (
+            <li key={index}>
+              {item.name} - ${item.price.toFixed(2)}
+            </li>
+          ))}
+        </ul>
+        <p>Total: ${receiptData.total.toFixed(2)}</p>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit}>
       <CardElement />
-      <button type="submit" disabled={!stripe || processing}>
-        {processing ? "Processing..." : "Pay"}
+      <button type="submit" disabled={!stripe}>
+        Pay Now
       </button>
-      {error && <div>{error}</div>}
-      {success && <div>Payment succeeded!</div>}
     </form>
   );
 };
