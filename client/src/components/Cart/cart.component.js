@@ -1,8 +1,13 @@
 import React, { useEffect, useContext } from "react";
 import CartContext from "../../Context/CartContext";
 import { Button } from "../Button/button.component";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import CheckoutForm from "../../stripe/CheckoutForm";
 
 import "./cart.styles.css";
+
+const stripePromise = loadStripe.process.env.REACT_APP_STRIPE_FRONTEND;
 
 const Cart = () => {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
@@ -65,6 +70,10 @@ const Cart = () => {
           <div className="cart-total">
             <h3>Total: ${calculateTotal()}</h3>
           </div>
+
+          <Elements stripe={stripePromise}>
+            <CheckoutForm name="Customer Name" items={cart} />
+          </Elements>
         </>
       )}
     </div>
