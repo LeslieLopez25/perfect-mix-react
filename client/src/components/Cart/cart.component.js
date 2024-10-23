@@ -3,13 +3,13 @@ import CartContext from "../../Context/CartContext";
 import { Button } from "../Button/button.component";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-import CheckoutForm from "../../stripe/CheckoutForm";
+import { CheckoutForm } from "../../stripe/CheckoutForm";
 
 import "./cart.styles.css";
 
-const stripePromise = loadStripe.process.env.REACT_APP_STRIPE_FRONTEND;
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_FRONTEND);
 
-const Cart = () => {
+export const Cart = () => {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
 
   const increaseQuantity = (item) => {
@@ -79,5 +79,3 @@ const Cart = () => {
     </div>
   );
 };
-
-export default Cart;

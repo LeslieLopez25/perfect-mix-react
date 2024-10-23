@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const stripe = Stripe.process.env.REACT_APP_STRIPE_BACKEND;
+const stripe = Stripe(process.env.REACT_APP_STRIPE_BACKEND);
 
 const prisma = new PrismaClient();
 const app = express();
