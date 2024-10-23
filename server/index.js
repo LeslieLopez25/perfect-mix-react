@@ -2,9 +2,13 @@ const express = require("express");
 const { PrismaClient } = require("@prisma/client");
 const itemsRoute = require("./routes/item");
 const cors = require("cors");
+const Stripe = require("stripe");
 const dotenv = require("dotenv");
 
 dotenv.config();
+
+const stripe = Stripe.process.env.REACT_APP_STRIPE_BACKEND;
+
 const prisma = new PrismaClient();
 const app = express();
 
@@ -50,6 +54,22 @@ app.post("/api/cart", async (req, res) => {
     console.log(error);
     res.status(500).json({ error: "Unable to add item to cart" });
   }
+});
+
+app.post("/create-payment-intent", async (req, res) => {
+  const { items, amount } = req.body;
+
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: Math.round(amount * 100),
+    currency: "mxn",
+    automatic_payment_methods: {
+      enabled: true,
+    },
+  });
+
+  res.send({
+    clientSecret: paymentIntent.client_secret,
+  });
 });
 
 const PORT = process.env.PORT || 5000;
