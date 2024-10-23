@@ -41,9 +41,9 @@ export const Cart = () => {
           <div className="cart-items">
             {cart.map((item) => (
               <div key={item.id} className="cart-item">
-                <img src={item.img} alt={item.title} />
+                <img src={item.image} alt={item.name} />
                 <div className="cart-item-details">
-                  <h3>{item.title}</h3>
+                  <h3>{item.name}</h3>
                   <p>${item.price.toFixed(2)}</p>
                   <div className="cart-item-quantity">
                     <Button
