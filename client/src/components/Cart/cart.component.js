@@ -41,7 +41,10 @@ export const Cart = () => {
           <div className="cart-items">
             {cart.map((item) => (
               <div key={item.id} className="cart-item">
-                <img src={item.image} alt={item.name} />
+                <img
+                  src={`http://localhost:5000${item.image}`}
+                  alt={item.name}
+                />
                 <div className="cart-item-details">
                   <h3>{item.name}</h3>
                   <p>${item.price.toFixed(2)}</p>
