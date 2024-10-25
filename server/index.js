@@ -14,15 +14,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 app.use("/api/items", itemsRoute);
 app.use("/images", express.static("public/images"));
-app.use((req, res, next) => {
-  res.setHeader(
-    "Content-Security-Policy",
-    "default-src 'self'; script-src 'self' https://js.stripe.com https://m.stripe.network 'sha256-/5Guo2nzv5n/w6ukZpOBZOtTJBJPSkJ6mhHpnBgm3Ls='; frame-src 'self' https://js.stripe.com https://m.stripe.network; connect-src 'self' https://api.stripe.com;"
-  );
-  next();
-});
 
 app.get("/", (req, res) => {
   {
