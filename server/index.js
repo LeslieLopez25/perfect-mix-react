@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const stripe = Stripe(process.env.REACT_APP_STRIPE_BACKEND);
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 const prisma = new PrismaClient();
 const app = express();
@@ -71,6 +71,28 @@ app.post("/create-payment-intent", async (req, res) => {
   res.send({
     clientSecret: paymentIntent.client_secret,
   });
+});
+
+app.post("/api/payment", async (req, res) => {
+  const { id, amount } = req.body;
+
+  try {
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: Math.round(amount * 100),
+      currency: "mxn",
+      payment_method: id,
+      confirm: true,
+      automatic_payment_methods: {
+        enabled: true,
+        allow_redirects: "never",
+      },
+    });
+
+    res.json({ success: true, clientSecret: paymentIntent.client_secret });
+  } catch (error) {
+    console.error("Error creating payment intent:", error);
+    res.status(500).json({ error: "Payment failed" });
+  }
 });
 
 const PORT = process.env.PORT || 5000;

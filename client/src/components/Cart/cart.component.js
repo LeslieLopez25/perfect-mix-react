@@ -7,7 +7,7 @@ import { CheckoutForm } from "../../stripe/CheckoutForm";
 
 import "./cart.styles.css";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_FRONTEND);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 export const Cart = () => {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
