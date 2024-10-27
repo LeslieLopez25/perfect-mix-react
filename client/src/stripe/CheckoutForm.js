@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 
 import "./CheckoutForm.styles.css";
@@ -10,6 +11,7 @@ Modal.setAppElement("#root");
 export const CheckoutForm = ({ name, items }) => {
   const stripe = useStripe();
   const elements = useElements();
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [receiptData, setReceiptData] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -20,6 +22,11 @@ export const CheckoutForm = ({ name, items }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!isAuthenticated) {
+      loginWithRedirect();
+      return;
+    }
 
     const cardElement = elements.getElement(CardElement);
 
