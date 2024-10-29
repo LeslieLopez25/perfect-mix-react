@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
       if (!user) return;
 
       try {
-        await axios.post("/api/cart/save", {
+        await axios.post("http://localhost:5000/api/cart/save", {
           userId: user.sub,
           items: cartItems,
         });
