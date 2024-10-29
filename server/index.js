@@ -11,12 +11,14 @@ const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 const prisma = new PrismaClient();
 const app = express();
+const cartRoute = require("./routes/cart");
 
 app.use(cors());
 app.use(express.json());
 
 app.use("/api/items", itemsRoute);
 app.use("/images", express.static("public/images"));
+app.use("/api/cart", cartRoute);
 
 app.get("/", (req, res) => {
   {
@@ -27,13 +29,13 @@ app.get("/", (req, res) => {
 app.get("/api/cart/:userId", async (req, res) => {
   const { userId } = req.params;
   try {
-    const userCart = await prisma.order.findMany({
-      where: { userId: parseInt(userId) },
+    const userCart = await prisma.order.findFirst({
+      where: { userId },
       include: { items: true },
     });
-    res.json(userCart);
+    res.json({ items: userCart ? userCart.items : [] });
   } catch (error) {
-    console.log(error);
+    console.log("Error fetching cart:", error);
     res.status(500).json({ error: "Unable to fetch cart" });
   }
 });
@@ -43,7 +45,7 @@ app.post("/api/cart", async (req, res) => {
   try {
     const order = await prisma.order.create({
       data: {
-        userId: parseInt(userId),
+        userId: userId,
         total: price * quantity,
         items: {
           create: { product, quantity, price },

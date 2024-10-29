@@ -3,6 +3,7 @@ import CartContext from "../../Context/CartContext";
 import { Button } from "../Button/button.component";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
 
 import "./navbar.styles.css";
 
@@ -11,7 +12,7 @@ export default function Navbar() {
   const [button, setButton] = useState(true);
   const [cartCount, setCartCount] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState();
-  const { cart } = useContext(CartContext);
+  const { cart, addToCart } = useContext(CartContext);
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -47,6 +48,29 @@ export default function Navbar() {
       window.removeEventListener("resize", showButton);
     };
   }, []);
+
+  useEffect(() => {
+    const loadCart = async () => {
+      if (isAuthenticated) {
+        try {
+          const response = await axios.get(`/api/cart/${user.sub}`);
+          const savedCartItems = response.data.items
+            ? response.data.items.map((item) => ({
+                id: item.id,
+                name: item.product,
+                price: item.price,
+                quantity: item.quantity,
+              }))
+            : [];
+          savedCartItems.forEach((item) => addToCart(item));
+        } catch (error) {
+          console.error("Failed to load cart:", error);
+        }
+      }
+    };
+
+    loadCart();
+  }, [isAuthenticated, user, addToCart]);
 
   const handleEmailClick = () => {
     setDropdownOpen(!dropdownOpen);
