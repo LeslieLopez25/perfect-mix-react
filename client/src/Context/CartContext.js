@@ -46,9 +46,10 @@ export const CartProvider = ({ children }) => {
   const saveCart = useCallback(
     async (cartItems) => {
       if (!user) return;
+      console.log("Attempting to save cart with items:", cartItems); // Log cartItems
 
       try {
-        await axios.post("http://localhost:5000/api/cart/save", {
+        await axios.post("/api/cart/save", {
           userId: user.sub,
           items: cartItems,
         });
@@ -64,6 +65,7 @@ export const CartProvider = ({ children }) => {
       type: "ADD_TO_CART",
       payload: item,
     });
+    console.log("Adding to cart:", updatedCart); // Log updated cart after adding item
     dispatch({ type: "ADD_TO_CART", payload: item });
     if (isAuthenticated) saveCart(updatedCart);
   };
@@ -73,6 +75,7 @@ export const CartProvider = ({ children }) => {
       type: "REMOVE_FROM_CART",
       payload: item,
     });
+    console.log("Removing from cart:", updatedCart); // Log updated cart after removing item
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
     if (isAuthenticated) saveCart(updatedCart);
   };

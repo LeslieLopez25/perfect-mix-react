@@ -6,42 +6,36 @@ const router = express.Router();
 // Save cart data
 router.post("/save", async (req, res) => {
   const { userId, items } = req.body;
-  try {
-    const total = items.reduce(
-      (acc, item) => acc + item.price * item.quantity,
-      0
-    );
+  if (!userId || !items || !Array.isArray(items) || items.length === 0) {
+    console.log("Invalid request data:", { userId, items });
+    return res.status(400).json({ error: "Invalid data" });
+  }
 
-    // Create or update the user's active order with cart items
-    const order = await prisma.order.upsert({
-      where: { userId: userId },
-      update: {
-        items: {
-          deleteMany: {},
-          create: items.map((item) => ({
-            product: item.product,
-            quantity: item.quantity,
-            price: item.price,
-          })),
-        },
-        total,
-      },
-      create: {
-        userId: userId,
+  console.log("Received save request with items:", items);
+
+  try {
+    // Proceed with saving if validation passes
+    const userExists = await prisma.user.findUnique({
+      where: { id: userId },
+    });
+    if (!userExists) return res.status(400).json({ error: "User not found" });
+
+    const order = await prisma.order.create({
+      data: {
+        userId,
         items: {
           create: items.map((item) => ({
-            product: item.product,
+            itemId: item.id,
             quantity: item.quantity,
-            price: item.price,
           })),
         },
-        total,
+        total: items.reduce((acc, item) => acc + item.price * item.quantity, 0),
       },
     });
-
-    res.status(200).json({ order });
+    res.status(200).json(order);
   } catch (error) {
-    res.status(500).json({ error: "Failed to save cart" });
+    console.error("Error saving cart:", error);
+    res.status(500).json({ error: "Failed to save cart." });
   }
 });
 
@@ -49,7 +43,7 @@ router.get("/retrieve/:userId", async (req, res) => {
   const { userId } = req.params;
   try {
     const order = await prisma.order.findUnique({
-      where: { userId: parseInt(userId) },
+      where: { userId: userId },
       include: { items: true },
     });
 
