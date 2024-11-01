@@ -46,7 +46,22 @@ export const CartProvider = ({ children }) => {
   const saveCart = useCallback(
     async (cartItems) => {
       if (!user) return;
-      console.log("Attempting to save cart with items:", cartItems); // Log cartItems
+
+      try {
+        await axios.post("/api/cart/save", {
+          userId: user.sub,
+          items: cartItems,
+        });
+      } catch (error) {
+        console.error("Failed to save cart:", error);
+      }
+    },
+    [user]
+  );
+
+  const saveCartToBackend = useCallback(
+    async (cartItems) => {
+      if (!user) return;
 
       try {
         await axios.post("/api/cart/save", {
@@ -65,7 +80,6 @@ export const CartProvider = ({ children }) => {
       type: "ADD_TO_CART",
       payload: item,
     });
-    console.log("Adding to cart:", updatedCart); // Log updated cart after adding item
     dispatch({ type: "ADD_TO_CART", payload: item });
     if (isAuthenticated) saveCart(updatedCart);
   };
@@ -75,7 +89,6 @@ export const CartProvider = ({ children }) => {
       type: "REMOVE_FROM_CART",
       payload: item,
     });
-    console.log("Removing from cart:", updatedCart); // Log updated cart after removing item
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
     if (isAuthenticated) saveCart(updatedCart);
   };
@@ -84,8 +97,14 @@ export const CartProvider = ({ children }) => {
     if (isAuthenticated) saveCart(cart);
   }, [cart, isAuthenticated, saveCart]);
 
+  useEffect(() => {
+    sessionStorage.setItem("cartItems", JSON.stringify(cart));
+  }, [cart]);
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, saveCartToBackend }}
+    >
       {children}
     </CartContext.Provider>
   );

@@ -6,36 +6,42 @@ const router = express.Router();
 // Save cart data
 router.post("/save", async (req, res) => {
   const { userId, items } = req.body;
-  if (!userId || !items || !Array.isArray(items) || items.length === 0) {
-    console.log("Invalid request data:", { userId, items });
-    return res.status(400).json({ error: "Invalid data" });
-  }
-
-  console.log("Received save request with items:", items);
-
   try {
-    // Proceed with saving if validation passes
-    const userExists = await prisma.user.findUnique({
-      where: { id: userId },
-    });
-    if (!userExists) return res.status(400).json({ error: "User not found" });
+    const total = items.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
 
-    const order = await prisma.order.create({
-      data: {
-        userId,
+    // Create or update the user's active order with cart items
+    const order = await prisma.order.upsert({
+      where: { userId: userId },
+      update: {
         items: {
+          deleteMany: {},
           create: items.map((item) => ({
-            itemId: item.id,
+            product: item.product,
             quantity: item.quantity,
+            price: item.price,
           })),
         },
-        total: items.reduce((acc, item) => acc + item.price * item.quantity, 0),
+        total,
+      },
+      create: {
+        userId: userId,
+        items: {
+          create: items.map((item) => ({
+            product: item.product,
+            quantity: item.quantity,
+            price: item.price,
+          })),
+        },
+        total,
       },
     });
-    res.status(200).json(order);
+
+    res.status(200).json({ order });
   } catch (error) {
-    console.error("Error saving cart:", error);
-    res.status(500).json({ error: "Failed to save cart." });
+    res.status(500).json({ error: "Failed to save cart" });
   }
 });
 

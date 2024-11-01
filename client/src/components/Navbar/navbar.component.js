@@ -12,7 +12,7 @@ export default function Navbar() {
   const [button, setButton] = useState(true);
   const [cartCount, setCartCount] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState();
-  const { cart, addToCart } = useContext(CartContext);
+  const { cart, addToCart, saveCartToBackend } = useContext(CartContext);
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -71,6 +71,16 @@ export default function Navbar() {
 
     loadCart();
   }, [isAuthenticated, user, addToCart]);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      const storedCart = JSON.parse(sessionStorage.getItem("cartItems"));
+      if (storedCart) {
+        saveCartToBackend(storedCart);
+        sessionStorage.removeItem("cartItems");
+      }
+    }
+  }, [isAuthenticated, saveCartToBackend]);
 
   const handleEmailClick = () => {
     setDropdownOpen(!dropdownOpen);
