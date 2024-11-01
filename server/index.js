@@ -11,14 +11,12 @@ const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 const prisma = new PrismaClient();
 const app = express();
-const cartRoute = require("./routes/cart");
 
 app.use(cors());
 app.use(express.json());
 
 app.use("/api/items", itemsRoute);
 app.use("/images", express.static("public/images"));
-app.use("/api/cart", cartRoute);
 
 app.get("/", (req, res) => {
   {

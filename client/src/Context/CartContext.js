@@ -38,28 +38,34 @@ const cartReducer = (state, action) => {
   }
 };
 
+// Helper functions to save and load cart from sessionStorage
+function saveCartToSessionStorage(cartItems) {
+  try {
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+  } catch (error) {
+    console.error("Failed to save cart to sessionStorage:", error);
+  }
+}
+
+function loadCartFromSessionStorage() {
+  try {
+    const storedCart = sessionStorage.getItem("cartItems");
+    return storedCart ? JSON.parse(storedCart) : [];
+  } catch (error) {
+    console.error("Failed to load cart from sessionStorage:", error);
+    return [];
+  }
+}
+
 export const CartProvider = ({ children }) => {
   const { user, isAuthenticated } = useAuth0();
-  const [cart, dispatch] = useReducer(cartReducer, []);
+  const [cart, dispatch] = useReducer(
+    cartReducer,
+    loadCartFromSessionStorage()
+  );
 
   // Wrap saveCart in useCallback to prevent re-creation on each render
   const saveCart = useCallback(
-    async (cartItems) => {
-      if (!user) return;
-
-      try {
-        await axios.post("/api/cart/save", {
-          userId: user.sub,
-          items: cartItems,
-        });
-      } catch (error) {
-        console.error("Failed to save cart:", error);
-      }
-    },
-    [user]
-  );
-
-  const saveCartToBackend = useCallback(
     async (cartItems) => {
       if (!user) return;
 
@@ -81,6 +87,7 @@ export const CartProvider = ({ children }) => {
       payload: item,
     });
     dispatch({ type: "ADD_TO_CART", payload: item });
+    saveCartToSessionStorage(updatedCart);
     if (isAuthenticated) saveCart(updatedCart);
   };
 
@@ -90,21 +97,22 @@ export const CartProvider = ({ children }) => {
       payload: item,
     });
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
+    saveCartToSessionStorage(updatedCart);
     if (isAuthenticated) saveCart(updatedCart);
   };
 
   useEffect(() => {
-    if (isAuthenticated) saveCart(cart);
-  }, [cart, isAuthenticated, saveCart]);
-
-  useEffect(() => {
-    sessionStorage.setItem("cartItems", JSON.stringify(cart));
-  }, [cart]);
+    // Synchronize cart state with sessionStorage on app load
+    const storedCart = loadCartFromSessionStorage();
+    if (storedCart.length) {
+      storedCart.forEach((item) =>
+        dispatch({ type: "ADD_TO_CART", payload: item })
+      );
+    }
+  }, []);
 
   return (
-    <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, saveCartToBackend }}
-    >
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, saveCart }}>
       {children}
     </CartContext.Provider>
   );
