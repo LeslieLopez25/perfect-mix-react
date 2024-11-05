@@ -33,12 +33,15 @@ const cartReducer = (state, action) => {
           : item
       );
 
+    case "SET_CART":
+      return action.payload;
+
     default:
       return state;
   }
 };
 
-// Helper functions to save and load cart from sessionStorage
+// Helper functions to save/load cart from sessionStorage
 function saveCartToSessionStorage(cartItems) {
   try {
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -64,7 +67,7 @@ export const CartProvider = ({ children }) => {
     loadCartFromSessionStorage()
   );
 
-  // Wrap saveCart in useCallback to prevent re-creation on each render
+  // Save cart to backend
   const saveCart = useCallback(
     async (cartItems) => {
       if (!user) return;
@@ -80,6 +83,55 @@ export const CartProvider = ({ children }) => {
     },
     [user]
   );
+
+  // Sync backend cart items, merging with session storage if needed
+  const syncCartFromBackend = useCallback(async () => {
+    if (!isAuthenticated || !user) return;
+
+    try {
+      const response = await axios.get(`/api/cart/${user.sub}`);
+      const backendCartItems = response.data.items
+        ? response.data.items.map((item) => ({
+            id: item.id,
+            name: item.product,
+            price: item.price,
+            quantity: item.quantity,
+          }))
+        : [];
+
+      // Load any items from session storage that aren't in backend cart
+      const sessionStorageItems = loadCartFromSessionStorage();
+      const mergedCart = [...backendCartItems];
+
+      sessionStorageItems.forEach((sessionItem) => {
+        const existingItem = mergedCart.find(
+          (item) => item.id === sessionItem.id
+        );
+        if (existingItem) {
+          existingItem.quantity += sessionItem.quantity;
+        } else {
+          mergedCart.push(sessionItem);
+        }
+      });
+
+      dispatch({ type: "SET_CART", payload: mergedCart });
+      saveCartToSessionStorage(mergedCart);
+
+      // Save the merged cart to backend if it includes new items
+      if (sessionStorageItems.length > 0) {
+        saveCart(mergedCart);
+      }
+    } catch (error) {
+      console.error("Failed to load cart from backend:", error);
+    }
+  }, [isAuthenticated, user, saveCart]);
+
+  // Sync cart from backend once on login
+  useEffect(() => {
+    if (isAuthenticated) {
+      syncCartFromBackend();
+    }
+  }, [isAuthenticated, syncCartFromBackend]);
 
   const addToCart = (item) => {
     const updatedCart = cartReducer(cart, {
@@ -101,18 +153,14 @@ export const CartProvider = ({ children }) => {
     if (isAuthenticated) saveCart(updatedCart);
   };
 
-  useEffect(() => {
-    // Synchronize cart state with sessionStorage on app load
-    const storedCart = loadCartFromSessionStorage();
-    if (storedCart.length) {
-      storedCart.forEach((item) =>
-        dispatch({ type: "ADD_TO_CART", payload: item })
-      );
-    }
-  }, []);
-
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, saveCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
