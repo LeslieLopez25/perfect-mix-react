@@ -9,7 +9,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const CartContext = createContext();
 
-// Update the cartReducer to include CLEAR_CART
 const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
@@ -34,15 +33,15 @@ const cartReducer = (state, action) => {
           : item
       );
 
-    case "CLEAR_CART": // Add this case to reset cart to an empty array
-      return [];
+    case "SET_CART":
+      return action.payload;
 
     default:
       return state;
   }
 };
 
-// Helper functions to save, load, and clear cart from sessionStorage
+// Helper functions to save/load cart from sessionStorage
 function saveCartToSessionStorage(cartItems) {
   try {
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -61,22 +60,14 @@ function loadCartFromSessionStorage() {
   }
 }
 
-// Add clearSessionStorage helper function if not already in your context
-function clearSessionStorage() {
-  try {
-    sessionStorage.removeItem("cartItems");
-  } catch (error) {
-    console.error("Failed to clear sessionStorage:", error);
-  }
-}
-
 export const CartProvider = ({ children }) => {
-  const { user, isAuthenticated, logout } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
   const [cart, dispatch] = useReducer(
     cartReducer,
     loadCartFromSessionStorage()
   );
 
+  // Save cart to backend
   const saveCart = useCallback(
     async (cartItems) => {
       if (!user) return;
@@ -93,43 +84,54 @@ export const CartProvider = ({ children }) => {
     [user]
   );
 
+  // Sync backend cart items, merging with session storage if needed
   const syncCartFromBackend = useCallback(async () => {
     if (!isAuthenticated || !user) return;
 
     try {
       const response = await axios.get(`/api/cart/${user.sub}`);
-      const backendCartItems = response.data.items || [];
+      const backendCartItems = response.data.items
+        ? response.data.items.map((item) => ({
+            id: item.id,
+            name: item.product,
+            price: item.price,
+            quantity: item.quantity,
+          }))
+        : [];
 
-      // Clear current cart before dispatching items from the backend
-      dispatch({ type: "CLEAR_CART" }); // Ensure cart is empty before loading
-      backendCartItems.forEach((item) => {
-        dispatch({ type: "ADD_TO_CART", payload: item });
+      // Load any items from session storage that aren't in backend cart
+      const sessionStorageItems = loadCartFromSessionStorage();
+      const mergedCart = [...backendCartItems];
+
+      sessionStorageItems.forEach((sessionItem) => {
+        const existingItem = mergedCart.find(
+          (item) => item.id === sessionItem.id
+        );
+        if (existingItem) {
+          existingItem.quantity += sessionItem.quantity;
+        } else {
+          mergedCart.push(sessionItem);
+        }
       });
 
-      saveCartToSessionStorage(backendCartItems);
+      dispatch({ type: "SET_CART", payload: mergedCart });
+      saveCartToSessionStorage(mergedCart);
+
+      // Save the merged cart to backend if it includes new items
+      if (sessionStorageItems.length > 0) {
+        saveCart(mergedCart);
+      }
     } catch (error) {
       console.error("Failed to load cart from backend:", error);
     }
-  }, [isAuthenticated, user]);
+  }, [isAuthenticated, user, saveCart]);
 
-  // Sync cart from backend when the user is authenticated
+  // Sync cart from backend once on login
   useEffect(() => {
     if (isAuthenticated) {
       syncCartFromBackend();
     }
   }, [isAuthenticated, syncCartFromBackend]);
-
-  // Add clearCart function inside CartProvider so it can access dispatch
-  const clearCart = () => {
-    clearSessionStorage();
-    dispatch({ type: "CLEAR_CART" });
-  };
-
-  // Modify handleLogout function to use clearCart
-  const handleLogout = () => {
-    clearCart();
-    logout({ returnTo: window.location.origin });
-  };
 
   const addToCart = (item) => {
     const updatedCart = cartReducer(cart, {
@@ -151,27 +153,12 @@ export const CartProvider = ({ children }) => {
     if (isAuthenticated) saveCart(updatedCart);
   };
 
-  useEffect(() => {
-    // Synchronize cart state with sessionStorage on app load
-    const storedCart = loadCartFromSessionStorage();
-    if (storedCart.length) {
-      storedCart.forEach((item) =>
-        dispatch({ type: "ADD_TO_CART", payload: item })
-      );
-    }
-  }, []);
-
   return (
     <CartContext.Provider
       value={{
         cart,
         addToCart,
         removeFromCart,
-        saveCart,
-        clearSessionStorage,
-        loadCartFromSessionStorage,
-        clearCart,
-        handleLogout,
       }}
     >
       {children}
