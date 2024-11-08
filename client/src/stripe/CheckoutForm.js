@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+import { Button } from "../components/Button/button.component";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
@@ -64,11 +65,33 @@ export const CheckoutForm = ({ name, items }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <CardElement />
-        <button type="submit" disabled={!stripe}>
-          Pay Now
-        </button>
+      <form onSubmit={handleSubmit} className="checkout-form">
+        <h2>Credit Card Payment:</h2>
+        <div className="payment-container">
+          <div className="card-details">
+            <CardElement
+              className="card-element"
+              options={{
+                style: {
+                  base: {
+                    color: "#a53005",
+                    iconColor: "#a53005",
+                    "::placeholder": {
+                      color: "#a53005",
+                    },
+                  },
+                },
+              }}
+            />
+          </div>
+          <Button
+            buttonStyle="btn--primary btn-medium"
+            type="submit"
+            disabled={!stripe}
+          >
+            Pay Now
+          </Button>
+        </div>
       </form>
 
       {/* Receipt Modal */}
