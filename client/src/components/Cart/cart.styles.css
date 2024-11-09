@@ -1,6 +1,6 @@
 .cart-container {
     color: white;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .cart-container .cart-heading {
@@ -21,28 +21,28 @@
 .cart-items {
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
+    padding-left: 6.25rem;
 }
 
 .cart-item {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
-    padding-left: 300px;
+    margin-bottom: 1.875rem;
+    padding-left: 18.75rem;
 }
 
 .cart-item img {
-    width: 150px;
-    min-width: 150px;
-    height: 150px;
-    margin-right: 20px;
+    margin-right: 1.25rem;
+    width: 9.375rem;
+    min-width: 9.375rem;
+    height: 9.375rem;
     border-radius: 4px;
     box-shadow: 0.25rem 0.25rem 0.1rem hsl(20, 76.3%, 23.1%);
 }
 
 .cart-item h3,
 p {
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 
 .cart-item-details {
@@ -55,7 +55,7 @@ p {
 }
 
 .cart-item-quantity button {
-    margin: 0 5px;
+    margin: 0 0.3125rem;
 }
 
 .cart-item-quantity span {
@@ -65,34 +65,34 @@ p {
 .cart-item-total {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-right: 400px;
+    margin-right: 25rem;
 }
 
 .cart-total {
-    margin-top: 20px;
     font-size: 1.2em;
     font-weight: bold;
-    padding-left: 400px;
+    margin-top: 1.25rem;
+    padding-left: 25rem;
 }
 
 /* Media Queries */
 @media screen and (max-width: 60em) {
     .cart-item {
-        padding-left: 200px;
+        padding-left: 12.5rem;
     }
 
     .cart-item img {
-        width: 200px;
-        min-width: 200px;
-        height: 200px;
+        width: 12.5rem;
+        min-width: 12.5rem;
+        height: 12.5rem;
     }
 
     .cart-item-total {
-        margin-right: 200px;
+        margin-right: 12.5rem;
     }
 
     .cart-total {
-        padding-left: 300px;
+        padding-left: 18.75rem;
     }
 }
 
@@ -110,10 +110,10 @@ p {
     }
 
     .cart-item img {
-        width: 200px;
-        height: 200px;
+        width: 12.5rem;
+        height: 12.5rem;
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 
     .cart-item h3,
@@ -126,16 +126,16 @@ p {
     }
 
     .cart-item-total {
-        margin: 0;
         font-size: 1.2rem;
+        margin: 0;
+        margin-top: 0.625rem;
         text-align: center;
-        margin-top: 10px;
     }
 
     .cart-total {
         padding-left: 0;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 
     .cart-item-quantity {
@@ -143,6 +143,6 @@ p {
     }
 
     .cart-item-quantity span {
-        margin-left: 10px;
+        margin-left: 0.625rem;
     }
 }
