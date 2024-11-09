@@ -1,11 +1,12 @@
 import React from "react";
-import "./cards.styles.css";
 import CardItem from "../Cards/card-item.component";
 import Img1 from "../../assets/images/display-1.jpeg";
 import Img2 from "../../assets/images/display-2.jpeg";
 import Img3 from "../../assets/images/display-3.jpeg";
 import Img4 from "../../assets/images/display-4.jpeg";
 import Img5 from "../../assets/images/display-5.jpeg";
+
+import "./cards.styles.css";
 
 export default function Cards() {
   return (
