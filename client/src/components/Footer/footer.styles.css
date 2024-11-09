@@ -6,9 +6,9 @@
   background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 35%, hsl(153.6, 100%, 21%) 100%);
   color: hsl(0, 0%, 100%);
   padding: 5rem calc((100vw - 81.25rem) / 2);
+  max-width: 100%;
   min-height: 100%;
   width: 100%;
-  max-width: 100%;
 }
 
 .footer-container .footer-heading {
@@ -98,8 +98,8 @@
 
 .social-icons {
   display: flex;
-  margin-right: 3.125rem;
   align-items: center;
+  margin-right: 3.125rem;
 }
 
 .social-logo {
@@ -195,15 +195,15 @@
     grid-template-columns: 1fr;
     grid-row-gap: 2rem;
     justify-content: center;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   .footer-wrapper {
     flex-direction: column;
     align-items: center;
-    margin-left: 100px;
-    margin-top: 20px;
+    margin-left: 6.25rem;
+    margin-top: 1.25rem;
   }
 
   .social-media-wrap {
@@ -213,8 +213,8 @@
   }
 
   .social-icons {
-    position: static;
     margin: 0 0 0 1rem;
+    position: static;
   }
 
   .website-rights {
@@ -234,7 +234,7 @@
   .footer-content {
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    margin-right: 1.875rem;
     height: 50%;
   }
 
@@ -250,8 +250,8 @@
 @media screen and (max-width: 25.125em) {
   .footer-container {
     padding: 1rem calc((100vw - 81.25rem) / 2);
-    min-height: 100%;
     width: 100%;
+    min-height: 100%;
   }
 
   .footer-content {
