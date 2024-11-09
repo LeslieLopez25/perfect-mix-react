@@ -17,6 +17,7 @@ export default function Navbar() {
 
   // handleClick to determine if the icon is clicked
   const handleClick = () => setClick(!click);
+
   // closeMobileMenu to close the mobile menu
   const closeMobileMenu = () => setClick(false);
 
