@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import imgData from "./imgData";
 
-import "../Gallery/gallery.styles.css";
 import "../../App.css";
+import "../Gallery/gallery.styles.css";
 
 export default function Gallery() {
   const [model, setModel] = useState(false);
