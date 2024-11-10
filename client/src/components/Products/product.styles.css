@@ -2,8 +2,8 @@
     background: linear-gradient(150deg, hsl(20, 76.3%, 23.1%) 35%, hsl(153.6, 100%, 21%) 100%);
     color: hsl(0, 0%, 100%);
     padding: 5rem calc((100vw - 81.25rem) / 2);
-    width: 100%;
     min-height: 100%;
+    width: 100%;
 }
 
 .product-container .product-heading {
@@ -36,8 +36,8 @@
 }
 
 .productLineUp img {
-    min-width: 18.75rem;
     max-width: 100%;
+    min-width: 18.75rem;
     height: 18.75rem;
     box-shadow: 0.3rem 0.3rem 0.1rem hsl(120, 60.7%, 33.9%);
     border-radius: 4px;
