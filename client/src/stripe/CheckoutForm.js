@@ -9,10 +9,10 @@ import "./CheckoutForm.styles.css";
 
 Modal.setAppElement("#root");
 
-export const CheckoutForm = ({ name, items }) => {
+export const CheckoutForm = ({ items }) => {
   const stripe = useStripe();
   const elements = useElements();
-  const { isAuthenticated, loginWithRedirect } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, user } = useAuth0();
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [receiptData, setReceiptData] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -48,7 +48,7 @@ export const CheckoutForm = ({ name, items }) => {
         if (response.data.success) {
           setPaymentSuccess(true);
           setReceiptData({
-            name,
+            name: user?.name,
             items,
             total: calculateTotalAmount(items),
             date: new Date().toLocaleString(),
@@ -102,17 +102,22 @@ export const CheckoutForm = ({ name, items }) => {
         >
           <div className="receipt">
             <h2>Receipt</h2>
-            <p>Thank you, {receiptData.name}!</p>
-            <p>Date: {receiptData.date}</p>
+            <p>Thank you, {receiptData?.name}!</p> {/* Safely access name */}
+            <p>Date: {receiptData?.date}</p>
             <ul>
-              {receiptData.items.map((item, index) => (
+              {receiptData?.items.map((item, index) => (
                 <li key={index}>
                   {item.name} - ${item.price.toFixed(2)}
                 </li>
               ))}
             </ul>
-            <p>Total: ${receiptData.total.toFixed(2)}</p>
-            <button onClick={() => setModalIsOpen(false)}>Close</button>
+            <p>Total: ${receiptData?.total.toFixed(2)}</p>
+            <Button
+              buttonStyle="btn--primary btn-medium"
+              onClick={() => setModalIsOpen(false)}
+            >
+              Close
+            </Button>
           </div>
         </Modal>
       )}
