@@ -1,4 +1,4 @@
-const { PrismaClient } = require("@prisma/client");
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
@@ -304,6 +304,75 @@ async function main() {
       data: item,
     });
   }
+}
+
+const GalleryList = [
+  {
+    imgSrc: "/images/gallery-1.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-2.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-3.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-4.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-5.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-6.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-7.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-8.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-9.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-10.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-11.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-12.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-13.jpg",
+  },
+  {
+    imgSrc: "/images/gallery-14.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-15.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-16.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-17.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-18.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-19.jpeg",
+  },
+  {
+    imgSrc: "/images/gallery-20.jpeg",
+  },
+];
+
+for (const image of GalleryList) {
+  await prisma.galleryImage.create({
+    data: image,
+  });
 }
 
 main()

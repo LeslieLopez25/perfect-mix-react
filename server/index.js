@@ -38,6 +38,16 @@ app.get("/api/cart/:userId", async (req, res) => {
   }
 });
 
+app.get("/api/gallery", async (req, res) => {
+  try {
+    const galleryImages = await prisma.galleryImage.findMany();
+    res.json(galleryImages);
+  } catch (error) {
+    console.error("Error fetching gallery images:", error);
+    res.status(500).json({ error: "Unable to fetch gallery images" });
+  }
+});
+
 app.post("/api/cart", async (req, res) => {
   const { userId, product, quantity, price } = req.body;
   try {
