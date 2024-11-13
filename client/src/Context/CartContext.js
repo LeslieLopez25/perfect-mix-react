@@ -1,5 +1,6 @@
 import React, {
   createContext,
+  useContext,
   useReducer,
   useEffect,
   useCallback,
@@ -36,6 +37,9 @@ const cartReducer = (state, action) => {
     case "SET_CART":
       return action.payload;
 
+    case "CLEAR_CART":
+      return [];
+
     default:
       return state;
   }
@@ -60,7 +64,7 @@ function loadCartFromSessionStorage() {
   }
 }
 
-export const CartProvider = ({ children }) => {
+const CartProvider = ({ children }) => {
   const { user, isAuthenticated } = useAuth0();
   const [cart, dispatch] = useReducer(
     cartReducer,
@@ -126,6 +130,10 @@ export const CartProvider = ({ children }) => {
     }
   }, [isAuthenticated, user, saveCart]);
 
+  const clearCart = () => {
+    dispatch({ type: "CLEAR_CART" });
+  };
+
   // Sync cart from backend once on login
   useEffect(() => {
     if (isAuthenticated) {
@@ -159,11 +167,16 @@ export const CartProvider = ({ children }) => {
         cart,
         addToCart,
         removeFromCart,
+        clearCart,
       }}
     >
       {children}
     </CartContext.Provider>
   );
 };
+
+const useCartContext = () => useContext(CartContext);
+
+export { CartProvider, useCartContext };
 
 export default CartContext;

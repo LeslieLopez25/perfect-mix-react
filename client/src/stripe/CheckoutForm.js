@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import { Button } from "../components/Button/button.component";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useCartContext } from "../Context/CartContext";
 import axios from "axios";
 
 import "./CheckoutForm.styles.css";
@@ -16,6 +17,7 @@ export const CheckoutForm = ({ items }) => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [receiptData, setReceiptData] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { clearCart } = useCartContext();
 
   const calculateTotalAmount = (items) => {
     return items.reduce((total, item) => total + item.price, 0);
@@ -114,7 +116,10 @@ export const CheckoutForm = ({ items }) => {
             <p>Total: ${receiptData?.total.toFixed(2)}</p>
             <Button
               buttonStyle="btn--primary btn-medium"
-              onClick={() => setModalIsOpen(false)}
+              onClick={() => {
+                setModalIsOpen(false);
+                clearCart();
+              }}
             >
               Close
             </Button>
