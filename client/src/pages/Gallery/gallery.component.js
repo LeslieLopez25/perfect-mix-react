@@ -4,6 +4,8 @@ import axios from "axios";
 import "../../App.css";
 import "../Gallery/gallery.styles.css";
 
+const apiURL = process.env.REACT_APP_API_URL;
+
 export default function Gallery() {
   const [model, setModel] = useState(false);
   const [tempimgSrc, setTempImgSrc] = useState("");
@@ -14,14 +16,14 @@ export default function Gallery() {
     window.scrollTo(0, 0);
     // Fetch gallery images from backend
     axios
-      .get("/api/gallery")
+      .get(`${apiURL}/api/gallery`)
       .then((response) => setImages(response.data))
       .catch((error) => console.error("Error fetching gallery images:", error));
   }, []);
 
   // To determine if the image is clicked to open the model and close the model when the xmark is clicked
   const getImg = (imgSrc) => {
-    setTempImgSrc(imgSrc);
+    setTempImgSrc(`${apiURL}${imgSrc}`);
     setModel(true);
   };
 
@@ -35,7 +37,7 @@ export default function Gallery() {
       <div className="gallery">
         {images.map((img, id) => (
           <div className="pics" key={id} onClick={() => getImg(img.imgSrc)}>
-            <img src={img.imgSrc} alt="" />
+            <img src={`${apiURL}${img.imgSrc}`} alt="" />
           </div>
         ))}
       </div>
