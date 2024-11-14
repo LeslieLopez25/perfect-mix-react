@@ -5,6 +5,8 @@ import { Button } from "../Button/button.component";
 
 import "../Products/product.styles.css";
 
+const apiURL = process.env.REACT_APP_API_URL;
+
 export const Product = ({ category }) => {
   const { addToCart } = useContext(CartContext);
   const [productData, setProductData] = useState([]);
@@ -12,7 +14,7 @@ export const Product = ({ category }) => {
   useEffect(() => {
     // Fetch product data from the backend
     axios
-      .get(`http://localhost:5000/api/items?category=${category}`)
+      .get(`${apiURL}/api/items?category=${category}`)
       .then((response) => {
         setProductData(response.data);
       })
@@ -32,7 +34,7 @@ export const Product = ({ category }) => {
     <div className="productLineUp">
       {productData.map((data) => (
         <div key={data.id} className="product-card">
-          <img src={`http://localhost:5000${data.image}`} alt={data.name} />
+          <img src={`${apiURL}${data.image}`} alt={data.name} />
           <h3>{data.name}</h3>
           <p>{data.description}</p>
           <h4>${data.price.toFixed(2)}</h4>

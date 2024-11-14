@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
 import Navbar from "./components/Navbar/navbar.component";
 import {
   Home,
@@ -14,6 +13,8 @@ import Footer from "./components/Footer/footer.component";
 import Loader from "./components/Loader/loader.component";
 import { CartProvider } from "./Context/CartContext";
 import { Cart } from "./components/Cart/cart.component";
+
+import "./App.css";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);

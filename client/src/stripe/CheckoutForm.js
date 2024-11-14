@@ -104,7 +104,7 @@ export const CheckoutForm = ({ items }) => {
         >
           <div className="receipt">
             <h2>Receipt</h2>
-            <p>Thank you, {receiptData?.name}!</p> {/* Safely access name */}
+            <p>Thank you, {receiptData?.name}!</p>
             <p>Date: {receiptData?.date}</p>
             <ul>
               {receiptData?.items.map((item, index) => (

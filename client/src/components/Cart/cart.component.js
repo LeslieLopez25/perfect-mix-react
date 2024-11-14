@@ -9,6 +9,8 @@ import "./cart.styles.css";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
+const apiURL = process.env.REACT_APP_API_URL;
+
 export const Cart = () => {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
 
@@ -41,10 +43,7 @@ export const Cart = () => {
           <div className="cart-items">
             {cart.map((item) => (
               <div key={item.id} className="cart-item">
-                <img
-                  src={`http://localhost:5000${item.image}`}
-                  alt={item.name}
-                />
+                <img src={`${apiURL}${item.image}`} alt={item.name} />
                 <div className="cart-item-details">
                   <h3>{item.name}</h3>
                   <p>${item.price.toFixed(2)}</p>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import imgData from "./imgData";
 import axios from "axios";
 
 import "../../App.css";
