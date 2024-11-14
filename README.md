@@ -20,7 +20,7 @@
 
 ### Link
 
-- Live Site: [The Perfect Mix](https://the-perfect-mix.netlify.app/)
+- Live Site: [The Perfect Mix](https://perfect-mix-react.onrender.com)
 
 ### Screenshots
 
