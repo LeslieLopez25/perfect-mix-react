@@ -10,6 +10,8 @@ import "./CheckoutForm.styles.css";
 
 Modal.setAppElement("#root");
 
+const apiURL = process.env.REACT_APP_API_URL;
+
 export const CheckoutForm = ({ items }) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -42,7 +44,7 @@ export const CheckoutForm = ({ items }) => {
       try {
         const { id } = paymentMethod;
 
-        const response = await axios.post("/api/payment", {
+        const response = await axios.post(`${apiURL}/api/payment`, {
           id,
           amount: calculateTotalAmount(items),
         });
