@@ -16,6 +16,44 @@
 \*\* Updated as of July 2024:
 
 - Enhanced Cart Functionality: Easily add items to your cart, adjust quantities, and view the total amount for each item with our intuitive add-to-cart feature.
+
+  \*\* Updated as of November 2024:
+
+  - Authentication: Integrated Auth0 to enable user account creation and login, allowing users to save items to their cart before checkout.
+
+  - Full-Stack Setup: Converted the project into a full-stack application with separate frontend and backend components.
+
+- Backend and Database:
+
+  - Hosted backend setup to manage data, Auth0 authentication, and Stripe payment processing.
+
+  - Integrated PostgreSQL database with Prisma as the ORM for efficient database interaction.
+
+  - Migrated product and gallery images to the database, seeding them through Prisma to replace hardcoded data.
+
+  - Node.js: Powers the backend runtime environment, allowing JavaScript to run server-side for handling server operations and managing asynchronous requests efficiently.
+
+  - Express: Provides the core web framework for routing and middleware management, serving dynamic API routes (e.g., item retrieval, cart management, payments) and static files like gallery images.
+
+  - dotenv: Manages environment variables securely by loading sensitive data (e.g., Stripe secret key) from a .env file, keeping it out of the codebase for security.
+
+  - CORS (Cross-Origin Resource Sharing): Enables secure cross-origin requests between the separately hosted frontend and backend, allowing them to communicate without security issues.
+
+  - REST API: Defines structured endpoints (e.g., /api/items, /api/cart, /create-payment-intent) that enable data exchange with the frontend, following REST principles for handling user interactions and payment processing.
+
+- Dynamic Content Fetching: Product and gallery data are now fetched directly from the database, making updates and scalability easier.
+
+- Payment Processing: Implemented Stripe for secure payment processing, configured in both frontend and backend for seamless transactions.
+
+- Receipt Modal: Upon successful payment, a receipt modal displays the user's name, list of items, and total amount paid, enhancing the checkout experience.
+
+- Cart Management: Cart items persist across login sessions, allowing users to resume shopping without losing their selections.
+
+- Frontend: Hosted on Render, making the user-facing interface accessible to the public and ensuring smooth interactions with the backend services.
+
+- Backend: Also hosted on Render, allowing it to handle API requests, process payments, and manage authentication and cart functionalities, all accessible to the frontend.
+
+- Database: Hosted on Neon, a cloud PostgreSQL database provider, which stores all product data, gallery images, and user cart information, ensuring secure and scalable data management for the app.
 </p>
 
 ### Link
