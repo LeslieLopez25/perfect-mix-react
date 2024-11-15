@@ -5,7 +5,7 @@
 ### Key Features
 
 <p>
-- Mobile Responsiveness: Enjoy a seamless experience on any device, whether it's a smartphone, tablet, or desktop.
+ - Mobile Responsiveness: Enjoy a seamless experience on any device, whether it's a smartphone, tablet, or desktop.
 
 - Custom Button: Experience our restaurant like never before with a thoughtfully designed custom button that adds a touch of elegance to your navigation.
 
