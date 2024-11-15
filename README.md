@@ -5,7 +5,7 @@
 ### Key Features
 
 <p>
- - Mobile Responsiveness: Enjoy a seamless experience on any device, whether it's a smartphone, tablet, or desktop.
+- Mobile Responsiveness: Enjoy a seamless experience on any device, whether it's a smartphone, tablet, or desktop.
 
 - Custom Button: Experience our restaurant like never before with a thoughtfully designed custom button that adds a touch of elegance to your navigation.
 
@@ -17,11 +17,11 @@
 
 - Enhanced Cart Functionality: Easily add items to your cart, adjust quantities, and view the total amount for each item with our intuitive add-to-cart feature.
 
-  \*\* Updated as of November 2024:
+\*\* Updated as of November 2024:
 
-  - Authentication: Integrated Auth0 to enable user account creation and login, allowing users to save items to their cart before checkout.
+- Authentication: Integrated Auth0 to enable user account creation and login, allowing users to save items to their cart before checkout.
 
-  - Full-Stack Setup: Converted the project into a full-stack application with separate frontend and backend components.
+- Full-Stack Setup: Converted the project into a full-stack application with separate frontend and backend components.
 
 - Backend and Database:
 
