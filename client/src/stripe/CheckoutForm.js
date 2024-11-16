@@ -29,7 +29,9 @@ export const CheckoutForm = ({ items }) => {
     event.preventDefault();
 
     if (!isAuthenticated) {
-      loginWithRedirect();
+      loginWithRedirect({
+        redirect_url: `${window.location.origin}/cart`,
+      });
       return;
     }
 
