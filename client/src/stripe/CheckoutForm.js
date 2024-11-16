@@ -30,7 +30,7 @@ export const CheckoutForm = ({ items }) => {
 
     if (!isAuthenticated) {
       loginWithRedirect({
-        redirect_url: `${window.location.origin}/cart`,
+        redirect_uri: `${window.location.origin}/cart`,
       });
       return;
     }
