@@ -18,6 +18,13 @@ app.use(express.json());
 app.use("/api/items", itemsRoute);
 app.use("/images", express.static("public/images"));
 
+const buildPath = path.join(__dirname, "client/build");
+app.use(express.static(buildPath));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(buildPath, "index.html"));
+});
+
 app.get("/", (req, res) => {
   {
     res.send("API is running...");
