@@ -13,7 +13,7 @@
 
 - Captivating Gallery: Immerse yourself in the visual feast of our mouthwatering dishes through our gallery section. Get a glimpse of the culinary artistry that awaits you.
 
-- Use this [link](https://docs.stripe.com/testing#international-cards) to use Stripe test cards from different countries.
+- Use this [link](https://docs.stripe.com/testing#international-cards) to use Stripe test cards, for placing your order, from different countries.
 
 \*\* Updated as of July 2024:
 
