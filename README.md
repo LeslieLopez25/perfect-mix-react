@@ -13,6 +13,8 @@
 
 - Captivating Gallery: Immerse yourself in the visual feast of our mouthwatering dishes through our gallery section. Get a glimpse of the culinary artistry that awaits you.
 
+- Use this [link](https://docs.stripe.com/testing#international-cards) to use Stripe test cards from different countries.
+
 \*\* Updated as of July 2024:
 
 - Enhanced Cart Functionality: Easily add items to your cart, adjust quantities, and view the total amount for each item with our intuitive add-to-cart feature.
