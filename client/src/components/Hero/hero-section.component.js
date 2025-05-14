@@ -10,18 +10,21 @@ const images = [
   require("../../assets/images/slider-4.jpg"),
 ];
 
+// HeroSection component displays rotating background images with text overlay
 export default function HeroSection() {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0); // Tracks the currently displayed image index
 
+  // Automatically change the background image every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 5000);
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
   return (
     <div className="hero-container">
+      {/* Render background image slides */}
       {images.map((image, index) => (
         <div
           key={index}
@@ -29,6 +32,7 @@ export default function HeroSection() {
           style={{ backgroundImage: `url(${image})` }}
         />
       ))}
+      {/* Overlay text content */}
       <div className="intro">
         <h1>Food from scratch with love from our kitchens</h1>
         <p>Come Check Us Out!</p>
