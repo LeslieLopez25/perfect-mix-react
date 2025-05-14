@@ -1,6 +1,8 @@
 import React from "react";
 import { Auth0Provider } from "@auth0/auth0-react";
 
+// AuthProvider wraps the app with Auth0 authentication context
+// It provides authentication features like login, logout, and user session handlingS
 export default function AuthProvider({ children }) {
   return (
     <Auth0Provider
