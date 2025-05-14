@@ -2,10 +2,16 @@ import React from "react";
 
 import "./button.styles.css";
 
-// Button sizes
+// Predefined button sizes classes
 const SIZES = ["btn--medium", "btn--large"];
 
-// Button props
+// Button component renders a customizable button.
+// Props:
+// - children: the content inside the button
+// - type: the HTML button type (e.g., "submit", "button")
+// - onClick: function to call when the button is clicked
+// - buttonStyle: custom class for styling
+// - buttonSize: determines button size class
 export const Button = ({
   children,
   type,
@@ -13,7 +19,7 @@ export const Button = ({
   buttonStyle,
   buttonSize,
 }) => {
-  // Button size
+  // Check if provided size is valid; otherwise default to medium
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
