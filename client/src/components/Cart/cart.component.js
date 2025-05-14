@@ -11,6 +11,8 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const apiURL = process.env.REACT_APP_API_URL;
 
+// Cart component displays current cart items, allows quantity updates,
+// shows total price, and renders Stripe checkout form
 export const Cart = () => {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
 
@@ -28,7 +30,7 @@ export const Cart = () => {
       .toFixed(2);
   };
 
-  // To have the page start at the top of the page
+  // Scrolls to the top of the page when the component is mounted
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -73,6 +75,7 @@ export const Cart = () => {
             <h3>Total: ${calculateTotal()}</h3>
           </div>
 
+          {/* Stripe payment form */}
           <Elements stripe={stripePromise}>
             <CheckoutForm name="Customer Name" items={cart} />
           </Elements>
