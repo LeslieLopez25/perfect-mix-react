@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./footer.styles.css";
 
+// Footer component displays address, hours, contact info, social links, and branding
 export default function Footer() {
   return (
     <div className="footer-container">
