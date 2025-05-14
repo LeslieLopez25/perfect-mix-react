@@ -8,6 +8,7 @@ import Img5 from "../../assets/images/display-5.jpeg";
 
 import "./cards.styles.css";
 
+// Cards component renders a collection of CardItem components
 export default function Cards() {
   return (
     <div className="cards">
