@@ -6,6 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 import "./navbar.styles.css";
 
+// Navbar component for navigation, cart, and Auth0 login/logout
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -15,13 +16,12 @@ export default function Navbar() {
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  // handleClick to determine if the icon is clicked
+  // Toggle mobile menu open/close
   const handleClick = () => setClick(!click);
 
-  // closeMobileMenu to close the mobile menu
   const closeMobileMenu = () => setClick(false);
 
-  // Displays button if the screen is less than 960px
+  // Show or hide the gallery button based on screen width
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -30,18 +30,18 @@ export default function Navbar() {
     }
   };
 
-  // Update cart count whenever cart changes
+  // Update cart count when the cart changes
   useEffect(() => {
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
     setCartCount(totalItems);
   }, [cart]);
 
-  // To render the button
+  // Set initial button visibility on mount
   useEffect(() => {
     showButton();
   }, []);
 
-  // When the screen size changes, the button is displayed or not
+  // Recalculate button visibility on window resize
   useEffect(() => {
     window.addEventListener("resize", showButton);
     return () => {
@@ -49,6 +49,7 @@ export default function Navbar() {
     };
   }, []);
 
+  // Update cart count when the cart changes
   useEffect(() => {
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
     setCartCount(totalItems);
@@ -58,12 +59,12 @@ export default function Navbar() {
     setDropdownOpen(!dropdownOpen);
   };
 
-  // Determine if the screen size is smaller than 25.125em (approx. 400px)
+  // Set screen size state if width is ≤ 400px
   const checkScreenSize = () => {
     setIsSmallScreen(window.innerWidth <= 400);
   };
 
-  // Runs on window resize and first render to check screen size
+  // Listen for screen resize to update small screen status
   useEffect(() => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
