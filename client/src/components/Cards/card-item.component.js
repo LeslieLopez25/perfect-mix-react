@@ -1,6 +1,6 @@
 import React from "react";
 
-// CardItem component for the Card component
+// CardItem component renders a single card with an image, label, and text.
 export default function CardItem({ label, src, text }) {
   return (
     <li className="cards__item">
