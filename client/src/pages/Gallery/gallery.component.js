@@ -11,17 +11,16 @@ export default function Gallery() {
   const [tempimgSrc, setTempImgSrc] = useState("");
   const [images, setImages] = useState([]);
 
-  // To have the page start at the top of the page
+  // Scrolls to top and fetches gallery images when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Fetch gallery images from backend
     axios
       .get(`${apiURL}/api/gallery`)
       .then((response) => setImages(response.data))
       .catch((error) => console.error("Error fetching gallery images:", error));
   }, []);
 
-  // To determine if the image is clicked to open the model and close the model when the xmark is clicked
+  // Opens the modal with the selected image
   const getImg = (imgSrc) => {
     setTempImgSrc(`${apiURL}${imgSrc}`);
     setModel(true);
@@ -30,10 +29,12 @@ export default function Gallery() {
   return (
     <>
       <h2 className="gallery-heading">Gallery</h2>
+      {/* Modal image viewer */}
       <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt="" />
         <i className="fa-solid fa-xmark" onClick={() => setModel(false)} />
       </div>
+      {/* Display all gallery images */}
       <div className="gallery">
         {images.map((img, id) => (
           <div className="pics" key={id} onClick={() => getImg(img.imgSrc)}>
