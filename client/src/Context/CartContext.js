@@ -10,6 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const CartContext = createContext();
 
+// Reducer function to manage cart actions
 const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
@@ -45,7 +46,7 @@ const cartReducer = (state, action) => {
   }
 };
 
-// Helper functions to save/load cart from sessionStorage
+// Save cart items to session storage
 function saveCartToSessionStorage(cartItems) {
   try {
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -54,6 +55,7 @@ function saveCartToSessionStorage(cartItems) {
   }
 }
 
+// Load cart items from session storage
 function loadCartFromSessionStorage() {
   try {
     const storedCart = sessionStorage.getItem("cartItems");
@@ -64,6 +66,7 @@ function loadCartFromSessionStorage() {
   }
 }
 
+// Provides the cart context and syncs it with backend and sessionStorage
 const CartProvider = ({ children }) => {
   const { user, isAuthenticated } = useAuth0();
   const [cart, dispatch] = useReducer(
@@ -71,7 +74,7 @@ const CartProvider = ({ children }) => {
     loadCartFromSessionStorage()
   );
 
-  // Save cart to backend
+  // Saves cart to backend for the authenticated user
   const saveCart = useCallback(
     async (cartItems) => {
       if (!user) return;
@@ -88,7 +91,7 @@ const CartProvider = ({ children }) => {
     [user]
   );
 
-  // Sync backend cart items, merging with session storage if needed
+  // Sync cart from backend and merge with sessionStorage cart items
   const syncCartFromBackend = useCallback(async () => {
     if (!isAuthenticated || !user) return;
 
@@ -103,7 +106,6 @@ const CartProvider = ({ children }) => {
           }))
         : [];
 
-      // Load any items from session storage that aren't in backend cart
       const sessionStorageItems = loadCartFromSessionStorage();
       const mergedCart = [...backendCartItems];
 
@@ -121,7 +123,6 @@ const CartProvider = ({ children }) => {
       dispatch({ type: "SET_CART", payload: mergedCart });
       saveCartToSessionStorage(mergedCart);
 
-      // Save the merged cart to backend if it includes new items
       if (sessionStorageItems.length > 0) {
         saveCart(mergedCart);
       }
@@ -134,13 +135,14 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "CLEAR_CART" });
   };
 
-  // Sync cart from backend once on login
+  // Sync cart when user logs in
   useEffect(() => {
     if (isAuthenticated) {
       syncCartFromBackend();
     }
   }, [isAuthenticated, syncCartFromBackend]);
 
+  // Adds item to cart, updates local state and storage
   const addToCart = (item) => {
     const updatedCart = cartReducer(cart, {
       type: "ADD_TO_CART",
@@ -151,6 +153,7 @@ const CartProvider = ({ children }) => {
     if (isAuthenticated) saveCart(updatedCart);
   };
 
+  // Removes item from cart, updates local state and storage
   const removeFromCart = (item) => {
     const updatedCart = cartReducer(cart, {
       type: "REMOVE_FROM_CART",
