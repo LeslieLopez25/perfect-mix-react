@@ -9,8 +9,8 @@ import {
 
 import "../../App.css";
 
+// // Renders the homepage that users see when they first visit the site
 export default function Home() {
-  // What the home page when you click on the website will display first
   return (
     <>
       <HeroSection />
