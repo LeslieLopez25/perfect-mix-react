@@ -12,6 +12,7 @@ Modal.setAppElement("#root");
 
 const apiURL = process.env.REACT_APP_API_URL;
 
+// Checkout form for Stripe payment processing
 export const CheckoutForm = ({ items }) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -25,9 +26,11 @@ export const CheckoutForm = ({ items }) => {
     return items.reduce((total, item) => total + item.price, 0);
   };
 
+  // Handles Stripe payment submission
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // Redirect to login if not authenticated
     if (!isAuthenticated) {
       loginWithRedirect();
       return;
@@ -44,11 +47,13 @@ export const CheckoutForm = ({ items }) => {
       try {
         const { id } = paymentMethod;
 
+        // Send payment info to backend
         const response = await axios.post(`${apiURL}/api/payment`, {
           id,
           amount: calculateTotalAmount(items),
         });
 
+        // If payment is successful, show receipt
         if (response.data.success) {
           setPaymentSuccess(true);
           setReceiptData({
@@ -69,6 +74,7 @@ export const CheckoutForm = ({ items }) => {
 
   return (
     <>
+      {/* Stripe payment form */}
       <form onSubmit={handleSubmit} className="checkout-form">
         <h2>Credit Card Payment:</h2>
         <div className="payment-container">
@@ -98,7 +104,7 @@ export const CheckoutForm = ({ items }) => {
         </div>
       </form>
 
-      {/* Receipt Modal */}
+      {/* Receipt Modal - shows after successful payment */}
       {modalIsOpen && (
         <Modal
           isOpen={modalIsOpen}
