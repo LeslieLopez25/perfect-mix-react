@@ -13,7 +13,7 @@ const apiURL = process.env.REACT_APP_API_URL;
 
 // Cart component displays current cart items, allows quantity updates,
 // shows total price, and renders Stripe checkout form
-export const Cart = () => {
+export default function Cart() {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
 
   const increaseQuantity = (item) => {
@@ -83,4 +83,4 @@ export const Cart = () => {
       )}
     </div>
   );
-};
+}
