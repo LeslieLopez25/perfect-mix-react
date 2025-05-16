@@ -1,6 +1,8 @@
-<h1>The Perfect Mix :taco:</h1>
+# The Perfect Mix :taco:
 
-<h2>Welcome to The Perfect Mix, a captivating restaurant website meticulously crafted using React and CSS to provide a delightful culinary journey.</h2>
+## ## Project Summary
+
+The Perfect Mix is a full-stack restaurant web app that allows users to browse menu items by category, view a gallery of dishes, add items to a cart, and securely checkout using Stripe. Auth0 powers user authentication, enabling a personalized and persistent cart experience. The backend is built with Express and Prisma, connected to a PostgreSQL database, while the frontend is styled with custom CSS and deployed via Render.
 
 ### Key Features
 
@@ -15,13 +17,15 @@
 
 - Use this [link](https://docs.stripe.com/testing#international-cards) to use Stripe test cards, for placing your order, from different countries.
 
-\*\* Updated as of July 2024:
+### Changelog Summary
 
-- Enhanced Cart Functionality: Easily add items to your cart, adjust quantities, and view the total amount for each item with our intuitive add-to-cart feature.
+This project is actively maintained. For a full history of updates, check the [CHANGELOG.md](./CHANGELOG.md).
 
-\*\* Updated as of November 2024:
+Latest Updates:
 
-- Authentication: Integrated Auth0 to enable user account creation and login, allowing users to save items to their cart before checkout.
+- Refactored backend routes and added comments for clarity (May 2025).
+- Integrated Cloudinary image upload functionality (May 2025).
+- Added Auth0 authentication and Stripe checkout system (Nov 2024).
 
 - Full-Stack Setup: Converted the project into a full-stack application with separate frontend and backend components.
 
