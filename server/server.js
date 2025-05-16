@@ -24,13 +24,16 @@ app.get("/", (req, res) => {
   }
 });
 
+// Fetch cart items for a specific user
 app.get("/api/cart/:userId", async (req, res) => {
   const { userId } = req.params;
   try {
+    // Find the user's cart and include the related items
     const userCart = await prisma.order.findFirst({
       where: { userId },
       include: { items: true },
     });
+    // Return items if found, or an empty array if not
     res.json({ items: userCart ? userCart.items : [] });
   } catch (error) {
     console.log("Error fetching cart:", error);
@@ -38,6 +41,7 @@ app.get("/api/cart/:userId", async (req, res) => {
   }
 });
 
+// Fetch all gallery images
 app.get("/api/gallery", async (req, res) => {
   try {
     const galleryImages = await prisma.galleryImage.findMany();
@@ -48,9 +52,11 @@ app.get("/api/gallery", async (req, res) => {
   }
 });
 
+// Add an item to the cart
 app.post("/api/cart", async (req, res) => {
   const { userId, product, quantity, price } = req.body;
   try {
+    // Create a new order with a related item
     const order = await prisma.order.create({
       data: {
         userId: userId,
@@ -67,6 +73,7 @@ app.post("/api/cart", async (req, res) => {
   }
 });
 
+// Stripe payment intent creation for newer Stripe integration method
 app.post("/create-payment-intent", async (req, res) => {
   const { items, amount } = req.body;
 
@@ -83,6 +90,7 @@ app.post("/create-payment-intent", async (req, res) => {
   });
 });
 
+// Stripe legacy/alternative payment handling with manual confirmation
 app.post("/api/payment", async (req, res) => {
   const { id, amount } = req.body;
 
