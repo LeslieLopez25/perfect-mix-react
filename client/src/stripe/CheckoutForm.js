@@ -12,7 +12,6 @@ Modal.setAppElement("#root");
 
 const apiURL = process.env.REACT_APP_API_URL;
 
-// Checkout form for Stripe payment processing
 export const CheckoutForm = ({ items }) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -26,49 +25,59 @@ export const CheckoutForm = ({ items }) => {
     return items.reduce((total, item) => total + item.price, 0);
   };
 
-  // Handles Stripe payment submission
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Redirect to login if not authenticated
     if (!isAuthenticated) {
       loginWithRedirect();
       return;
     }
 
-    const cardElement = elements.getElement(CardElement);
+    if (!stripe || !elements) return;
 
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: "card",
-      card: cardElement,
-    });
+    try {
+      //  Request clientSecret from backend
+      const { data } = await axios.post(`${apiURL}/create-payment-intent`, {
+        amount: calculateTotalAmount(items),
+      });
+      const clientSecret = data.clientSecret?.trim();
 
-    if (!error) {
-      try {
-        const { id } = paymentMethod;
+      //  Get card details
+      const cardElement = elements.getElement(CardElement);
 
-        // Send payment info to backend
-        const response = await axios.post(`${apiURL}/api/payment`, {
-          id,
-          amount: calculateTotalAmount(items),
-        });
-
-        // If payment is successful, show receipt
-        if (response.data.success) {
-          setPaymentSuccess(true);
-          setReceiptData({
-            name: user?.name,
-            items,
-            total: calculateTotalAmount(items),
-            date: new Date().toLocaleString(),
-          });
-          setModalIsOpen(true);
+      //  Confirm payment with Stripe using clientSecret
+      const { error, paymentIntent } = await stripe.confirmCardPayment(
+        clientSecret,
+        {
+          payment_method: {
+            card: cardElement,
+            billing_details: {
+              email: user?.email,
+              name: user?.name || "Customer",
+            },
+          },
         }
-      } catch (error) {
-        console.log("Payment failed", error);
+      );
+
+      if (error) {
+        console.error("Stripe error:", error.message);
+        alert(error.message);
+        return;
       }
-    } else {
-      console.log("Stripe error:", error.message);
+
+      if (paymentIntent.status === "succeeded") {
+        setPaymentSuccess(true);
+        setReceiptData({
+          name: user?.name || "Customer",
+          items,
+          total: calculateTotalAmount(items),
+          date: new Date().toLocaleString(),
+        });
+        setModalIsOpen(true);
+      }
+    } catch (err) {
+      console.error("Payment failed:", err);
+      alert("Payment failed. Please try again.");
     }
   };
 
@@ -84,13 +93,18 @@ export const CheckoutForm = ({ items }) => {
               options={{
                 style: {
                   base: {
+                    fontSize: "16px",
                     color: "#a53005",
                     iconColor: "#a53005",
                     "::placeholder": {
                       color: "#a53005",
                     },
                   },
+                  invalid: {
+                    color: "#e5424d",
+                  },
                 },
+                hidePostalCode: false,
               }}
             />
           </div>
@@ -104,7 +118,7 @@ export const CheckoutForm = ({ items }) => {
         </div>
       </form>
 
-      {/* Receipt Modal - shows after successful payment */}
+      {/* Receipt Modal */}
       {modalIsOpen && (
         <Modal
           isOpen={modalIsOpen}

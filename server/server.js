@@ -8,7 +8,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
-
 const prisma = new PrismaClient();
 const app = express();
 
@@ -19,21 +18,17 @@ app.use("/api/items", itemsRoute);
 app.use("/images", express.static("public/images"));
 
 app.get("/", (req, res) => {
-  {
-    res.send("API is running...");
-  }
+  res.send("API is running...");
 });
 
 // Fetch cart items for a specific user
 app.get("/api/cart/:userId", async (req, res) => {
   const { userId } = req.params;
   try {
-    // Find the user's cart and include the related items
     const userCart = await prisma.order.findFirst({
       where: { userId },
       include: { items: true },
     });
-    // Return items if found, or an empty array if not
     res.json({ items: userCart ? userCart.items : [] });
   } catch (error) {
     console.log("Error fetching cart:", error);
@@ -56,7 +51,6 @@ app.get("/api/gallery", async (req, res) => {
 app.post("/api/cart", async (req, res) => {
   const { userId, product, quantity, price } = req.body;
   try {
-    // Create a new order with a related item
     const order = await prisma.order.create({
       data: {
         userId: userId,
@@ -73,43 +67,21 @@ app.post("/api/cart", async (req, res) => {
   }
 });
 
-// Stripe payment intent creation for newer Stripe integration method
+// Stripe payment intent creation
 app.post("/create-payment-intent", async (req, res) => {
-  const { items, amount } = req.body;
-
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: Math.round(amount * 100),
-    currency: "mxn",
-    automatic_payment_methods: {
-      enabled: true,
-    },
-  });
-
-  res.send({
-    clientSecret: paymentIntent.client_secret,
-  });
-});
-
-// Stripe legacy/alternative payment handling with manual confirmation
-app.post("/api/payment", async (req, res) => {
-  const { id, amount } = req.body;
-
   try {
+    const { amount } = req.body;
+
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: Math.round(amount * 100),
+      amount: Math.round(amount * 100), // cents
       currency: "mxn",
-      payment_method: id,
-      confirm: true,
-      automatic_payment_methods: {
-        enabled: true,
-        allow_redirects: "never",
-      },
+      automatic_payment_methods: { enabled: true },
     });
 
-    res.json({ success: true, clientSecret: paymentIntent.client_secret });
+    res.json({ clientSecret: paymentIntent.client_secret }); // ✅ must return client_secret
   } catch (error) {
     console.error("Error creating payment intent:", error);
-    res.status(500).json({ error: "Payment failed" });
+    res.status(500).json({ error: "Unable to create payment intent" });
   }
 });
 
