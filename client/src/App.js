@@ -6,6 +6,7 @@ import Loader from "./components/Loader/loader.component";
 import { CartProvider } from "./Context/CartContext";
 
 import "./App.css";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 // Lazy load pages and components
 const Home = lazy(() => import("./pages/MenuSections/home.component"));
@@ -45,7 +46,14 @@ export default function App() {
                 <Route path="/desserts" element={<Desserts />} />
                 <Route path="/appetizers" element={<Appetizers />} />
                 <Route path="/gallery" element={<Gallery />} />
-                <Route path="/cart" element={<Cart />} />
+                <Route
+                  path="/cart"
+                  element={
+                    <ProtectedRoute>
+                      <Cart />
+                    </ProtectedRoute>
+                  }
+                />
               </Routes>
             </Suspense>
             <Footer />

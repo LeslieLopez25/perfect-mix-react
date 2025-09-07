@@ -21,18 +21,76 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-// Fetch cart items for a specific user
-app.get("/api/cart/:userId", async (req, res) => {
-  const { userId } = req.params;
+// Fetch or create cart for a specific Auth0 user
+app.get("/api/cart/:auth0Id", async (req, res) => {
+  const { auth0Id } = req.params;
+
   try {
-    const userCart = await prisma.order.findFirst({
-      where: { userId },
+    let userCart = await prisma.order.findUnique({
+      where: { userId: auth0Id },
       include: { items: true },
     });
-    res.json({ items: userCart ? userCart.items : [] });
+
+    // If no cart exists yet, create an empty one
+    if (!userCart) {
+      userCart = await prisma.order.create({
+        data: {
+          userId: auth0Id,
+          total: 0,
+          items: { create: [] },
+        },
+        include: { items: true },
+      });
+    }
+
+    res.json(userCart);
   } catch (error) {
-    console.log("Error fetching cart:", error);
+    console.error("Error fetching cart:", error);
     res.status(500).json({ error: "Unable to fetch cart" });
+  }
+});
+
+// Save or replace full cart for a user (upsert = create or update)
+app.post("/api/cart/save", async (req, res) => {
+  const { auth0Id, items } = req.body;
+
+  try {
+    const total = items.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
+    const newOrder = await prisma.order.upsert({
+      where: { userId: auth0Id },
+      update: {
+        total,
+        items: {
+          deleteMany: {}, // clear existing items
+          create: items.map((item) => ({
+            product: item.name,
+            quantity: item.quantity,
+            price: item.price,
+          })),
+        },
+      },
+      create: {
+        userId: auth0Id,
+        total,
+        items: {
+          create: items.map((item) => ({
+            product: item.name,
+            quantity: item.quantity,
+            price: item.price,
+          })),
+        },
+      },
+      include: { items: true },
+    });
+
+    res.json(newOrder);
+  } catch (error) {
+    console.error("Error saving cart:", error);
+    res.status(500).json({ error: "Unable to save cart" });
   }
 });
 
@@ -47,26 +105,6 @@ app.get("/api/gallery", async (req, res) => {
   }
 });
 
-// Add an item to the cart
-app.post("/api/cart", async (req, res) => {
-  const { userId, product, quantity, price } = req.body;
-  try {
-    const order = await prisma.order.create({
-      data: {
-        userId: userId,
-        total: price * quantity,
-        items: {
-          create: { product, quantity, price },
-        },
-      },
-    });
-    res.json(order);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: "Unable to add item to cart" });
-  }
-});
-
 // Stripe payment intent creation
 app.post("/create-payment-intent", async (req, res) => {
   try {
@@ -78,7 +116,7 @@ app.post("/create-payment-intent", async (req, res) => {
       automatic_payment_methods: { enabled: true },
     });
 
-    res.json({ clientSecret: paymentIntent.client_secret }); // ✅ must return client_secret
+    res.json({ clientSecret: paymentIntent.client_secret });
   } catch (error) {
     console.error("Error creating payment intent:", error);
     res.status(500).json({ error: "Unable to create payment intent" });
