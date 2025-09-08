@@ -3,6 +3,7 @@ const { PrismaClient } = require("@prisma/client");
 const itemsRoute = require("./routes/item");
 const cors = require("cors");
 const Stripe = require("stripe");
+const { checkJwt, checkUserMatch } = require("./middleware/authMiddleware");
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -22,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 // Fetch or create cart for a specific Auth0 user
-app.get("/api/cart/:auth0Id", async (req, res) => {
+app.get("/api/cart/:auth0Id", checkJwt, checkUserMatch, async (req, res) => {
   const { auth0Id } = req.params;
 
   try {
@@ -51,8 +52,13 @@ app.get("/api/cart/:auth0Id", async (req, res) => {
 });
 
 // Save or replace full cart for a user (upsert = create or update)
-app.post("/api/cart/save", async (req, res) => {
+app.post("/api/cart/save", checkJwt, async (req, res) => {
+  const userIdFromToken = req.auth.payload.sub;
   const { auth0Id, items } = req.body;
+
+  if (userIdFromToken !== auth0Id) {
+    return res.status(403).json({ error: "Forbidden: Access denied" });
+  }
 
   try {
     const total = items.reduce(
