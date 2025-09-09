@@ -15,6 +15,10 @@ The Perfect Mix is a full-stack restaurant web app that allows users to browse m
 
 - Captivating Gallery: Immerse yourself in the visual feast of our mouthwatering dishes through our gallery section. Get a glimpse of the culinary artistry that awaits you.
 
+- Playwright E2E Tests: Automated end-to-end tests covering login, cart, checkout, and receipt flow to ensure reliability.
+
+- Middleware: Custom backend middleware for request validation, authentication, and error handling.
+
 - Use this [link](https://docs.stripe.com/testing#international-cards) to use Stripe test cards, for placing your order, from different countries.
 
 ### Changelog Summary
@@ -26,6 +30,8 @@ Latest Updates:
 - Refactored backend routes and added comments for clarity (May 2025).
 - Integrated Cloudinary image upload functionality (May 2025).
 - Added Auth0 authentication and Stripe checkout system (Nov 2024).
+- Added Playwright end-to-end testing suite for checkout and authentication flows (September 2025).
+- Introduced middleware for authentication and error handling (September 2025).
 
 - Full-Stack Setup: Converted the project into a full-stack application with separate frontend and backend components.
 
@@ -72,6 +78,32 @@ Latest Updates:
 <img src="/client/src/assets/screenshots/main.png" width="400"/>
 <img src="/client/src/assets/screenshots/gallery.png" width="400"/>
 <img src="/client/src/assets/screenshots/cart.png" width="400"/>
+
+---
+
+## 🧪 Running Playwright Tests
+
+This project includes automated end-to-end (E2E) tests using [Playwright](https://playwright.dev/).
+
+### Setup
+
+1. Ensure both frontend and backend servers are **not running** — Playwright will start them automatically.
+2. Install Playwright dependencies (only needed once):
+   ```bash
+   npx playwright install
+   ```
+
+---
+
+This project uses an authentication setup file (auth.setup.js) to log in with Auth0 once and save the session state.
+
+The stored authentication state is written to tests/auth.json.
+
+All other Playwright tests reuse this stored state, so they run as if the user is already logged in.
+
+If you need to reset authentication (e.g., you changed test credentials), simply delete tests/auth.json and rerun:
+
+npx playwright test tests/auth.setup.js
 
 ---
 

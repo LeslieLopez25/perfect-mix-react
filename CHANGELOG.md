@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [September 2025]
+
+### Added
+
+- Playwright end-to-end tests to cover login, adding items to cart, Stripe checkout, and receipt modal.
+- Middleware for request validation, authentication checks, and centralized error handling.
+
+---
+
 ## [May 2025]
 
 ### Added
