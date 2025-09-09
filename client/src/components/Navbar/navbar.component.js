@@ -126,7 +126,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link to="/cart" className="nav-links" onClick={closeMobileMenu}>
-              <div className="cart-icon-wrapper">
+              <div className="cart-icon-wrapper" data-testid="cart-icon">
                 <i className="fas fa-shopping-cart" />
                 <span className="cart-count">{cartCount}</span>
               </div>
